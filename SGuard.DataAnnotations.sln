@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{BF3A83E1-8390-46AA-9FDF-4ED926EC071B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{02ECB08C-6882-4AB1-B6A3-94293964782B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SGuard.DataAnnotations", "SGuard.DataAnnotations\SGuard.DataAnnotations.csproj", "{52A61576-76CF-4A64-A800-05E244238BBC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SGuard.DataAnnotations.Tests", "SGuard.DataAnnotations.Tests\SGuard.DataAnnotations.Tests.csproj", "{EE01A505-8666-4AEA-9014-6EB44A9E6395}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{52A61576-76CF-4A64-A800-05E244238BBC} = {BF3A83E1-8390-46AA-9FDF-4ED926EC071B}
+		{EE01A505-8666-4AEA-9014-6EB44A9E6395} = {02ECB08C-6882-4AB1-B6A3-94293964782B}
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{52A61576-76CF-4A64-A800-05E244238BBC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52A61576-76CF-4A64-A800-05E244238BBC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52A61576-76CF-4A64-A800-05E244238BBC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52A61576-76CF-4A64-A800-05E244238BBC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EE01A505-8666-4AEA-9014-6EB44A9E6395}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE01A505-8666-4AEA-9014-6EB44A9E6395}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE01A505-8666-4AEA-9014-6EB44A9E6395}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE01A505-8666-4AEA-9014-6EB44A9E6395}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
