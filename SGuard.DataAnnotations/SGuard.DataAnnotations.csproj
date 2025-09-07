@@ -11,4 +11,81 @@
       <PackageReference Include="System.ComponentModel.Annotations" Version="5.0.0" />
     </ItemGroup>
 
+    <ItemGroup>
+      <EmbeddedResource Update="src\Resources\SGuardDataAnnotationResource.resx">
+        <Generator>ResXFileCodeGenerator</Generator>
+        <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </EmbeddedResource>
+      <EmbeddedResource Update="Resources\SGuardDataAnnotationResource.resx">
+        <Generator>ResXFileCodeGenerator</Generator>
+        <LastGenOutput>SGuardDataAnnotationResource.Designer.cs</LastGenOutput>
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </EmbeddedResource>
+      <EmbeddedResource Update="Resources\SGuardDataAnnotationsResource.tr.resx">
+        <Generator>ResXFileCodeGenerator</Generator>
+        <LastGenOutput>SGuardDataAnnotationsResource.tr.Designer.cs</LastGenOutput>
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </EmbeddedResource>
+      <EmbeddedResource Update="Resources\SGuardDataAnnotationResource.ru.resx">
+        <Generator>ResXFileCodeGenerator</Generator>
+        <LastGenOutput>SGuardDataAnnotationResource.ru.Designer.cs</LastGenOutput>
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </EmbeddedResource>
+      <EmbeddedResource Update="Resources\SGuardDataAnnotationResource.ja.resx">
+        <Generator>ResXFileCodeGenerator</Generator>
+        <LastGenOutput>SGuardDataAnnotationResource.ja.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
+      <EmbeddedResource Update="Resources\SGuardDataAnnotationsResource.de.resx">
+        <Generator>ResXFileCodeGenerator</Generator>
+        <LastGenOutput>SGuardDataAnnotationsResource.de.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
+      <EmbeddedResource Update="Resources\SGuardDataAnnotationsResource.fr.resx">
+        <Generator>ResXFileCodeGenerator</Generator>
+        <LastGenOutput>SGuardDataAnnotationsResource.fr.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
+      <EmbeddedResource Update="Resources\SGuardDataAnnotationResource.hi.resx">
+        <Generator>ResXFileCodeGenerator</Generator>
+        <LastGenOutput>SGuardDataAnnotationResource.hi.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Update="src\Resources\SGuardDataAnnotationResource.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>Resources.resx</DependentUpon>
+      </Compile>
+      <Compile Update="Resources\SGuardDataAnnotationsResource.tr.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>SGuardDataAnnotationsResource.tr.resx</DependentUpon>
+      </Compile>
+      <Compile Update="Resources\SGuardDataAnnotationResource.ru.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>SGuardDataAnnotationResource.ru.resx</DependentUpon>
+      </Compile>
+      <Compile Update="Resources\SGuardDataAnnotationResource.ja.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>SGuardDataAnnotationResource.ja.resx</DependentUpon>
+      </Compile>
+      <Compile Update="Resources\SGuardDataAnnotationsResource.de.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>SGuardDataAnnotationsResource.de.resx</DependentUpon>
+      </Compile>
+      <Compile Update="Resources\SGuardDataAnnotationsResource.fr.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>SGuardDataAnnotationsResource.fr.resx</DependentUpon>
+      </Compile>
+      <Compile Update="Resources\SGuardDataAnnotationResource.hi.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>SGuardDataAnnotationResource.hi.resx</DependentUpon>
+      </Compile>
+    </ItemGroup>
+
 </Project>

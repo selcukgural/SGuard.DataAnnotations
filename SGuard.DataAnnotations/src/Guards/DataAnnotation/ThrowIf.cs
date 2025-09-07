@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.Diagnostics.CodeAnalysis;
 using SGuard.DataAnnotations.Exceptions;
 using SGuard.DataAnnotations.Internal;
 
@@ -6,9 +7,15 @@ using SGuard.DataAnnotations.Internal;
 namespace SGuard.DataAnnotations;
 
 /// <summary>
-/// Provides methods to validate objects using DataAnnotations and throw exceptions if validation fails.
+/// Provides exception-throwing guard methods for DataAnnotations validation, following the SGuard pattern.
+/// <para>
+/// <b>Pattern:</b> All <c>ThrowIf.*</c> methods throw exceptions when validation fails, support custom exception types and constructor arguments, and invoke callbacks with <see cref="GuardOutcome.Failure"/> before throwing and <see cref="GuardOutcome.Success"/> when validation passes.
+/// </para>
+/// <para>
+/// For details, see the SGuard main documentation: https://github.com/selcukgural/sguard
+/// </para>
 /// </summary>
-public sealed partial class ThrowIf
+public static class ThrowIf
 {
     /// <summary>
     /// Validates the specified object instance using DataAnnotations and throws an exception if the object is invalid.
@@ -32,7 +39,7 @@ public sealed partial class ThrowIf
 
         var valid = Validator.TryValidateObject(instance, context, results, validateAllProperties);
 
-        SGuardDataAnnotations.Guard(valid, () => Throw.That(new DataAnnotationsException(results)), callback);
+        SGuardDataAnnotations.Guard(!valid, () => Throw.That(new DataAnnotationsException(results)), callback);
     }
 
     /// <summary>
@@ -50,15 +57,17 @@ public sealed partial class ThrowIf
     /// The callback receives the validation outcome.
     /// </param>
     /// <exception cref="TException">Thrown when the object fails validation.</exception>
-    public static void DataAnnotationsInValid<TException>(object instance, TException exception, bool validateAllProperties = true,
+    public static void DataAnnotationsInValid<TException>(object instance, [NotNull]TException exception, bool validateAllProperties = true,
                                                           SGuardCallback? callback = null) where TException : Exception
     {
+        ArgumentNullException.ThrowIfNull(exception);
+        
         var context = new ValidationContext(instance);
         var results = new List<ValidationResult>();
 
         var valid = Validator.TryValidateObject(instance, context, results, validateAllProperties);
 
-        SGuardDataAnnotations.Guard(valid, () => Throw.That(exception), callback);
+        SGuardDataAnnotations.Guard(!valid, () => Throw.That(exception), callback);
     }
 
     /// <summary>
@@ -87,6 +96,6 @@ public sealed partial class ThrowIf
 
         var valid = Validator.TryValidateObject(instance, context, results, validateAllProperties);
 
-        SGuardDataAnnotations.Guard(valid, () => Throw.That(ExceptionActivator.Create<TException>(constructorArgs)), callback);
+        SGuardDataAnnotations.Guard(!valid, () => Throw.That(ExceptionActivator.Create<TException>(constructorArgs)), callback);
     }
 }

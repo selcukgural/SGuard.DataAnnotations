@@ -5,9 +5,15 @@ using SGuard.DataAnnotations.Internal;
 namespace SGuard.DataAnnotations;
 
 /// <summary>
-/// Provides methods to validate objects using DataAnnotations.
+/// Provides boolean guard methods for DataAnnotations validation, following the SGuard pattern.
+/// <para>
+/// <b>Pattern:</b> All <c>Is.*</c> methods return booleans for validation checks, never throw exceptions, and invoke callbacks with <see cref="GuardOutcome.Success"/> when the result is true and <see cref="GuardOutcome.Failure"/> when false.
+/// </para>
+/// <para>
+/// For details, see the SGuard main documentation: https://github.com/selcukgural/sguard
+/// </para>
 /// </summary>
-public sealed partial class Is
+public static class Is
 {
     /// <summary>
     /// Validates the specified object instance using DataAnnotations.

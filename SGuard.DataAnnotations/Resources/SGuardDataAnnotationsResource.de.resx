@@ -1,0 +1,165 @@
+<?xml version='1.0' encoding='utf-8'?>
+<root>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral,
+            PublicKeyToken=b77a5c561934e089
+        </value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral,
+            PublicKeyToken=b77a5c561934e089
+        </value>
+    </resheader>
+    <data name="Username_Required" xml:space="preserve"><value>Benutzername ist erforderlich.</value></data>
+    <data name="Username_MinLength" xml:space="preserve"><value>Benutzername muss mindestens {0} Zeichen lang sein.</value></data>
+    <data name="Username_MaxLength" xml:space="preserve"><value>Benutzername darf nicht länger als {0} Zeichen sein.</value></data>
+    <data name="Username_InvalidCharacters" xml:space="preserve"><value>Benutzername enthält ungültige Zeichen.</value></data>
+    <data name="Username_AlreadyExists" xml:space="preserve"><value>Dieser Benutzername ist nicht verfügbar. Bitte wählen Sie einen anderen.</value></data>
+    <data name="Username_NotFound" xml:space="preserve"><value>Kein passender Eintrag gefunden.</value></data>
+    <data name="Password_Required" xml:space="preserve"><value>Passwort ist erforderlich.</value></data>
+    <data name="Password_MinLength" xml:space="preserve"><value>Passwort muss mindestens {0} Zeichen lang sein.</value></data>
+    <data name="Password_MaxLength" xml:space="preserve"><value>Passwort darf nicht länger als {0} Zeichen sein.</value></data>
+    <data name="Password_TooWeak" xml:space="preserve"><value>Das Passwort ist zu schwach. Es muss mindestens einen Großbuchstaben, einen Kleinbuchstaben, eine Ziffer und ein Sonderzeichen enthalten.</value></data>
+    <data name="Password_InvalidCharacters" xml:space="preserve"><value>Passwort enthält ungültige Zeichen.</value></data>
+    <data name="Password_Mismatch" xml:space="preserve"><value>Passwörter stimmen nicht überein.</value></data>
+    <data name="Email_Required" xml:space="preserve"><value>E-Mail-Adresse ist erforderlich.</value></data>
+    <data name="Email_InvalidFormat" xml:space="preserve"><value>E-Mail-Adresse hat ein ungültiges Format.</value></data>
+    <data name="Email_AlreadyExists" xml:space="preserve"><value>Dieser Wert ist nicht verfügbar.</value></data>
+    <data name="Login_InvalidCredentials" xml:space="preserve"><value>Benutzername oder Passwort ist falsch.</value></data>
+    <data name="Login_AccountLocked" xml:space="preserve"><value>Kontovorgang konnte nicht abgeschlossen werden.</value></data>
+    <data name="Login_AccountInactive" xml:space="preserve"><value>Bestätigung ist erforderlich.</value></data>
+    <data name="Login_TooManyAttempts" xml:space="preserve"><value>Zulässiges Limit wurde überschritten.</value></data>
+    <data name="Terms_NotAccepted" xml:space="preserve"><value>Zum Fortfahren ist Ihre Zustimmung erforderlich.</value></data>
+    <data name="Captcha_Invalid" xml:space="preserve"><value>Captcha‑Prüfung fehlgeschlagen.</value></data>
+    <data name="General_UnexpectedError" xml:space="preserve"><value>Ihre Anfrage kann derzeit nicht abgeschlossen werden. Bitte versuchen Sie es später erneut.</value></data>
+    <data name="Profile_DisplayName_Required" xml:space="preserve"><value>Anzeigename ist erforderlich.</value></data>
+    <data name="Profile_DisplayName_MinLength" xml:space="preserve"><value>Anzeigename muss mindestens {0} Zeichen lang sein.</value></data>
+    <data name="Profile_DisplayName_MaxLength" xml:space="preserve"><value>Anzeigename darf nicht länger als {0} Zeichen sein.</value></data>
+    <data name="Profile_Bio_MaxLength" xml:space="preserve"><value>Biografie darf nicht länger als {0} Zeichen sein.</value></data>
+    <data name="Profile_ProfilePicture_Required" xml:space="preserve"><value>Profilbild ist erforderlich.</value></data>
+    <data name="Profile_ProfilePicture_InvalidFormat" xml:space="preserve"><value>Das Dateiformat des Profilbildes ist ungültig. Zulässige Formate: JPG, PNG, GIF.</value></data>
+    <data name="Profile_ProfilePicture_TooLarge" xml:space="preserve"><value>Die Größe des Profilbildes darf {0} MB nicht überschreiten.</value></data>
+    <data name="Profile_Phone_Required" xml:space="preserve"><value>Telefonnummer ist erforderlich.</value></data>
+    <data name="Profile_Phone_Invalid" xml:space="preserve"><value>Telefonnummer ist ungültig.</value></data>
+    <data name="Profile_Phone_AlreadyExists" xml:space="preserve"><value>Dieser Wert ist nicht verfügbar.</value></data>
+    <data name="Profile_BirthDate_Required" xml:space="preserve"><value>Geburtsdatum ist erforderlich.</value></data>
+    <data name="Profile_BirthDate_Invalid" xml:space="preserve"><value>Date of birth ist ungültig.</value></data>
+    <data name="Profile_BirthDate_MinimumAge" xml:space="preserve"><value>Sie müssen mindestens {0} Jahre alt sein.</value></data>
+    <data name="Profile_BirthDate_MaximumAge" xml:space="preserve"><value>Alter darf {0} Jahre nicht überschreiten.</value></data>
+    <data name="Profile_Gender_Required" xml:space="preserve"><value>Geschlecht ist erforderlich.</value></data>
+    <data name="Profile_Address_Required" xml:space="preserve"><value>Address ist erforderlich.</value></data>
+    <data name="Profile_Country_Required" xml:space="preserve"><value>Land ist erforderlich.</value></data>
+    <data name="Profile_City_Required" xml:space="preserve"><value>Stadt ist erforderlich.</value></data>
+    <data name="Profile_TimeZone_Required" xml:space="preserve"><value>Zeitzone ist erforderlich.</value></data>
+    <data name="Profile_Account_Deactivated" xml:space="preserve"><value>Kontovorgang konnte nicht abgeschlossen werden.</value></data>
+    <data name="Profile_Account_NotFound" xml:space="preserve"><value>Kein passender Eintrag gefunden.</value></data>
+    <data name="Profile_Account_AlreadyExists" xml:space="preserve"><value>Dieser Wert ist nicht verfügbar.</value></data>
+    <data name="Profile_Account_UpdateFailed" xml:space="preserve"><value>Profil konnte nicht aktualisiert werden. Bitte versuchen Sie es erneut.</value></data>
+    <data name="Profile_Account_DeletionNotAllowed" xml:space="preserve"><value>Dieses Konto kann nicht gelöscht werden.</value></data>
+    <data name="Profile_Account_Deleted" xml:space="preserve"><value>Ihr Konto wurde gelöscht.</value></data>
+    <data name="Profile_Account_DeleteConfirm" xml:space="preserve"><value>Möchten Sie Ihr Konto wirklich löschen? Dieser Vorgang kann nicht rückgängig gemacht werden.</value></data>
+    <data name="Email_Verification_Required" xml:space="preserve"><value>E-Mail-Bestätigung ist erforderlich.</value></data>
+    <data name="Email_Verification_Failed" xml:space="preserve"><value>Vorgang konnte nicht abgeschlossen werden. Bitte versuchen Sie es erneut.</value></data>
+    <data name="Email_Verification_Expired" xml:space="preserve"><value>Link oder Code ist abgelaufen.</value></data>
+    <data name="Email_Change_Required" xml:space="preserve"><value>Dieses Feld ist erforderlich.</value></data>
+    <data name="Email_Change_SameAsCurrent" xml:space="preserve"><value>Die neue E‑Mail‑Adresse muss sich von Ihrer aktuellen unterscheiden.</value></data>
+    <data name="Email_Change_AlreadyExists" xml:space="preserve"><value>E-Mail-Vorgang konnte nicht abgeschlossen werden.</value></data>
+    <data name="Email_Change_Pending" xml:space="preserve"><value>Bestätigung ist erforderlich.</value></data>
+    <data name="Email_Notification_OptInRequired" xml:space="preserve"><value>E-Mail-Vorgang konnte nicht abgeschlossen werden.</value></data>
+    <data name="Email_Notification_OptOutSuccess" xml:space="preserve"><value>E-Mail-Vorgang konnte nicht abgeschlossen werden.</value></data>
+    <data name="Email_Notification_OptOutAlready" xml:space="preserve"><value>E-Mail-Vorgang konnte nicht abgeschlossen werden.</value></data>
+    <data name="Email_Blocked" xml:space="preserve"><value>E-Mail-Vorgang konnte nicht abgeschlossen werden.</value></data>
+    <data name="Email_Send_Failed" xml:space="preserve"><value>Vorgang konnte nicht abgeschlossen werden. Bitte versuchen Sie es erneut.</value></data>
+    <data name="Email_Template_NotFound" xml:space="preserve"><value>Kein passender Eintrag gefunden.</value></data>
+    <data name="Email_InvalidDomain" xml:space="preserve"><value>E-Mail-Vorgang konnte nicht abgeschlossen werden.</value></data>
+    <data name="Email_ContactSupport" xml:space="preserve"><value>Ihre Anfrage kann derzeit nicht abgeschlossen werden. Bitte versuchen Sie es später erneut.</value></data>
+    <data name="PasswordReset_Token_Required" xml:space="preserve"><value>Password reset token ist erforderlich.</value></data>
+    <data name="PasswordReset_Token_Invalid" xml:space="preserve"><value>Wert ist ungültig.</value></data>
+    <data name="PasswordReset_Expired" xml:space="preserve"><value>Link oder Code ist abgelaufen.</value></data>
+    <data name="PasswordReset_TooManyRequests" xml:space="preserve"><value>Zulässiges Limit wurde überschritten.</value></data>
+    <data name="PasswordReset_Email_Required" xml:space="preserve"><value>Dieses Feld ist erforderlich.</value></data>
+    <data name="PasswordReset_Email_NotFound" xml:space="preserve"><value>E-Mail-Vorgang konnte nicht abgeschlossen werden.</value></data>
+    <data name="PasswordReset_OldPassword_Required" xml:space="preserve"><value>Aktuelles Passwort ist erforderlich.</value></data>
+    <data name="PasswordReset_NewPassword_Required" xml:space="preserve"><value>Neues Passwort ist erforderlich.</value></data>
+    <data name="PasswordReset_NewPassword_MinLength" xml:space="preserve"><value>Neues Passwort muss mindestens {0} Zeichen lang sein.</value></data>
+    <data name="PasswordReset_NewPassword_MaxLength" xml:space="preserve"><value>Neues Passwort darf nicht länger als {0} Zeichen sein.</value></data>
+    <data name="PasswordReset_NewPassword_TooWeak" xml:space="preserve"><value>Das neue Passwort ist zu schwach. Es muss mindestens einen Großbuchstaben, einen Kleinbuchstaben, eine Ziffer und ein Sonderzeichen enthalten.</value></data>
+    <data name="PasswordReset_NewPassword_SameAsOld" xml:space="preserve"><value>Vorgang konnte nicht abgeschlossen werden. Bitte versuchen Sie es erneut.</value></data>
+    <data name="PasswordReset_Mismatch" xml:space="preserve"><value>Neues Passwort und Bestätigung stimmen nicht überein.</value></data>
+    <data name="SecurityCode_Required" xml:space="preserve"><value>Security code ist erforderlich.</value></data>
+    <data name="SecurityCode_Invalid" xml:space="preserve"><value>Sicherheitscode ist ungültig oder abgelaufen.</value></data>
+    <data name="TwoFactor_Required" xml:space="preserve"><value>Two-factor authentication code ist erforderlich.</value></data>
+    <data name="TwoFactor_Invalid" xml:space="preserve"><value>Zwei‑Faktor‑Authentifizierungscode ist ungültig.</value></data>
+    <data name="TwoFactor_SetupRequired" xml:space="preserve"><value>Code/Token ist ungültig oder abgelaufen.</value></data>
+    <data name="Security_AccountLocked" xml:space="preserve"><value>Zulässiges Limit wurde überschritten.</value></data>
+    <data name="Security_AccountSuspended" xml:space="preserve"><value>Kontovorgang konnte nicht abgeschlossen werden.</value></data>
+    <data name="Security_UnexpectedError" xml:space="preserve"><value>Es ist ein unerwarteter Sicherheitsfehler aufgetreten. Bitte versuchen Sie es erneut.</value></data>
+    <data name="Address_Required" xml:space="preserve"><value>Address ist erforderlich.</value></data>
+    <data name="Address_Line1_Required" xml:space="preserve"><value>Adresszeile 1 ist erforderlich.</value></data>
+    <data name="Address_Line2_Optional" xml:space="preserve"><value>Adresszeile 2 ist optional.</value></data>
+    <data name="Address_City_Required" xml:space="preserve"><value>Stadt ist erforderlich.</value></data>
+    <data name="Address_State_Required" xml:space="preserve"><value>State or province ist erforderlich.</value></data>
+    <data name="Address_PostalCode_Required" xml:space="preserve"><value>Postleitzahl ist erforderlich.</value></data>
+    <data name="Address_PostalCode_Invalid" xml:space="preserve"><value>Postleitzahl ist ungültig.</value></data>
+    <data name="Address_Country_Required" xml:space="preserve"><value>Land ist erforderlich.</value></data>
+    <data name="Address_Country_Invalid" xml:space="preserve"><value>Das ausgewählte Land ist ungültig.</value></data>
+    <data name="Address_NotFound" xml:space="preserve"><value>Adresse nicht gefunden.</value></data>
+    <data name="Address_AlreadyExists" xml:space="preserve"><value>Diese Adresse ist bereits vorhanden.</value></data>
+    <data name="Address_Location_Invalid" xml:space="preserve"><value>Der angegebene Standort ist ungültig.</value></data>
+    <data name="Address_Coordinates_Required" xml:space="preserve"><value>Für diese Adresse sind Koordinaten erforderlich.</value></data>
+    <data name="Address_Coordinates_Invalid" xml:space="preserve"><value>Koordinaten sind ungültig.</value></data>
+    <data name="Address_UpdateFailed" xml:space="preserve"><value>Adresse konnte nicht aktualisiert werden. Bitte versuchen Sie es erneut.</value></data>
+    <data name="Address_DeleteFailed" xml:space="preserve"><value>Adresse konnte nicht gelöscht werden. Bitte versuchen Sie es erneut.</value></data>
+    <data name="Address_Type_Required" xml:space="preserve"><value>Adresstyp ist erforderlich.</value></data>
+    <data name="Common_Required" xml:space="preserve"><value>This field ist erforderlich.</value></data>
+    <data name="Common_Invalid" xml:space="preserve"><value>The value provided ist ungültig.</value></data>
+    <data name="Common_MinLength" xml:space="preserve"><value>This field muss mindestens {0} Zeichen lang sein.</value></data>
+    <data name="Common_MaxLength" xml:space="preserve"><value>This field darf nicht länger als {0} Zeichen sein.</value></data>
+    <data name="Common_Range" xml:space="preserve"><value>Der Wert muss zwischen {0} und {1} liegen.</value></data>
+    <data name="Common_AlreadyExists" xml:space="preserve"><value>Dieser Wert ist nicht verfügbar.</value></data>
+    <data name="Common_NotFound" xml:space="preserve"><value>Ihre Anfrage kann derzeit nicht abgeschlossen werden. Bitte versuchen Sie es später erneut.</value></data>
+    <data name="Common_Format" xml:space="preserve"><value>The format ist ungültig.</value></data>
+    <data name="Common_UnexpectedError" xml:space="preserve"><value>Ihre Anfrage kann derzeit nicht abgeschlossen werden. Bitte versuchen Sie es später erneut.</value></data>
+    <data name="Common_OperationNotAllowed" xml:space="preserve"><value>Dieser Vorgang ist nicht zulässig.</value></data>
+    <data name="Common_OperationFailed" xml:space="preserve"><value>Vorgang konnte nicht abgeschlossen werden. Bitte versuchen Sie es erneut.</value></data>
+    <data name="Common_RequiredSelection" xml:space="preserve"><value>Ihre Anfrage kann derzeit nicht abgeschlossen werden. Bitte versuchen Sie es später erneut.</value></data>
+    <data name="Common_TooManyRequests" xml:space="preserve"><value>Zulässiges Limit wurde überschritten.</value></data>
+    <data name="Common_Forbidden" xml:space="preserve"><value>Sie haben keine Berechtigung, diese Aktion auszuführen.</value></data>
+    <data name="Common_Unauthorized" xml:space="preserve"><value>Ihre Anfrage kann derzeit nicht abgeschlossen werden. Bitte versuchen Sie es später erneut.</value></data>
+    <data name="Common_Timeout" xml:space="preserve"><value>Der Vorgang hat das Zeitlimit überschritten. Bitte versuchen Sie es erneut.</value></data>
+    <data name="Common_Empty" xml:space="preserve"><value>Dieses Feld darf nicht leer sein.</value></data>
+    <data name="Common_Null" xml:space="preserve"><value>Dieses Feld darf nicht leer sein.</value></data>
+    <data name="Common_InvalidSelection" xml:space="preserve"><value>The selected value ist ungültig.</value></data>
+    <data name="Common_RequiredConfirmation" xml:space="preserve"><value>Bitte bestätigen Sie, um fortzufahren.</value></data>
+    <data name="Agreement_PrivacyPolicy_Required" xml:space="preserve"><value>Zum Fortfahren ist Ihre Zustimmung erforderlich.</value></data>
+    <data name="Agreement_TermsOfService_Required" xml:space="preserve"><value>Zum Fortfahren ist Ihre Zustimmung erforderlich.</value></data>
+    <data name="Agreement_KVKK_Required" xml:space="preserve"><value>Zum Fortfahren ist Ihre Zustimmung erforderlich.</value></data>
+    <data name="Agreement_Consent_Required" xml:space="preserve"><value>Dieses Feld ist erforderlich.</value></data>
+    <data name="Agreement_AlreadyAccepted" xml:space="preserve"><value>Ihre Anfrage kann derzeit nicht abgeschlossen werden. Bitte versuchen Sie es später erneut.</value></data>
+    <data name="Agreement_Withdrawn" xml:space="preserve"><value>Zum Fortfahren ist Ihre Zustimmung erforderlich.</value></data>
+    <data name="Agreement_Invalid" xml:space="preserve"><value>The agreement reference ist ungültig.</value></data>
+    <data name="Agreement_NotFound" xml:space="preserve"><value>Zu dieser Vereinbarung wurde kein Eintrag gefunden.</value></data>
+    <data name="Agreement_Signature_Required" xml:space="preserve"><value>Dieses Feld ist erforderlich.</value></data>
+    <data name="Agreement_ConsentTimestamp_Invalid" xml:space="preserve"><value>The consent timestamp ist ungültig.</value></data>
+    <data name="System_Maintenance" xml:space="preserve"><value>Das System wird derzeit gewartet. Bitte versuchen Sie es später erneut.</value></data>
+    <data name="System_Unavailable" xml:space="preserve"><value>Der Dienst ist vorübergehend nicht verfügbar. Bitte versuchen Sie es später erneut.</value></data>
+    <data name="System_RateLimitExceeded" xml:space="preserve"><value>Zulässiges Limit wurde überschritten.</value></data>
+    <data name="System_Timeout" xml:space="preserve"><value>Ihre Anfrage hat das Zeitlimit überschritten. Bitte versuchen Sie es erneut.</value></data>
+    <data name="System_InternalError" xml:space="preserve"><value>Ihre Anfrage kann derzeit nicht abgeschlossen werden. Bitte versuchen Sie es später erneut.</value></data>
+    <data name="System_UnexpectedError" xml:space="preserve"><value>Es ist ein unerwarteter Systemfehler aufgetreten. Bitte versuchen Sie es später erneut.</value></data>
+    <data name="System_UnsupportedOperation" xml:space="preserve"><value>Dieser Vorgang wird von der aktuellen Systemkonfiguration nicht unterstützt.</value></data>
+    <data name="System_ResourceNotFound" xml:space="preserve"><value>Die angeforderte Ressource wurde nicht gefunden.</value></data>
+    <data name="System_ResourceLocked" xml:space="preserve"><value>Die angeforderte Ressource ist derzeit gesperrt. Bitte versuchen Sie es später erneut.</value></data>
+    <data name="System_QuotaExceeded" xml:space="preserve"><value>Ihr Kontingent für diesen Vorgang wurde überschritten.</value></data>
+    <data name="System_DependencyFailure" xml:space="preserve"><value>Eine erforderliche Systemabhängigkeit ist fehlgeschlagen. Versuchen Sie es erneut oder wenden Sie sich an den Support.</value></data>
+    <data name="System_ApiKeyMissing" xml:space="preserve"><value>API‑Schlüssel fehlt oder ist ungültig.</value></data>
+    <data name="System_ApiKeyExpired" xml:space="preserve"><value>Ihr API‑Schlüssel ist abgelaufen. Bitte erneuern Sie Ihre Anmeldedaten.</value></data>
+    <data name="System_ApiAccessDenied" xml:space="preserve"><value>Der Zugriff auf die API ist verweigert. Bitte prüfen Sie Ihre Berechtigungen.</value></data>
+    <data name="System_OperationCanceled" xml:space="preserve"><value>Der Vorgang wurde abgebrochen.</value></data>
+</root>

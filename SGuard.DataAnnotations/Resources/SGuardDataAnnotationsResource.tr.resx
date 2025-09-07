@@ -1,0 +1,165 @@
+<?xml version='1.0' encoding='utf-8'?>
+<root>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral,
+            PublicKeyToken=b77a5c561934e089
+        </value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral,
+            PublicKeyToken=b77a5c561934e089
+        </value>
+    </resheader>
+    <data name="Username_Required" xml:space="preserve"><value>Kullanıcı adı zorunludur.</value></data>
+    <data name="Username_MinLength" xml:space="preserve"><value>Kullanıcı adı en az {0} karakter olmalıdır.</value></data>
+    <data name="Username_MaxLength" xml:space="preserve"><value>Kullanıcı adı {0} karakterden uzun olamaz.</value></data>
+    <data name="Username_InvalidCharacters" xml:space="preserve"><value>Kullanıcı adı geçersiz karakterler içeriyor.</value></data>
+    <data name="Username_AlreadyExists" xml:space="preserve"><value>Bu kullanıcı adı kullanılamaz. Başka bir tane deneyin.</value></data>
+    <data name="Username_NotFound" xml:space="preserve"><value>Kayıt bulunamadı.</value></data>
+    <data name="Password_Required" xml:space="preserve"><value>Parola zorunludur.</value></data>
+    <data name="Password_MinLength" xml:space="preserve"><value>Parola en az {0} karakter olmalıdır.</value></data>
+    <data name="Password_MaxLength" xml:space="preserve"><value>Parola {0} karakterden uzun olamaz.</value></data>
+    <data name="Password_TooWeak" xml:space="preserve"><value>Parola çok zayıf. En az bir büyük harf, bir küçük harf, bir rakam ve bir özel karakter içermelidir.</value></data>
+    <data name="Password_InvalidCharacters" xml:space="preserve"><value>Parola geçersiz karakterler içeriyor.</value></data>
+    <data name="Password_Mismatch" xml:space="preserve"><value>Parola işlemi tamamlanamadı.</value></data>
+    <data name="Email_Required" xml:space="preserve"><value>E-posta adresi zorunludur.</value></data>
+    <data name="Email_InvalidFormat" xml:space="preserve"><value>E-posta adresi geçerli bir biçimde değil.</value></data>
+    <data name="Email_AlreadyExists" xml:space="preserve"><value>Bu değer kullanılamıyor.</value></data>
+    <data name="Login_InvalidCredentials" xml:space="preserve"><value>Kullanıcı adı veya parola hatalı.</value></data>
+    <data name="Login_AccountLocked" xml:space="preserve"><value>Hesap işlemi tamamlanamadı.</value></data>
+    <data name="Login_AccountInactive" xml:space="preserve"><value>Doğrulama gerekiyor.</value></data>
+    <data name="Login_TooManyAttempts" xml:space="preserve"><value>İzin verilen sınır aşıldı.</value></data>
+    <data name="Terms_NotAccepted" xml:space="preserve"><value>Devam etmek için onay gereklidir.</value></data>
+    <data name="Captcha_Invalid" xml:space="preserve"><value>İşlem tamamlanamadı. Lütfen tekrar deneyin.</value></data>
+    <data name="General_UnexpectedError" xml:space="preserve"><value>İsteğinizi şu anda tamamlayamadık. Lütfen daha sonra tekrar deneyin.</value></data>
+    <data name="Profile_DisplayName_Required" xml:space="preserve"><value>Görünen ad zorunludur.</value></data>
+    <data name="Profile_DisplayName_MinLength" xml:space="preserve"><value>Görünen ad en az {0} karakter olmalıdır.</value></data>
+    <data name="Profile_DisplayName_MaxLength" xml:space="preserve"><value>Görünen ad {0} karakterden uzun olamaz.</value></data>
+    <data name="Profile_Bio_MaxLength" xml:space="preserve"><value>Biyografi {0} karakterden uzun olamaz.</value></data>
+    <data name="Profile_ProfilePicture_Required" xml:space="preserve"><value>Profil resmi zorunludur.</value></data>
+    <data name="Profile_ProfilePicture_InvalidFormat" xml:space="preserve"><value>Profil resminin dosya biçimi geçersiz. İzin verilen biçimler: JPG, PNG, GIF.</value></data>
+    <data name="Profile_ProfilePicture_TooLarge" xml:space="preserve"><value>Profil resmi boyutu {0} MB’ı aşamaz.</value></data>
+    <data name="Profile_Phone_Required" xml:space="preserve"><value>“Telefon numarası” zorunludur.</value></data>
+    <data name="Profile_Phone_Invalid" xml:space="preserve"><value>“Telefon numarası” geçerli değil.</value></data>
+    <data name="Profile_Phone_AlreadyExists" xml:space="preserve"><value>Bu değer kullanılamıyor.</value></data>
+    <data name="Profile_BirthDate_Required" xml:space="preserve"><value>Doğum tarihi zorunludur.</value></data>
+    <data name="Profile_BirthDate_Invalid" xml:space="preserve"><value>“Date of birth” geçerli değil.</value></data>
+    <data name="Profile_BirthDate_MinimumAge" xml:space="preserve"><value>En az {0} yaşında olmalısınız.</value></data>
+    <data name="Profile_BirthDate_MaximumAge" xml:space="preserve"><value>Yaş {0} yılı aşamaz.</value></data>
+    <data name="Profile_Gender_Required" xml:space="preserve"><value>Cinsiyet zorunludur.</value></data>
+    <data name="Profile_Address_Required" xml:space="preserve"><value>“Address” zorunludur.</value></data>
+    <data name="Profile_Country_Required" xml:space="preserve"><value>Ülke zorunludur.</value></data>
+    <data name="Profile_City_Required" xml:space="preserve"><value>“Şehir” zorunludur.</value></data>
+    <data name="Profile_TimeZone_Required" xml:space="preserve"><value>Zaman dilimi seçimi zorunludur.</value></data>
+    <data name="Profile_Account_Deactivated" xml:space="preserve"><value>Hesap işlemi tamamlanamadı.</value></data>
+    <data name="Profile_Account_NotFound" xml:space="preserve"><value>Kayıt bulunamadı.</value></data>
+    <data name="Profile_Account_AlreadyExists" xml:space="preserve"><value>Bu değer kullanılamıyor.</value></data>
+    <data name="Profile_Account_UpdateFailed" xml:space="preserve"><value>İşlem tamamlanamadı. Lütfen tekrar deneyin.</value></data>
+    <data name="Profile_Account_DeletionNotAllowed" xml:space="preserve"><value>İşlem tamamlanamadı. Lütfen tekrar deneyin.</value></data>
+    <data name="Profile_Account_Deleted" xml:space="preserve"><value>Hesabınız silindi.</value></data>
+    <data name="Profile_Account_DeleteConfirm" xml:space="preserve"><value>Hesabınızı silmek istediğinize emin misiniz? Bu işlem geri alınamaz.</value></data>
+    <data name="Email_Verification_Required" xml:space="preserve"><value>E-posta doğrulaması gereklidir.</value></data>
+    <data name="Email_Verification_Failed" xml:space="preserve"><value>İşlem tamamlanamadı. Lütfen tekrar deneyin.</value></data>
+    <data name="Email_Verification_Expired" xml:space="preserve"><value>Bağlantı veya kodun süresi dolmuş.</value></data>
+    <data name="Email_Change_Required" xml:space="preserve"><value>Bu alan zorunludur.</value></data>
+    <data name="Email_Change_SameAsCurrent" xml:space="preserve"><value>E-posta işlemi tamamlanamadı.</value></data>
+    <data name="Email_Change_AlreadyExists" xml:space="preserve"><value>E-posta işlemi tamamlanamadı.</value></data>
+    <data name="Email_Change_Pending" xml:space="preserve"><value>Doğrulama gerekiyor.</value></data>
+    <data name="Email_Notification_OptInRequired" xml:space="preserve"><value>E-posta işlemi tamamlanamadı.</value></data>
+    <data name="Email_Notification_OptOutSuccess" xml:space="preserve"><value>E-posta işlemi tamamlanamadı.</value></data>
+    <data name="Email_Notification_OptOutAlready" xml:space="preserve"><value>E-posta işlemi tamamlanamadı.</value></data>
+    <data name="Email_Blocked" xml:space="preserve"><value>E-posta işlemi tamamlanamadı.</value></data>
+    <data name="Email_Send_Failed" xml:space="preserve"><value>İşlem tamamlanamadı. Lütfen tekrar deneyin.</value></data>
+    <data name="Email_Template_NotFound" xml:space="preserve"><value>Kayıt bulunamadı.</value></data>
+    <data name="Email_InvalidDomain" xml:space="preserve"><value>E-posta işlemi tamamlanamadı.</value></data>
+    <data name="Email_ContactSupport" xml:space="preserve"><value>İsteğinizi şu anda tamamlayamadık. Lütfen daha sonra tekrar deneyin.</value></data>
+    <data name="PasswordReset_Token_Required" xml:space="preserve"><value>“Password reset token” zorunludur.</value></data>
+    <data name="PasswordReset_Token_Invalid" xml:space="preserve"><value>Değer geçerli değil.</value></data>
+    <data name="PasswordReset_Expired" xml:space="preserve"><value>Bağlantı veya kodun süresi dolmuş.</value></data>
+    <data name="PasswordReset_TooManyRequests" xml:space="preserve"><value>İzin verilen sınır aşıldı.</value></data>
+    <data name="PasswordReset_Email_Required" xml:space="preserve"><value>Bu alan zorunludur.</value></data>
+    <data name="PasswordReset_Email_NotFound" xml:space="preserve"><value>E-posta işlemi tamamlanamadı.</value></data>
+    <data name="PasswordReset_OldPassword_Required" xml:space="preserve"><value>“Mevcut parola” zorunludur.</value></data>
+    <data name="PasswordReset_NewPassword_Required" xml:space="preserve"><value>Yeni parola zorunludur.</value></data>
+    <data name="PasswordReset_NewPassword_MinLength" xml:space="preserve"><value>Yeni parola en az {0} karakter olmalıdır.</value></data>
+    <data name="PasswordReset_NewPassword_MaxLength" xml:space="preserve"><value>Yeni parola {0} karakterden uzun olamaz.</value></data>
+    <data name="PasswordReset_NewPassword_TooWeak" xml:space="preserve"><value>Parola çok zayıf. En az bir büyük harf, bir küçük harf, bir rakam ve bir özel karakter içermelidir.</value></data>
+    <data name="PasswordReset_NewPassword_SameAsOld" xml:space="preserve"><value>İşlem tamamlanamadı. Lütfen tekrar deneyin.</value></data>
+    <data name="PasswordReset_Mismatch" xml:space="preserve"><value>Yeni parola ve onayı eşleşmiyor.</value></data>
+    <data name="SecurityCode_Required" xml:space="preserve"><value>“Security code” zorunludur.</value></data>
+    <data name="SecurityCode_Invalid" xml:space="preserve"><value>Değer geçerli değil.</value></data>
+    <data name="TwoFactor_Required" xml:space="preserve"><value>“Two-factor authentication code” zorunludur.</value></data>
+    <data name="TwoFactor_Invalid" xml:space="preserve"><value>Değer geçerli değil.</value></data>
+    <data name="TwoFactor_SetupRequired" xml:space="preserve"><value>Kod/jeton geçersiz veya süresi dolmuş.</value></data>
+    <data name="Security_AccountLocked" xml:space="preserve"><value>İzin verilen sınır aşıldı.</value></data>
+    <data name="Security_AccountSuspended" xml:space="preserve"><value>Hesap işlemi tamamlanamadı.</value></data>
+    <data name="Security_UnexpectedError" xml:space="preserve"><value>İsteğinizi şu anda tamamlayamadık. Lütfen daha sonra tekrar deneyin.</value></data>
+    <data name="Address_Required" xml:space="preserve"><value>“Address” zorunludur.</value></data>
+    <data name="Address_Line1_Required" xml:space="preserve"><value>Adres satırı 1 zorunludur.</value></data>
+    <data name="Address_Line2_Optional" xml:space="preserve"><value>Adres satırı 2 isteğe bağlıdır.</value></data>
+    <data name="Address_City_Required" xml:space="preserve"><value>“Şehir” zorunludur.</value></data>
+    <data name="Address_State_Required" xml:space="preserve"><value>“State or province” zorunludur.</value></data>
+    <data name="Address_PostalCode_Required" xml:space="preserve"><value>Posta kodu zorunludur.</value></data>
+    <data name="Address_PostalCode_Invalid" xml:space="preserve"><value>Posta kodu geçerli değil.</value></data>
+    <data name="Address_Country_Required" xml:space="preserve"><value>Ülke zorunludur.</value></data>
+    <data name="Address_Country_Invalid" xml:space="preserve"><value>Seçilen ülke geçerli değil.</value></data>
+    <data name="Address_NotFound" xml:space="preserve"><value>Adres bulunamadı.</value></data>
+    <data name="Address_AlreadyExists" xml:space="preserve"><value>Bu adres zaten mevcut.</value></data>
+    <data name="Address_Location_Invalid" xml:space="preserve"><value>Belirtilen konum geçersiz.</value></data>
+    <data name="Address_Coordinates_Required" xml:space="preserve"><value>Bu adres için koordinatlar gereklidir.</value></data>
+    <data name="Address_Coordinates_Invalid" xml:space="preserve"><value>Koordinatlar geçersiz.</value></data>
+    <data name="Address_UpdateFailed" xml:space="preserve"><value>Adres güncellenemedi. Lütfen tekrar deneyin.</value></data>
+    <data name="Address_DeleteFailed" xml:space="preserve"><value>Adres silinemedi. Lütfen tekrar deneyin.</value></data>
+    <data name="Address_Type_Required" xml:space="preserve"><value>Adres türü zorunludur.</value></data>
+    <data name="Common_Required" xml:space="preserve"><value>“This field” zorunludur.</value></data>
+    <data name="Common_Invalid" xml:space="preserve"><value>“The value provided” geçerli değil.</value></data>
+    <data name="Common_MinLength" xml:space="preserve"><value>This field en az {0} karakter olmalıdır.</value></data>
+    <data name="Common_MaxLength" xml:space="preserve"><value>This field {0} karakterden uzun olamaz.</value></data>
+    <data name="Common_Range" xml:space="preserve"><value>Değer {0} ile {1} arasında olmalıdır.</value></data>
+    <data name="Common_AlreadyExists" xml:space="preserve"><value>Bu değer kullanılamıyor.</value></data>
+    <data name="Common_NotFound" xml:space="preserve"><value>İsteğinizi şu anda tamamlayamadık. Lütfen daha sonra tekrar deneyin.</value></data>
+    <data name="Common_Format" xml:space="preserve"><value>“The format” geçerli değil.</value></data>
+    <data name="Common_UnexpectedError" xml:space="preserve"><value>İsteğinizi şu anda tamamlayamadık. Lütfen daha sonra tekrar deneyin.</value></data>
+    <data name="Common_OperationNotAllowed" xml:space="preserve"><value>İsteğinizi şu anda tamamlayamadık. Lütfen daha sonra tekrar deneyin.</value></data>
+    <data name="Common_OperationFailed" xml:space="preserve"><value>İşlem tamamlanamadı. Lütfen tekrar deneyin.</value></data>
+    <data name="Common_RequiredSelection" xml:space="preserve"><value>İsteğinizi şu anda tamamlayamadık. Lütfen daha sonra tekrar deneyin.</value></data>
+    <data name="Common_TooManyRequests" xml:space="preserve"><value>İzin verilen sınır aşıldı.</value></data>
+    <data name="Common_Forbidden" xml:space="preserve"><value>Bu işlemi gerçekleştirme izniniz yok.</value></data>
+    <data name="Common_Unauthorized" xml:space="preserve"><value>İsteğinizi şu anda tamamlayamadık. Lütfen daha sonra tekrar deneyin.</value></data>
+    <data name="Common_Timeout" xml:space="preserve"><value>İşlem zaman aşımına uğradı.</value></data>
+    <data name="Common_Empty" xml:space="preserve"><value>İşlem tamamlanamadı. Lütfen tekrar deneyin.</value></data>
+    <data name="Common_Null" xml:space="preserve"><value>İşlem tamamlanamadı. Lütfen tekrar deneyin.</value></data>
+    <data name="Common_InvalidSelection" xml:space="preserve"><value>“The selected value” geçerli değil.</value></data>
+    <data name="Common_RequiredConfirmation" xml:space="preserve"><value>Devam etmek için lütfen onaylayın.</value></data>
+    <data name="Agreement_PrivacyPolicy_Required" xml:space="preserve"><value>Devam etmek için onay gereklidir.</value></data>
+    <data name="Agreement_TermsOfService_Required" xml:space="preserve"><value>Devam etmek için onay gereklidir.</value></data>
+    <data name="Agreement_KVKK_Required" xml:space="preserve"><value>Devam etmek için onay gereklidir.</value></data>
+    <data name="Agreement_Consent_Required" xml:space="preserve"><value>Bu alan zorunludur.</value></data>
+    <data name="Agreement_AlreadyAccepted" xml:space="preserve"><value>İsteğinizi şu anda tamamlayamadık. Lütfen daha sonra tekrar deneyin.</value></data>
+    <data name="Agreement_Withdrawn" xml:space="preserve"><value>Devam etmek için onay gereklidir.</value></data>
+    <data name="Agreement_Invalid" xml:space="preserve"><value>“The agreement reference” geçerli değil.</value></data>
+    <data name="Agreement_NotFound" xml:space="preserve"><value>İsteğinizi şu anda tamamlayamadık. Lütfen daha sonra tekrar deneyin.</value></data>
+    <data name="Agreement_Signature_Required" xml:space="preserve"><value>Bu alan zorunludur.</value></data>
+    <data name="Agreement_ConsentTimestamp_Invalid" xml:space="preserve"><value>“The consent timestamp” geçerli değil.</value></data>
+    <data name="System_Maintenance" xml:space="preserve"><value>Sistem şu anda bakımda. Lütfen daha sonra tekrar deneyin.</value></data>
+    <data name="System_Unavailable" xml:space="preserve"><value>Hizmet geçici olarak kullanılamıyor. Lütfen daha sonra tekrar deneyin.</value></data>
+    <data name="System_RateLimitExceeded" xml:space="preserve"><value>İzin verilen sınır aşıldı.</value></data>
+    <data name="System_Timeout" xml:space="preserve"><value>İsteğiniz zaman aşımına uğradı. Lütfen tekrar deneyin.</value></data>
+    <data name="System_InternalError" xml:space="preserve"><value>İsteğinizi şu anda tamamlayamadık. Lütfen daha sonra tekrar deneyin.</value></data>
+    <data name="System_UnexpectedError" xml:space="preserve"><value>Beklenmeyen bir sistem hatası oluştu. Lütfen daha sonra tekrar deneyin.</value></data>
+    <data name="System_UnsupportedOperation" xml:space="preserve"><value>İsteğinizi şu anda tamamlayamadık. Lütfen daha sonra tekrar deneyin.</value></data>
+    <data name="System_ResourceNotFound" xml:space="preserve"><value>İstenen kaynak bulunamadı.</value></data>
+    <data name="System_ResourceLocked" xml:space="preserve"><value>İstenen kaynak şu anda kilitli. Lütfen daha sonra tekrar deneyin.</value></data>
+    <data name="System_QuotaExceeded" xml:space="preserve"><value>Bu işlem için kota sınırını aştınız.</value></data>
+    <data name="System_DependencyFailure" xml:space="preserve"><value>Gerekli bir sistem bağımlılığı başarısız oldu. Lütfen tekrar deneyin veya destekle iletişime geçin.</value></data>
+    <data name="System_ApiKeyMissing" xml:space="preserve"><value>API anahtarı eksik veya geçersiz.</value></data>
+    <data name="System_ApiKeyExpired" xml:space="preserve"><value>API anahtarınızın süresi dolmuş. Lütfen kimlik bilgilerinizi yenileyin.</value></data>
+    <data name="System_ApiAccessDenied" xml:space="preserve"><value>API erişimi reddedildi. Lütfen izinlerinizi kontrol edin.</value></data>
+    <data name="System_OperationCanceled" xml:space="preserve"><value>İşlem iptal edildi.</value></data>
+</root>

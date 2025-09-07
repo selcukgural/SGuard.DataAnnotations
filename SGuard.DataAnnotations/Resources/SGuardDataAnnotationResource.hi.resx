@@ -1,0 +1,165 @@
+<?xml version='1.0' encoding='utf-8'?>
+<root>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral,
+            PublicKeyToken=b77a5c561934e089
+        </value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral,
+            PublicKeyToken=b77a5c561934e089
+        </value>
+    </resheader>
+    <data name="Username_Required" xml:space="preserve"><value>उपयोगकर्ता नाम आवश्यक है।</value></data>
+    <data name="Username_MinLength" xml:space="preserve"><value>उपयोगकर्ता नाम कम से कम {0} अक्षरों का होना चाहिए।</value></data>
+    <data name="Username_MaxLength" xml:space="preserve"><value>उपयोगकर्ता नाम {0} अक्षरों से लंबा नहीं हो सकता।</value></data>
+    <data name="Username_InvalidCharacters" xml:space="preserve"><value>उपयोगकर्ता नाम में अमान्य अक्षर हैं।</value></data>
+    <data name="Username_AlreadyExists" xml:space="preserve"><value>क्रिया पूरी नहीं हो सकी। कृपया पुनः प्रयास करें।</value></data>
+    <data name="Username_NotFound" xml:space="preserve"><value>आपका अनुरोध पूरा नहीं हो सका।</value></data>
+    <data name="Password_Required" xml:space="preserve"><value>पासवर्ड आवश्यक है।</value></data>
+    <data name="Password_MinLength" xml:space="preserve"><value>पासवर्ड कम से कम {0} अक्षरों का होना चाहिए।</value></data>
+    <data name="Password_MaxLength" xml:space="preserve"><value>पासवर्ड {0} अक्षरों से लंबा नहीं हो सकता।</value></data>
+    <data name="Password_TooWeak" xml:space="preserve"><value>पासवर्ड बहुत कमजोर है। इसमें कम से कम एक बड़े अक्षर, एक छोटे अक्षर, एक अंक और एक विशेष अक्षर होना चाहिए।</value></data>
+    <data name="Password_InvalidCharacters" xml:space="preserve"><value>पासवर्ड में अमान्य अक्षर हैं।</value></data>
+    <data name="Password_Mismatch" xml:space="preserve"><value>पासवर्ड मेल नहीं खाते।</value></data>
+    <data name="Email_Required" xml:space="preserve"><value>ई‑मेल पता आवश्यक है।</value></data>
+    <data name="Email_InvalidFormat" xml:space="preserve"><value>ई‑मेल पते का स्वरूप मान्य नहीं है।</value></data>
+    <data name="Email_AlreadyExists" xml:space="preserve"><value>यह ई‑मेल उपयोग नहीं किया जा सकता। कोई दूसरा आज़माएँ या साइन‑इन करें।</value></data>
+    <data name="Login_InvalidCredentials" xml:space="preserve"><value>अमान्य उपयोगकर्ता नाम या पासवर्ड।</value></data>
+    <data name="Login_AccountLocked" xml:space="preserve"><value>अभी साइन‑इन नहीं किया जा सका। बाद में फिर प्रयास करें या सहायता से संपर्क करें।</value></data>
+    <data name="Login_AccountInactive" xml:space="preserve"><value>साइन‑इन नहीं हो सका। सेटअप पूरा करने के लिए ई‑मेल जाँचें।</value></data>
+    <data name="Login_TooManyAttempts" xml:space="preserve"><value>अभी साइन‑इन नहीं किया जा सका। बाद में फिर प्रयास करें।</value></data>
+    <data name="Terms_NotAccepted" xml:space="preserve"><value>जारी रखने के लिए सहमति आवश्यक है।</value></data>
+    <data name="Captcha_Invalid" xml:space="preserve"><value>कैप्चा सत्यापन असफल रहा।</value></data>
+    <data name="General_UnexpectedError" xml:space="preserve"><value>क्रिया पूरी नहीं हो सकी। कृपया पुनः प्रयास करें।</value></data>
+    <data name="Profile_DisplayName_Required" xml:space="preserve"><value>प्रदर्शित नाम आवश्यक है।</value></data>
+    <data name="Profile_DisplayName_MinLength" xml:space="preserve"><value>प्रदर्शित नाम कम से कम {0} अक्षरों का होना चाहिए।</value></data>
+    <data name="Profile_DisplayName_MaxLength" xml:space="preserve"><value>प्रदर्शित नाम {0} अक्षरों से लंबा नहीं हो सकता।</value></data>
+    <data name="Profile_Bio_MaxLength" xml:space="preserve"><value>परिचय {0} अक्षरों से लंबा नहीं हो सकता।</value></data>
+    <data name="Profile_ProfilePicture_Required" xml:space="preserve"><value>प्रोफ़ाइल तस्वीर आवश्यक है।</value></data>
+    <data name="Profile_ProfilePicture_InvalidFormat" xml:space="preserve"><value>प्रोफ़ाइल तस्वीर का फ़ाइल फ़ॉर्मेट अमान्य है। अनुमत फ़ॉर्मेट: JPG, PNG, GIF.</value></data>
+    <data name="Profile_ProfilePicture_TooLarge" xml:space="preserve"><value>प्रोफ़ाइल तस्वीर का आकार {0} MB से अधिक नहीं हो सकता।</value></data>
+    <data name="Profile_Phone_Required" xml:space="preserve"><value>फ़ोन नंबर आवश्यक है।</value></data>
+    <data name="Profile_Phone_Invalid" xml:space="preserve"><value>फ़ोन नंबर अमान्य है।</value></data>
+    <data name="Profile_Phone_AlreadyExists" xml:space="preserve"><value>क्रिया पूरी नहीं हो सकी। कृपया पुनः प्रयास करें।</value></data>
+    <data name="Profile_BirthDate_Required" xml:space="preserve"><value>जन्म तिथि आवश्यक है।</value></data>
+    <data name="Profile_BirthDate_Invalid" xml:space="preserve"><value>Date of birth अमान्य है।</value></data>
+    <data name="Profile_BirthDate_MinimumAge" xml:space="preserve"><value>आपकी आयु कम से कम {0} वर्ष होनी चाहिए।</value></data>
+    <data name="Profile_BirthDate_MaximumAge" xml:space="preserve"><value>आयु {0} वर्ष से अधिक नहीं हो सकती।</value></data>
+    <data name="Profile_Gender_Required" xml:space="preserve"><value>लिंग आवश्यक है।</value></data>
+    <data name="Profile_Address_Required" xml:space="preserve"><value>Address आवश्यक है।</value></data>
+    <data name="Profile_Country_Required" xml:space="preserve"><value>देश आवश्यक है।</value></data>
+    <data name="Profile_City_Required" xml:space="preserve"><value>शहर आवश्यक है।</value></data>
+    <data name="Profile_TimeZone_Required" xml:space="preserve"><value>समय क्षेत्र का चयन आवश्यक है।</value></data>
+    <data name="Profile_Account_Deactivated" xml:space="preserve"><value>खाते संबंधी क्रिया पूरी नहीं हो सकी।</value></data>
+    <data name="Profile_Account_NotFound" xml:space="preserve"><value>आपका अनुरोध पूरा नहीं हो सका।</value></data>
+    <data name="Profile_Account_AlreadyExists" xml:space="preserve"><value>आपका अनुरोध पूरा नहीं हो सका।</value></data>
+    <data name="Profile_Account_UpdateFailed" xml:space="preserve"><value>प्रोफ़ाइल अपडेट नहीं हो सका। कृपया पुनः प्रयास करें।</value></data>
+    <data name="Profile_Account_DeletionNotAllowed" xml:space="preserve"><value>यह खाता हटाया नहीं जा सकता।</value></data>
+    <data name="Profile_Account_Deleted" xml:space="preserve"><value>आपका खाता हटा दिया गया है।</value></data>
+    <data name="Profile_Account_DeleteConfirm" xml:space="preserve"><value>क्या आप वाकई अपना खाता हटाना चाहते हैं? यह क्रिया वापस नहीं ली जा सकती।</value></data>
+    <data name="Email_Verification_Required" xml:space="preserve"><value>ई‑मेल सत्यापन आवश्यक है।</value></data>
+    <data name="Email_Verification_Failed" xml:space="preserve"><value>यह लिंक अमान्य है या इसकी अवधि समाप्त हो गई है।</value></data>
+    <data name="Email_Verification_Expired" xml:space="preserve"><value>यह लिंक अमान्य है या इसकी अवधि समाप्त हो गई है।</value></data>
+    <data name="Email_Change_Required" xml:space="preserve"><value>यह फ़ील्ड आवश्यक है।</value></data>
+    <data name="Email_Change_SameAsCurrent" xml:space="preserve"><value>नया ई‑मेल पता आपके वर्तमान पते से अलग होना चाहिए।</value></data>
+    <data name="Email_Change_AlreadyExists" xml:space="preserve"><value>क्रिया पूरी नहीं हो सकी। कृपया पुनः प्रयास करें।</value></data>
+    <data name="Email_Change_Pending" xml:space="preserve"><value>पुष्टि आवश्यक है।</value></data>
+    <data name="Email_Notification_OptInRequired" xml:space="preserve"><value>ई‑मेल हेतु क्रिया पूरी नहीं हो सकी।</value></data>
+    <data name="Email_Notification_OptOutSuccess" xml:space="preserve"><value>ई‑मेल हेतु क्रिया पूरी नहीं हो सकी।</value></data>
+    <data name="Email_Notification_OptOutAlready" xml:space="preserve"><value>ई‑मेल हेतु क्रिया पूरी नहीं हो सकी।</value></data>
+    <data name="Email_Blocked" xml:space="preserve"><value>यह ई‑मेल उपयोग नहीं किया जा सकता। कृपया कोई दूसरा आज़माएँ।</value></data>
+    <data name="Email_Send_Failed" xml:space="preserve"><value>ई‑मेल हेतु क्रिया पूरी नहीं हो सकी।</value></data>
+    <data name="Email_Template_NotFound" xml:space="preserve"><value>ई‑मेल हेतु क्रिया पूरी नहीं हो सकी।</value></data>
+    <data name="Email_InvalidDomain" xml:space="preserve"><value>ई‑मेल हेतु क्रिया पूरी नहीं हो सकी।</value></data>
+    <data name="Email_ContactSupport" xml:space="preserve"><value>क्रिया पूरी नहीं हो सकी। कृपया पुनः प्रयास करें।</value></data>
+    <data name="PasswordReset_Token_Required" xml:space="preserve"><value>Password reset token आवश्यक है।</value></data>
+    <data name="PasswordReset_Token_Invalid" xml:space="preserve"><value>मान अमान्य है।</value></data>
+    <data name="PasswordReset_Expired" xml:space="preserve"><value>यह लिंक अमान्य है या इसकी अवधि समाप्त हो गई है।</value></data>
+    <data name="PasswordReset_TooManyRequests" xml:space="preserve"><value>हम अभी आपका अनुरोध पूरा नहीं कर सके। कृपया बाद में पुनः प्रयास करें।</value></data>
+    <data name="PasswordReset_Email_Required" xml:space="preserve"><value>यह फ़ील्ड आवश्यक है।</value></data>
+    <data name="PasswordReset_Email_NotFound" xml:space="preserve"><value>यदि इस ई‑मेल के लिए खाता मौजूद है, तो हम रीसेट निर्देश भेजेंगे।</value></data>
+    <data name="PasswordReset_OldPassword_Required" xml:space="preserve"><value>वर्तमान पासवर्ड आवश्यक है।</value></data>
+    <data name="PasswordReset_NewPassword_Required" xml:space="preserve"><value>नया पासवर्ड आवश्यक है।</value></data>
+    <data name="PasswordReset_NewPassword_MinLength" xml:space="preserve"><value>नया पासवर्ड कम से कम {0} अक्षरों का होना चाहिए।</value></data>
+    <data name="PasswordReset_NewPassword_MaxLength" xml:space="preserve"><value>नया पासवर्ड {0} अक्षरों से लंबा नहीं हो सकता।</value></data>
+    <data name="PasswordReset_NewPassword_TooWeak" xml:space="preserve"><value>नया पासवर्ड बहुत कमजोर है। इसमें कम से कम एक बड़े अक्षर, एक छोटे अक्षर, एक अंक और एक विशेष अक्षर होना चाहिए।</value></data>
+    <data name="PasswordReset_NewPassword_SameAsOld" xml:space="preserve"><value>क्रिया पूरी नहीं हो सकी। कृपया पुनः प्रयास करें।</value></data>
+    <data name="PasswordReset_Mismatch" xml:space="preserve"><value>नया पासवर्ड और पुष्टि मेल नहीं खाते।</value></data>
+    <data name="SecurityCode_Required" xml:space="preserve"><value>Security code आवश्यक है।</value></data>
+    <data name="SecurityCode_Invalid" xml:space="preserve"><value>सुरक्षा कोड अमान्य है या समाप्त हो गया है।</value></data>
+    <data name="TwoFactor_Required" xml:space="preserve"><value>Two-factor authentication code आवश्यक है।</value></data>
+    <data name="TwoFactor_Invalid" xml:space="preserve"><value>दो‑कारक प्रमाणीकरण कोड अमान्य है।</value></data>
+    <data name="TwoFactor_SetupRequired" xml:space="preserve"><value>कोड/टोकन अमान्य है या समाप्त हो गया है।</value></data>
+    <data name="Security_AccountLocked" xml:space="preserve"><value>हम अभी आपका अनुरोध पूरा नहीं कर सके। बाद में पुनः प्रयास करें या सहायता से संपर्क करें।</value></data>
+    <data name="Security_AccountSuspended" xml:space="preserve"><value>हम अभी आपका अनुरोध पूरा नहीं कर सके। बाद में पुनः प्रयास करें या सहायता से संपर्क करें।</value></data>
+    <data name="Security_UnexpectedError" xml:space="preserve"><value>अप्रत्याशित सुरक्षा त्रुटि हुई। कृपया पुनः प्रयास करें।</value></data>
+    <data name="Address_Required" xml:space="preserve"><value>Address आवश्यक है।</value></data>
+    <data name="Address_Line1_Required" xml:space="preserve"><value>पता पंक्ति 1 आवश्यक है।</value></data>
+    <data name="Address_Line2_Optional" xml:space="preserve"><value>पता पंक्ति 2 वैकल्पिक है।</value></data>
+    <data name="Address_City_Required" xml:space="preserve"><value>शहर आवश्यक है।</value></data>
+    <data name="Address_State_Required" xml:space="preserve"><value>State or province आवश्यक है।</value></data>
+    <data name="Address_PostalCode_Required" xml:space="preserve"><value>पिन कोड आवश्यक है।</value></data>
+    <data name="Address_PostalCode_Invalid" xml:space="preserve"><value>पिन कोड मान्य नहीं है।</value></data>
+    <data name="Address_Country_Required" xml:space="preserve"><value>देश आवश्यक है।</value></data>
+    <data name="Address_Country_Invalid" xml:space="preserve"><value>चयनित देश मान्य नहीं है।</value></data>
+    <data name="Address_NotFound" xml:space="preserve"><value>पता नहीं मिला।</value></data>
+    <data name="Address_AlreadyExists" xml:space="preserve"><value>यह पता पहले से मौजूद है।</value></data>
+    <data name="Address_Location_Invalid" xml:space="preserve"><value>दिया गया स्थान अमान्य है।</value></data>
+    <data name="Address_Coordinates_Required" xml:space="preserve"><value>इस पते के लिए निर्देशांक आवश्यक हैं।</value></data>
+    <data name="Address_Coordinates_Invalid" xml:space="preserve"><value>निर्देशांक अमान्य हैं।</value></data>
+    <data name="Address_UpdateFailed" xml:space="preserve"><value>पता अपडेट नहीं हो सका। कृपया पुनः प्रयास करें।</value></data>
+    <data name="Address_DeleteFailed" xml:space="preserve"><value>पता हटाया नहीं जा सका। कृपया पुनः प्रयास करें।</value></data>
+    <data name="Address_Type_Required" xml:space="preserve"><value>पते का प्रकार आवश्यक है।</value></data>
+    <data name="Common_Required" xml:space="preserve"><value>This field आवश्यक है।</value></data>
+    <data name="Common_Invalid" xml:space="preserve"><value>The value provided अमान्य है।</value></data>
+    <data name="Common_MinLength" xml:space="preserve"><value>This field कम से कम {0} अक्षरों का होना चाहिए।</value></data>
+    <data name="Common_MaxLength" xml:space="preserve"><value>This field {0} अक्षरों से लंबा नहीं हो सकता।</value></data>
+    <data name="Common_Range" xml:space="preserve"><value>मान {0} और {1} के बीच होना चाहिए।</value></data>
+    <data name="Common_AlreadyExists" xml:space="preserve"><value>यह मान उपलब्ध नहीं है।</value></data>
+    <data name="Common_NotFound" xml:space="preserve"><value>क्रिया पूरी नहीं हो सकी। कृपया पुनः प्रयास करें।</value></data>
+    <data name="Common_Format" xml:space="preserve"><value>The format अमान्य है।</value></data>
+    <data name="Common_UnexpectedError" xml:space="preserve"><value>क्रिया पूरी नहीं हो सकी। कृपया पुनः प्रयास करें।</value></data>
+    <data name="Common_OperationNotAllowed" xml:space="preserve"><value>यह क्रिया अनुमत नहीं है।</value></data>
+    <data name="Common_OperationFailed" xml:space="preserve"><value>क्रिया पूरी नहीं हो सकी। कृपया पुनः प्रयास करें।</value></data>
+    <data name="Common_RequiredSelection" xml:space="preserve"><value>क्रिया पूरी नहीं हो सकी। कृपया पुनः प्रयास करें।</value></data>
+    <data name="Common_TooManyRequests" xml:space="preserve"><value>हम अभी आपका अनुरोध पूरा नहीं कर सके। कृपया बाद में पुनः प्रयास करें।</value></data>
+    <data name="Common_Forbidden" xml:space="preserve"><value>आपके पास यह क्रिया करने की अनुमति नहीं है।</value></data>
+    <data name="Common_Unauthorized" xml:space="preserve"><value>क्रिया पूरी नहीं हो सकी। कृपया पुनः प्रयास करें।</value></data>
+    <data name="Common_Timeout" xml:space="preserve"><value>क्रिया की समय‑सीमा समाप्त हो गई। कृपया पुनः प्रयास करें।</value></data>
+    <data name="Common_Empty" xml:space="preserve"><value>यह फ़ील्ड खाली नहीं हो सकता।</value></data>
+    <data name="Common_Null" xml:space="preserve"><value>यह फ़ील्ड null नहीं हो सकता।</value></data>
+    <data name="Common_InvalidSelection" xml:space="preserve"><value>The selected value अमान्य है।</value></data>
+    <data name="Common_RequiredConfirmation" xml:space="preserve"><value>आगे बढ़ने के लिए कृपया पुष्टि करें।</value></data>
+    <data name="Agreement_PrivacyPolicy_Required" xml:space="preserve"><value>जारी रखने के लिए सहमति आवश्यक है।</value></data>
+    <data name="Agreement_TermsOfService_Required" xml:space="preserve"><value>जारी रखने के लिए सहमति आवश्यक है।</value></data>
+    <data name="Agreement_Required" xml:space="preserve"><value>जारी रखने के लिए सहमति आवश्यक है।</value></data>
+    <data name="Agreement_Consent_Required" xml:space="preserve"><value>यह फ़ील्ड आवश्यक है।</value></data>
+    <data name="Agreement_AlreadyAccepted" xml:space="preserve"><value>क्रिया पूरी नहीं हो सकी। कृपया पुनः प्रयास करें।</value></data>
+    <data name="Agreement_Withdrawn" xml:space="preserve"><value>जारी रखने के लिए सहमति आवश्यक है।</value></data>
+    <data name="Agreement_Invalid" xml:space="preserve"><value>The agreement reference अमान्य है।</value></data>
+    <data name="Agreement_NotFound" xml:space="preserve"><value>इस अनुबंध का कोई रिकॉर्ड नहीं मिला।</value></data>
+    <data name="Agreement_Signature_Required" xml:space="preserve"><value>यह फ़ील्ड आवश्यक है।</value></data>
+    <data name="Agreement_ConsentTimestamp_Invalid" xml:space="preserve"><value>The consent timestamp अमान्य है।</value></data>
+    <data name="System_Maintenance" xml:space="preserve"><value>सिस्टम वर्तमान में रखरखाव में है। बाद में पुनः प्रयास करें।</value></data>
+    <data name="System_Unavailable" xml:space="preserve"><value>सेवा अस्थायी रूप से उपलब्ध नहीं है। बाद में पुनः प्रयास करें।</value></data>
+    <data name="System_RateLimitExceeded" xml:space="preserve"><value>हम अभी आपका अनुरोध पूरा नहीं कर सके। कृपया बाद में पुनः प्रयास करें।</value></data>
+    <data name="System_Timeout" xml:space="preserve"><value>आपका अनुरोध समय सीमा से बाहर हो गया। कृपया पुनः प्रयास करें।</value></data>
+    <data name="System_InternalError" xml:space="preserve"><value>क्रिया पूरी नहीं हो सकी। कृपया पुनः प्रयास करें।</value></data>
+    <data name="System_UnexpectedError" xml:space="preserve"><value>क्रिया पूरी नहीं हो सकी। कृपया पुनः प्रयास करें।</value></data>
+    <data name="System_UnsupportedOperation" xml:space="preserve"><value>यह क्रिया वर्तमान सिस्टम कॉन्फ़िगरेशन द्वारा समर्थित नहीं है।</value></data>
+    <data name="System_ResourceNotFound" xml:space="preserve"><value>अनुरोधित संसाधन नहीं मिला।</value></data>
+    <data name="System_ResourceLocked" xml:space="preserve"><value>अनुरोधित संसाधन फिलहाल लॉक है। बाद में पुनः प्रयास करें।</value></data>
+    <data name="System_QuotaExceeded" xml:space="preserve"><value>हम अभी आपका अनुरोध पूरा नहीं कर सके। कृपया बाद में पुनः प्रयास करें।</value></data>
+    <data name="System_DependencyFailure" xml:space="preserve"><value>एक आवश्यक सिस्टम निर्भरता विफल हुई। कृपया पुनः प्रयास करें या सहायता से संपर्क करें।</value></data>
+    <data name="System_ApiKeyMissing" xml:space="preserve"><value>मान अमान्य है।</value></data>
+    <data name="System_ApiKeyExpired" xml:space="preserve"><value>मान अमान्य है।</value></data>
+    <data name="System_ApiAccessDenied" xml:space="preserve"><value>क्रिया पूरी नहीं हो सकी। कृपया पुनः प्रयास करें।</value></data>
+    <data name="System_OperationCanceled" xml:space="preserve"><value>क्रिया रद्द कर दी गई।</value></data>
+</root>
