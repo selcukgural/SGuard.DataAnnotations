@@ -35,18 +35,22 @@
       <EmbeddedResource Update="Resources\SGuardDataAnnotations.ja.resx">
         <Generator>ResXFileCodeGenerator</Generator>
         <LastGenOutput>SGuardDataAnnotationResource.ja.Designer.cs</LastGenOutput>
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </EmbeddedResource>
       <EmbeddedResource Update="Resources\SGuardDataAnnotations.de.resx">
         <Generator>ResXFileCodeGenerator</Generator>
         <LastGenOutput>SGuardDataAnnotationsResource.de.Designer.cs</LastGenOutput>
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </EmbeddedResource>
       <EmbeddedResource Update="Resources\SGuardDataAnnotations.fr.resx">
         <Generator>ResXFileCodeGenerator</Generator>
         <LastGenOutput>SGuardDataAnnotationsResource.fr.Designer.cs</LastGenOutput>
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </EmbeddedResource>
       <EmbeddedResource Update="Resources\SGuardDataAnnotations.hi.resx">
         <Generator>ResXFileCodeGenerator</Generator>
         <LastGenOutput>SGuardDataAnnotationResource.hi.Designer.cs</LastGenOutput>
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </EmbeddedResource>
     </ItemGroup>
 
