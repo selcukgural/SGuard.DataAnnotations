@@ -14,21 +14,21 @@ namespace SGuard.DataAnnotations.Resources {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
     [System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class SGuardDataAnnotationResource_ja {
+    internal class SGuardDataAnnotations_de {
         
         private static System.Resources.ResourceManager resourceMan;
         
         private static System.Globalization.CultureInfo resourceCulture;
         
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal SGuardDataAnnotationResource_ja() {
+        internal SGuardDataAnnotations_de() {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         internal static System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.Equals(null, resourceMan)) {
-                    System.Resources.ResourceManager temp = new System.Resources.ResourceManager("SGuard.DataAnnotations.Resources.SGuardDataAnnotationResource_ja", typeof(SGuardDataAnnotationResource_ja).Assembly);
+                    System.Resources.ResourceManager temp = new System.Resources.ResourceManager("SGuard.DataAnnotations.Resources.SGuardDataAnnotations_de", typeof(SGuardDataAnnotations_de).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -783,9 +783,9 @@ namespace SGuard.DataAnnotations.Resources {
             }
         }
         
-        internal static string Agreement_KVKK_Required {
+        internal static string Agreement_Required {
             get {
-                return ResourceManager.GetString("Agreement_KVKK_Required", resourceCulture);
+                return ResourceManager.GetString("Agreement_Required", resourceCulture);
             }
         }
         
@@ -918,6 +918,174 @@ namespace SGuard.DataAnnotations.Resources {
         internal static string System_OperationCanceled {
             get {
                 return ResourceManager.GetString("System_OperationCanceled", resourceCulture);
+            }
+        }
+        
+        internal static string Privacy_Consent_Required {
+            get {
+                return ResourceManager.GetString("Privacy_Consent_Required", resourceCulture);
+            }
+        }
+        
+        internal static string Privacy_Consent_Updated {
+            get {
+                return ResourceManager.GetString("Privacy_Consent_Updated", resourceCulture);
+            }
+        }
+        
+        internal static string Privacy_DataExport_Requested {
+            get {
+                return ResourceManager.GetString("Privacy_DataExport_Requested", resourceCulture);
+            }
+        }
+        
+        internal static string Privacy_DataDeletion_Requested {
+            get {
+                return ResourceManager.GetString("Privacy_DataDeletion_Requested", resourceCulture);
+            }
+        }
+        
+        internal static string Common_Between {
+            get {
+                return ResourceManager.GetString("Common_Between", resourceCulture);
+            }
+        }
+        
+        internal static string Common_BetweenExclusive {
+            get {
+                return ResourceManager.GetString("Common_BetweenExclusive", resourceCulture);
+            }
+        }
+        
+        internal static string Common_Compare_Equal {
+            get {
+                return ResourceManager.GetString("Common_Compare_Equal", resourceCulture);
+            }
+        }
+        
+        internal static string Common_Compare_NotEqual {
+            get {
+                return ResourceManager.GetString("Common_Compare_NotEqual", resourceCulture);
+            }
+        }
+        
+        internal static string Common_Compare_GreaterThan {
+            get {
+                return ResourceManager.GetString("Common_Compare_GreaterThan", resourceCulture);
+            }
+        }
+        
+        internal static string Common_Compare_GreaterThanOrEqual {
+            get {
+                return ResourceManager.GetString("Common_Compare_GreaterThanOrEqual", resourceCulture);
+            }
+        }
+        
+        internal static string Common_Compare_LessThan {
+            get {
+                return ResourceManager.GetString("Common_Compare_LessThan", resourceCulture);
+            }
+        }
+        
+        internal static string Common_Compare_LessThanOrEqual {
+            get {
+                return ResourceManager.GetString("Common_Compare_LessThanOrEqual", resourceCulture);
+            }
+        }
+        
+        internal static string Common_CreditCard_Invalid {
+            get {
+                return ResourceManager.GetString("Common_CreditCard_Invalid", resourceCulture);
+            }
+        }
+        
+        internal static string Common_GreaterThan {
+            get {
+                return ResourceManager.GetString("Common_GreaterThan", resourceCulture);
+            }
+        }
+        
+        internal static string Common_LessThan {
+            get {
+                return ResourceManager.GetString("Common_LessThan", resourceCulture);
+            }
+        }
+        
+        internal static string Common_MaxCount {
+            get {
+                return ResourceManager.GetString("Common_MaxCount", resourceCulture);
+            }
+        }
+        
+        internal static string Common_MinCount {
+            get {
+                return ResourceManager.GetString("Common_MinCount", resourceCulture);
+            }
+        }
+        
+        internal static string Common_Collection_Required {
+            get {
+                return ResourceManager.GetString("Common_Collection_Required", resourceCulture);
+            }
+        }
+        
+        internal static string Common_Collection_NotEmpty {
+            get {
+                return ResourceManager.GetString("Common_Collection_NotEmpty", resourceCulture);
+            }
+        }
+        
+        internal static string Common_Collection_MinCount {
+            get {
+                return ResourceManager.GetString("Common_Collection_MinCount", resourceCulture);
+            }
+        }
+        
+        internal static string Common_Collection_MaxCount {
+            get {
+                return ResourceManager.GetString("Common_Collection_MaxCount", resourceCulture);
+            }
+        }
+        
+        internal static string Common_RequiredIf {
+            get {
+                return ResourceManager.GetString("Common_RequiredIf", resourceCulture);
+            }
+        }
+        
+        internal static string Common_RequiredIfNot {
+            get {
+                return ResourceManager.GetString("Common_RequiredIfNot", resourceCulture);
+            }
+        }
+        
+        internal static string Common_RequiredIfAny {
+            get {
+                return ResourceManager.GetString("Common_RequiredIfAny", resourceCulture);
+            }
+        }
+        
+        internal static string Common_RequiredIfAll {
+            get {
+                return ResourceManager.GetString("Common_RequiredIfAll", resourceCulture);
+            }
+        }
+        
+        internal static string Common_RequiredIfEmpty {
+            get {
+                return ResourceManager.GetString("Common_RequiredIfEmpty", resourceCulture);
+            }
+        }
+        
+        internal static string Common_RequiredIfNotEmpty {
+            get {
+                return ResourceManager.GetString("Common_RequiredIfNotEmpty", resourceCulture);
+            }
+        }
+        
+        internal static string Common_Url_Invalid {
+            get {
+                return ResourceManager.GetString("Common_Url_Invalid", resourceCulture);
             }
         }
     }

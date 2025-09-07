@@ -33,7 +33,7 @@ public static class DataAnnotationsExceptionExtensions
 
         foreach (DictionaryEntry entry in exception.Data)
         {
-            if (entry.Key is not DataAnnotationsException.DataKey || entry.Value is not List<ValidationError> errorsList)
+            if (entry.Key is not string key || key != DataAnnotationsException.DataKey || entry.Value is not List<ValidationError> errorsList)
             {
                 continue;
             }

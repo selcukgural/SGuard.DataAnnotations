@@ -1,0 +1,539 @@
+<?xml version='1.0' encoding='utf-8'?>
+<root>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+        </value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+        </value>
+    </resheader>
+    <data name="Username_Required" xml:space="preserve">
+        <value>Требуется указать имя пользователя.</value>
+    </data>
+    <data name="Username_MinLength" xml:space="preserve">
+        <value>Имя пользователя должно содержать не менее {0} символов.</value>
+    </data>
+    <data name="Username_MaxLength" xml:space="preserve">
+        <value>Имя пользователя не может быть длиннее {0} символов.</value>
+    </data>
+    <data name="Username_InvalidCharacters" xml:space="preserve">
+        <value>Имя пользователя содержит недопустимые символы.</value>
+    </data>
+    <data name="Username_AlreadyExists" xml:space="preserve">
+        <value>Это имя пользователя недоступно. Укажите другое.</value>
+    </data>
+    <data name="Username_NotFound" xml:space="preserve">
+        <value>Запись не найдена.</value>
+    </data>
+    <data name="Password_Required" xml:space="preserve">
+        <value>Требуется указать пароль.</value>
+    </data>
+    <data name="Password_MinLength" xml:space="preserve">
+        <value>Пароль должен содержать не менее {0} символов.</value>
+    </data>
+    <data name="Password_MaxLength" xml:space="preserve">
+        <value>Пароль не может быть длиннее {0} символов.</value>
+    </data>
+    <data name="Password_TooWeak" xml:space="preserve">
+        <value>Пароль слишком простой. Он должен содержать хотя бы одну заглавную букву, одну строчную букву, одну цифру и один специальный символ.</value>
+    </data>
+    <data name="Password_InvalidCharacters" xml:space="preserve">
+        <value>Пароль содержит недопустимые символы.</value>
+    </data>
+    <data name="Password_Mismatch" xml:space="preserve">
+        <value>Операция с паролем не выполнена.</value>
+    </data>
+    <data name="Email_Required" xml:space="preserve">
+        <value>Адрес электронной почты обязателен.</value>
+    </data>
+    <data name="Email_InvalidFormat" xml:space="preserve">
+        <value>Адрес электронной почты имеет неверный формат.</value>
+    </data>
+    <data name="Email_AlreadyExists" xml:space="preserve">
+        <value>Значение недоступно.</value>
+    </data>
+    <data name="Login_InvalidCredentials" xml:space="preserve">
+        <value>Неверное имя пользователя или пароль.</value>
+    </data>
+    <data name="Login_AccountLocked" xml:space="preserve">
+        <value>Операция с аккаунтом не выполнена.</value>
+    </data>
+    <data name="Login_AccountInactive" xml:space="preserve">
+        <value>Требуется подтверждение.</value>
+    </data>
+    <data name="Login_TooManyAttempts" xml:space="preserve">
+        <value>Превышен допустимый предел.</value>
+    </data>
+    <data name="Terms_NotAccepted" xml:space="preserve">
+        <value>Для продолжения требуется согласие.</value>
+    </data>
+    <data name="Captcha_Invalid" xml:space="preserve">
+        <value>Не удалось выполнить операцию. Повторите попытку.</value>
+    </data>
+    <data name="General_UnexpectedError" xml:space="preserve">
+        <value>Не удалось выполнить запрос. Повторите попытку позже.</value>
+    </data>
+    <data name="Profile_DisplayName_Required" xml:space="preserve">
+        <value>Требуется указать отображаемое имя.</value>
+    </data>
+    <data name="Profile_DisplayName_MinLength" xml:space="preserve">
+        <value>«Отображаемое имя» должно содержать не менее {0} символов.</value>
+    </data>
+    <data name="Profile_DisplayName_MaxLength" xml:space="preserve">
+        <value>«Отображаемое имя» не может быть длиннее {0} символов.</value>
+    </data>
+    <data name="Profile_Bio_MaxLength" xml:space="preserve">
+        <value>«Биография» не может быть длиннее {0} символов.</value>
+    </data>
+    <data name="Profile_ProfilePicture_Required" xml:space="preserve">
+        <value>Требуется фотография профиля.</value>
+    </data>
+    <data name="Profile_ProfilePicture_InvalidFormat" xml:space="preserve">
+        <value>Недопустимый формат файла фотографии профиля. Разрешённые форматы: JPG, PNG, GIF.</value>
+    </data>
+    <data name="Profile_ProfilePicture_TooLarge" xml:space="preserve">
+        <value>Размер фотографии профиля не может превышать {0} МБ.</value>
+    </data>
+    <data name="Profile_Phone_Required" xml:space="preserve">
+        <value>Поле «Номер телефона» обязательно.</value>
+    </data>
+    <data name="Profile_Phone_Invalid" xml:space="preserve">
+        <value>Поле «Номер телефона» указано некорректно.</value>
+    </data>
+    <data name="Profile_Phone_AlreadyExists" xml:space="preserve">
+        <value>Значение недоступно.</value>
+    </data>
+    <data name="Profile_BirthDate_Required" xml:space="preserve">
+        <value>Требуется указать дату рождения.</value>
+    </data>
+    <data name="Profile_BirthDate_Invalid" xml:space="preserve">
+        <value>Поле «Date of birth» указано некорректно.</value>
+    </data>
+    <data name="Profile_BirthDate_MinimumAge" xml:space="preserve">
+        <value>Вам должно быть не менее {0} лет.</value>
+    </data>
+    <data name="Profile_BirthDate_MaximumAge" xml:space="preserve">
+        <value>Возраст не может превышать {0} лет.</value>
+    </data>
+    <data name="Profile_Gender_Required" xml:space="preserve">
+        <value>Требуется указать пол.</value>
+    </data>
+    <data name="Profile_Address_Required" xml:space="preserve">
+        <value>Поле «Address» обязательно.</value>
+    </data>
+    <data name="Profile_Country_Required" xml:space="preserve">
+        <value>Страна обязательна.</value>
+    </data>
+    <data name="Profile_City_Required" xml:space="preserve">
+        <value>Поле «Город» обязательно.</value>
+    </data>
+    <data name="Profile_TimeZone_Required" xml:space="preserve">
+        <value>Требуется выбрать часовой пояс.</value>
+    </data>
+    <data name="Profile_Account_Deactivated" xml:space="preserve">
+        <value>Операция с аккаунтом не выполнена.</value>
+    </data>
+    <data name="Profile_Account_NotFound" xml:space="preserve">
+        <value>Запись не найдена.</value>
+    </data>
+    <data name="Profile_Account_AlreadyExists" xml:space="preserve">
+        <value>Значение недоступно.</value>
+    </data>
+    <data name="Profile_Account_UpdateFailed" xml:space="preserve">
+        <value>Не удалось выполнить операцию. Повторите попытку.</value>
+    </data>
+    <data name="Profile_Account_DeletionNotAllowed" xml:space="preserve">
+        <value>Не удалось выполнить операцию. Повторите попытку.</value>
+    </data>
+    <data name="Profile_Account_Deleted" xml:space="preserve">
+        <value>Ваш аккаунт удалён.</value>
+    </data>
+    <data name="Profile_Account_DeleteConfirm" xml:space="preserve">
+        <value>Вы уверены, что хотите удалить аккаунт? Это действие необратимо.</value>
+    </data>
+    <data name="Email_Verification_Required" xml:space="preserve">
+        <value>Требуется подтверждение email.</value>
+    </data>
+    <data name="Email_Verification_Failed" xml:space="preserve">
+        <value>Не удалось выполнить операцию. Повторите попытку.</value>
+    </data>
+    <data name="Email_Verification_Expired" xml:space="preserve">
+        <value>Ссылка или код просрочены.</value>
+    </data>
+    <data name="Email_Change_Required" xml:space="preserve">
+        <value>Поле обязательно.</value>
+    </data>
+    <data name="Email_Change_SameAsCurrent" xml:space="preserve">
+        <value>Операция с электронной почтой не выполнена.</value>
+    </data>
+    <data name="Email_Change_AlreadyExists" xml:space="preserve">
+        <value>Операция с электронной почтой не выполнена.</value>
+    </data>
+    <data name="Email_Change_Pending" xml:space="preserve">
+        <value>Требуется подтверждение.</value>
+    </data>
+    <data name="Email_Notification_OptInRequired" xml:space="preserve">
+        <value>Операция с электронной почтой не выполнена.</value>
+    </data>
+    <data name="Email_Notification_OptOutSuccess" xml:space="preserve">
+        <value>Операция с электронной почтой не выполнена.</value>
+    </data>
+    <data name="Email_Notification_OptOutAlready" xml:space="preserve">
+        <value>Операция с электронной почтой не выполнена.</value>
+    </data>
+    <data name="Email_Blocked" xml:space="preserve">
+        <value>Операция с электронной почтой не выполнена.</value>
+    </data>
+    <data name="Email_Send_Failed" xml:space="preserve">
+        <value>Не удалось выполнить операцию. Повторите попытку.</value>
+    </data>
+    <data name="Email_Template_NotFound" xml:space="preserve">
+        <value>Запись не найдена.</value>
+    </data>
+    <data name="Email_InvalidDomain" xml:space="preserve">
+        <value>Операция с электронной почтой не выполнена.</value>
+    </data>
+    <data name="Email_ContactSupport" xml:space="preserve">
+        <value>Не удалось выполнить запрос. Повторите попытку позже.</value>
+    </data>
+    <data name="PasswordReset_Token_Required" xml:space="preserve">
+        <value>Поле «Password reset token» обязательно.</value>
+    </data>
+    <data name="PasswordReset_Token_Invalid" xml:space="preserve">
+        <value>Недопустимое значение.</value>
+    </data>
+    <data name="PasswordReset_Expired" xml:space="preserve">
+        <value>Ссылка или код просрочены.</value>
+    </data>
+    <data name="PasswordReset_TooManyRequests" xml:space="preserve">
+        <value>Превышен допустимый предел.</value>
+    </data>
+    <data name="PasswordReset_Email_Required" xml:space="preserve">
+        <value>Поле обязательно.</value>
+    </data>
+    <data name="PasswordReset_Email_NotFound" xml:space="preserve">
+        <value>Операция с электронной почтой не выполнена.</value>
+    </data>
+    <data name="PasswordReset_OldPassword_Required" xml:space="preserve">
+        <value>Поле «Текущий пароль» обязательно.</value>
+    </data>
+    <data name="PasswordReset_NewPassword_Required" xml:space="preserve">
+        <value>Требуется указать новый пароль.</value>
+    </data>
+    <data name="PasswordReset_NewPassword_MinLength" xml:space="preserve">
+        <value>Новый пароль должен содержать не менее {0} символов.</value>
+    </data>
+    <data name="PasswordReset_NewPassword_MaxLength" xml:space="preserve">
+        <value>Новый пароль не может быть длиннее {0} символов.</value>
+    </data>
+    <data name="PasswordReset_NewPassword_TooWeak" xml:space="preserve">
+        <value>Пароль слишком простой. Он должен содержать хотя бы одну заглавную букву, одну строчную букву, одну цифру и один специальный символ.</value>
+    </data>
+    <data name="PasswordReset_NewPassword_SameAsOld" xml:space="preserve">
+        <value>Не удалось выполнить операцию. Повторите попытку.</value>
+    </data>
+    <data name="PasswordReset_Mismatch" xml:space="preserve">
+        <value>Новый пароль и подтверждение не совпадают.</value>
+    </data>
+    <data name="SecurityCode_Required" xml:space="preserve">
+        <value>Поле «Security code» обязательно.</value>
+    </data>
+    <data name="SecurityCode_Invalid" xml:space="preserve">
+        <value>Недопустимое значение.</value>
+    </data>
+    <data name="TwoFactor_Required" xml:space="preserve">
+        <value>Поле «Two-factor authentication code» обязательно.</value>
+    </data>
+    <data name="TwoFactor_Invalid" xml:space="preserve">
+        <value>Недопустимое значение.</value>
+    </data>
+    <data name="TwoFactor_SetupRequired" xml:space="preserve">
+        <value>Код/токен недействителен или истёк.</value>
+    </data>
+    <data name="Security_AccountLocked" xml:space="preserve">
+        <value>Превышен допустимый предел.</value>
+    </data>
+    <data name="Security_AccountSuspended" xml:space="preserve">
+        <value>Операция с аккаунтом не выполнена.</value>
+    </data>
+    <data name="Security_UnexpectedError" xml:space="preserve">
+        <value>Не удалось выполнить запрос. Повторите попытку позже.</value>
+    </data>
+    <data name="Address_Required" xml:space="preserve">
+        <value>Поле «Address» обязательно.</value>
+    </data>
+    <data name="Address_Line1_Required" xml:space="preserve">
+        <value>Строка адреса 1 обязательна.</value>
+    </data>
+    <data name="Address_Line2_Optional" xml:space="preserve">
+        <value>Строка адреса 2 необязательна.</value>
+    </data>
+    <data name="Address_City_Required" xml:space="preserve">
+        <value>Поле «Город» обязательно.</value>
+    </data>
+    <data name="Address_State_Required" xml:space="preserve">
+        <value>Поле «State or province» обязательно.</value>
+    </data>
+    <data name="Address_PostalCode_Required" xml:space="preserve">
+        <value>Почтовый индекс обязателен.</value>
+    </data>
+    <data name="Address_PostalCode_Invalid" xml:space="preserve">
+        <value>Почтовый индекс имеет неверный формат.</value>
+    </data>
+    <data name="Address_Country_Required" xml:space="preserve">
+        <value>Страна обязательна.</value>
+    </data>
+    <data name="Address_Country_Invalid" xml:space="preserve">
+        <value>Выбрана недопустимая страна.</value>
+    </data>
+    <data name="Address_NotFound" xml:space="preserve">
+        <value>Адрес не найден.</value>
+    </data>
+    <data name="Address_AlreadyExists" xml:space="preserve">
+        <value>Такой адрес уже существует.</value>
+    </data>
+    <data name="Address_Location_Invalid" xml:space="preserve">
+        <value>Указано недопустимое местоположение.</value>
+    </data>
+    <data name="Address_Coordinates_Required" xml:space="preserve">
+        <value>Для этого адреса требуются координаты.</value>
+    </data>
+    <data name="Address_Coordinates_Invalid" xml:space="preserve">
+        <value>Неверные координаты.</value>
+    </data>
+    <data name="Address_UpdateFailed" xml:space="preserve">
+        <value>Не удалось обновить адрес. Повторите попытку.</value>
+    </data>
+    <data name="Address_DeleteFailed" xml:space="preserve">
+        <value>Не удалось удалить адрес. Повторите попытку.</value>
+    </data>
+    <data name="Address_Type_Required" xml:space="preserve">
+        <value>Требуется указать тип адреса.</value>
+    </data>
+    <data name="Common_Required" xml:space="preserve">
+        <value>Поле «This field» обязательно.</value>
+    </data>
+    <data name="Common_Invalid" xml:space="preserve">
+        <value>Поле «The value provided» указано некорректно.</value>
+    </data>
+    <data name="Common_MinLength" xml:space="preserve">
+        <value>This field должно содержать не менее {0} символов.</value>
+    </data>
+    <data name="Common_MaxLength" xml:space="preserve">
+        <value>This field не может быть длиннее {0} символов.</value>
+    </data>
+    <data name="Common_Range" xml:space="preserve">
+        <value>Значение должно быть между {0} и {1}.</value>
+    </data>
+    <data name="Common_AlreadyExists" xml:space="preserve">
+        <value>Значение недоступно.</value>
+    </data>
+    <data name="Common_NotFound" xml:space="preserve">
+        <value>Не удалось выполнить запрос. Повторите попытку позже.</value>
+    </data>
+    <data name="Common_Format" xml:space="preserve">
+        <value>Поле «The format» указано некорректно.</value>
+    </data>
+    <data name="Common_UnexpectedError" xml:space="preserve">
+        <value>Не удалось выполнить запрос. Повторите попытку позже.</value>
+    </data>
+    <data name="Common_OperationNotAllowed" xml:space="preserve">
+        <value>Не удалось выполнить запрос. Повторите попытку позже.</value>
+    </data>
+    <data name="Common_OperationFailed" xml:space="preserve">
+        <value>Не удалось выполнить операцию. Повторите попытку.</value>
+    </data>
+    <data name="Common_RequiredSelection" xml:space="preserve">
+        <value>Не удалось выполнить запрос. Повторите попытку позже.</value>
+    </data>
+    <data name="Common_TooManyRequests" xml:space="preserve">
+        <value>Превышен допустимый предел.</value>
+    </data>
+    <data name="Common_Forbidden" xml:space="preserve">
+        <value>У вас нет прав для выполнения этого действия.</value>
+    </data>
+    <data name="Common_Unauthorized" xml:space="preserve">
+        <value>Не удалось выполнить запрос. Повторите попытку позже.</value>
+    </data>
+    <data name="Common_Timeout" xml:space="preserve">
+        <value>Превышено время ожидания.</value>
+    </data>
+    <data name="Common_Empty" xml:space="preserve">
+        <value>Не удалось выполнить операцию. Повторите попытку.</value>
+    </data>
+    <data name="Common_Null" xml:space="preserve">
+        <value>Не удалось выполнить операцию. Повторите попытку.</value>
+    </data>
+    <data name="Common_InvalidSelection" xml:space="preserve">
+        <value>Поле «The selected value» указано некорректно.</value>
+    </data>
+    <data name="Common_RequiredConfirmation" xml:space="preserve">
+        <value>Подтвердите, чтобы продолжить.</value>
+    </data>
+    <data name="Agreement_PrivacyPolicy_Required" xml:space="preserve">
+        <value>Для продолжения требуется согласие.</value>
+    </data>
+    <data name="Agreement_TermsOfService_Required" xml:space="preserve">
+        <value>Для продолжения требуется согласие.</value>
+    </data>
+    <data name="Agreement_Required" xml:space="preserve">
+        <value>Для продолжения требуется согласие.</value>
+    </data>
+    <data name="Agreement_Consent_Required" xml:space="preserve">
+        <value>Поле обязательно.</value>
+    </data>
+    <data name="Agreement_AlreadyAccepted" xml:space="preserve">
+        <value>Не удалось выполнить запрос. Повторите попытку позже.</value>
+    </data>
+    <data name="Agreement_Withdrawn" xml:space="preserve">
+        <value>Для продолжения требуется согласие.</value>
+    </data>
+    <data name="Agreement_Invalid" xml:space="preserve">
+        <value>Поле «The agreement reference» указано некорректно.</value>
+    </data>
+    <data name="Agreement_NotFound" xml:space="preserve">
+        <value>Не удалось выполнить запрос. Повторите попытку позже.</value>
+    </data>
+    <data name="Agreement_Signature_Required" xml:space="preserve">
+        <value>Поле обязательно.</value>
+    </data>
+    <data name="Agreement_ConsentTimestamp_Invalid" xml:space="preserve">
+        <value>Поле «The consent timestamp» указано некорректно.</value>
+    </data>
+    <data name="System_Maintenance" xml:space="preserve">
+        <value>Система находится на обслуживании. Повторите попытку позже.</value>
+    </data>
+    <data name="System_Unavailable" xml:space="preserve">
+        <value>Сервис временно недоступен. Повторите попытку позже.</value>
+    </data>
+    <data name="System_RateLimitExceeded" xml:space="preserve">
+        <value>Превышен допустимый предел.</value>
+    </data>
+    <data name="System_Timeout" xml:space="preserve">
+        <value>Время ожидания истекло. Повторите попытку.</value>
+    </data>
+    <data name="System_InternalError" xml:space="preserve">
+        <value>Не удалось выполнить запрос. Повторите попытку позже.</value>
+    </data>
+    <data name="System_UnexpectedError" xml:space="preserve">
+        <value>Произошла непредвиденная ошибка системы. Повторите попытку позже.</value>
+    </data>
+    <data name="System_UnsupportedOperation" xml:space="preserve">
+        <value>Не удалось выполнить запрос. Повторите попытку позже.</value>
+    </data>
+    <data name="System_ResourceNotFound" xml:space="preserve">
+        <value>Запрашиваемый ресурс не найден.</value>
+    </data>
+    <data name="System_ResourceLocked" xml:space="preserve">
+        <value>Запрашиваемый ресурс сейчас заблокирован. Повторите попытку позже.</value>
+    </data>
+    <data name="System_QuotaExceeded" xml:space="preserve">
+        <value>Превышена квота для этой операции.</value>
+    </data>
+    <data name="System_DependencyFailure" xml:space="preserve">
+        <value>Сбой обязательной системной зависимости. Повторите попытку или обратитесь в поддержку.</value>
+    </data>
+    <data name="System_ApiKeyMissing" xml:space="preserve">
+        <value>Отсутствует или недействительный API‑ключ.</value>
+    </data>
+    <data name="System_ApiKeyExpired" xml:space="preserve">
+        <value>Срок действия вашего API‑ключа истёк. Обновите учетные данные.</value>
+    </data>
+    <data name="System_ApiAccessDenied" xml:space="preserve">
+        <value>Доступ к API запрещён. Проверьте свои права доступа.</value>
+    </data>
+    <data name="System_OperationCanceled" xml:space="preserve">
+        <value>Операция была отменена.</value>
+    </data>
+    <data name="Privacy_Consent_Required" xml:space="preserve">
+        <value>Для продолжения требуется ваше согласие.</value>
+    </data>
+    <data name="Privacy_Consent_Updated" xml:space="preserve">
+        <value>Ваши настройки конфиденциальности были обновлены.</value>
+    </data>
+    <data name="Privacy_DataExport_Requested" xml:space="preserve">
+        <value>Ваш запрос на экспорт данных получен.</value>
+    </data>
+    <data name="Privacy_DataDeletion_Requested" xml:space="preserve">
+        <value>Ваш запрос на удаление данных получен.</value>
+    </data>
+    <data name="Common_Between" xml:space="preserve">
+        <value>Значение должно быть между {0} и {1}.</value>
+    </data>
+    <data name="Common_BetweenExclusive" xml:space="preserve">
+        <value>Значение должно быть больше {0} и меньше {1}.</value>
+    </data>
+    <data name="Common_Compare_Equal" xml:space="preserve">
+        <value>{0} должно быть равно {1}.</value>
+    </data>
+    <data name="Common_Compare_NotEqual" xml:space="preserve">
+        <value>{0} не должно быть равно {1}.</value>
+    </data>
+    <data name="Common_Compare_GreaterThan" xml:space="preserve">
+        <value>{0} должно быть больше {1}.</value>
+    </data>
+    <data name="Common_Compare_GreaterThanOrEqual" xml:space="preserve">
+        <value>{0} должно быть больше или равно {1}.</value>
+    </data>
+    <data name="Common_Compare_LessThan" xml:space="preserve">
+        <value>{0} должно быть меньше {1}.</value>
+    </data>
+    <data name="Common_Compare_LessThanOrEqual" xml:space="preserve">
+        <value>{0} должно быть меньше или равно {1}.</value>
+    </data>
+    <data name="Common_CreditCard_Invalid" xml:space="preserve">
+        <value>Номер кредитной карты недействителен.</value>
+    </data>
+    <data name="Common_GreaterThan" xml:space="preserve">
+        <value>{0} должно быть больше {1}.</value>
+    </data>
+    <data name="Common_LessThan" xml:space="preserve">
+        <value>{0} должно быть меньше {1}.</value>
+    </data>
+    <data name="Common_MaxCount" xml:space="preserve">
+        <value>{0} не может содержать более {1} элементов.</value>
+    </data>
+    <data name="Common_MinCount" xml:space="preserve">
+        <value>{0} должно содержать не менее {1} элементов.</value>
+    </data>
+    <data name="Common_Collection_Required" xml:space="preserve">
+        <value>{0} обязательно.</value>
+    </data>
+    <data name="Common_Collection_NotEmpty" xml:space="preserve">
+        <value>{0} не может быть пустым.</value>
+    </data>
+    <data name="Common_Collection_MinCount" xml:space="preserve">
+        <value>{0} должно содержать не менее {1} элементов.</value>
+    </data>
+    <data name="Common_Collection_MaxCount" xml:space="preserve">
+        <value>{0} не может содержать более {1} элементов.</value>
+    </data>
+    <data name="Common_RequiredIf" xml:space="preserve">
+        <value>{0} обязательно, если {1} равно {2}.</value>
+    </data>
+    <data name="Common_RequiredIfNot" xml:space="preserve">
+        <value>{0} обязательно, если {1} не равно {2}.</value>
+    </data>
+    <data name="Common_RequiredIfAny" xml:space="preserve">
+        <value>{0} обязательно, если любое из {1} равно {2}.</value>
+    </data>
+    <data name="Common_RequiredIfAll" xml:space="preserve">
+        <value>{0} обязательно, если все из {1} равны {2}.</value>
+    </data>
+    <data name="Common_RequiredIfEmpty" xml:space="preserve">
+        <value>{0} обязательно, если {1} пусто.</value>
+    </data>
+    <data name="Common_RequiredIfNotEmpty" xml:space="preserve">
+        <value>{0} обязательно, если {1} не пусто.</value>
+    </data>
+    <data name="Common_Url_Invalid" xml:space="preserve">
+        <value>Указанный URL недействителен.</value>
+    </data>
+</root>

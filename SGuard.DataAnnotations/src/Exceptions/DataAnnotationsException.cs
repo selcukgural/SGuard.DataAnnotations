@@ -11,6 +11,11 @@ public sealed class DataAnnotationsException : ValidationException
     /// The key used to store validation errors in the exception's data dictionary.
     /// </summary>
     internal const string DataKey = "SGuard:DataAnnotations";
+    
+    /// <summary>
+    /// Gets the validation errors associated with this exception, if any.
+    /// </summary>
+    public IReadOnlyList<ValidationError> ValidationErrors { get; } = Array.Empty<ValidationError>();
 
     /// <summary>
     /// Initializes a new instance of the <see cref="DataAnnotationsException"/> class with a list of validation results and an optional message.
@@ -24,11 +29,14 @@ public sealed class DataAnnotationsException : ValidationException
             return;
         }
 
-        var errors = validationResults.Select(x => new ValidationError(
-                                                  Message: string.IsNullOrWhiteSpace(x.ErrorMessage) ? "Errors" : x.ErrorMessage, x.MemberNames))
-                                      .ToList();
+        var errors = validationResults
+                     .Select(x => new ValidationError(
+                                 Message: string.IsNullOrWhiteSpace(x.ErrorMessage) ? "Errors" : x.ErrorMessage!,
+                                 x.MemberNames))
+                     .ToList();
 
         Data[DataKey] = errors;
+        ValidationErrors = errors;
     }
 
     /// <summary>

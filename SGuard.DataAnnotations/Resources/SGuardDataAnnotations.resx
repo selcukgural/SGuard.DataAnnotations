@@ -476,4 +476,76 @@
     <data name="Privacy_DataDeletion_Requested" xml:space="preserve">
         <value>Your data deletion request has been received.</value>
     </data>
+    <data name="Common_Between" xml:space="preserve">
+    <value>The value must be between {0} and {1}.</value>
+</data>
+    <data name="Common_BetweenExclusive" xml:space="preserve">
+    <value>The value must be greater than {0} and less than {1}.</value>
+</data>
+    <data name="Common_Compare_Equal" xml:space="preserve">
+    <value>{0} must be equal to {1}.</value>
+</data>
+    <data name="Common_Compare_NotEqual" xml:space="preserve">
+    <value>{0} must not be equal to {1}.</value>
+</data>
+    <data name="Common_Compare_GreaterThan" xml:space="preserve">
+    <value>{0} must be greater than {1}.</value>
+</data>
+    <data name="Common_Compare_GreaterThanOrEqual" xml:space="preserve">
+    <value>{0} must be greater than or equal to {1}.</value>
+</data>
+    <data name="Common_Compare_LessThan" xml:space="preserve">
+    <value>{0} must be less than {1}.</value>
+</data>
+    <data name="Common_Compare_LessThanOrEqual" xml:space="preserve">
+    <value>{0} must be less than or equal to {1}.</value>
+</data>
+    <data name="Common_CreditCard_Invalid" xml:space="preserve">
+    <value>The credit card number is invalid.</value>
+</data>
+    <data name="Common_GreaterThan" xml:space="preserve">
+    <value>{0} must be greater than {1}.</value>
+</data>
+    <data name="Common_LessThan" xml:space="preserve">
+    <value>{0} must be less than {1}.</value>
+</data>
+    <data name="Common_MaxCount" xml:space="preserve">
+    <value>{0} cannot contain more than {1} items.</value>
+</data>
+    <data name="Common_MinCount" xml:space="preserve">
+    <value>{0} must contain at least {1} items.</value>
+</data>
+    <data name="Common_Collection_Required" xml:space="preserve">
+    <value>{0} is required.</value>
+</data>
+    <data name="Common_Collection_NotEmpty" xml:space="preserve">
+    <value>{0} cannot be empty.</value>
+</data>
+    <data name="Common_Collection_MinCount" xml:space="preserve">
+    <value>{0} must contain at least {1} items.</value>
+</data>
+    <data name="Common_Collection_MaxCount" xml:space="preserve">
+    <value>{0} cannot contain more than {1} items.</value>
+</data>
+    <data name="Common_RequiredIf" xml:space="preserve">
+    <value>{0} is required when {1} is {2}.</value>
+</data>
+    <data name="Common_RequiredIfNot" xml:space="preserve">
+    <value>{0} is required when {1} is not {2}.</value>
+</data>
+    <data name="Common_RequiredIfAny" xml:space="preserve">
+    <value>{0} is required when any of {1} is {2}.</value>
+</data>
+    <data name="Common_RequiredIfAll" xml:space="preserve">
+    <value>{0} is required when all of {1} is {2}.</value>
+</data>
+    <data name="Common_RequiredIfEmpty" xml:space="preserve">
+    <value>{0} is required when {1} is empty.</value>
+</data>
+    <data name="Common_RequiredIfNotEmpty" xml:space="preserve">
+    <value>{0} is required when {1} is not empty.</value>
+</data>
+    <data name="Common_Url_Invalid" xml:space="preserve">
+    <value>The URL provided is invalid.</value>
+</data>
 </root>

@@ -17,34 +17,34 @@
         <LastGenOutput>Resources.Designer.cs</LastGenOutput>
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </EmbeddedResource>
-      <EmbeddedResource Update="Resources\SGuardDataAnnotationResource.resx">
+      <EmbeddedResource Update="Resources\SGuardDataAnnotations.resx">
         <Generator>ResXFileCodeGenerator</Generator>
         <LastGenOutput>SGuardDataAnnotationResource.Designer.cs</LastGenOutput>
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </EmbeddedResource>
-      <EmbeddedResource Update="Resources\SGuardDataAnnotationsResource.tr.resx">
+      <EmbeddedResource Update="Resources\SGuardDataAnnotations.tr.resx">
         <Generator>ResXFileCodeGenerator</Generator>
         <LastGenOutput>SGuardDataAnnotationsResource.tr.Designer.cs</LastGenOutput>
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </EmbeddedResource>
-      <EmbeddedResource Update="Resources\SGuardDataAnnotationResource.ru.resx">
+      <EmbeddedResource Update="Resources\SGuardDataAnnotations.ru.resx">
         <Generator>ResXFileCodeGenerator</Generator>
         <LastGenOutput>SGuardDataAnnotationResource.ru.Designer.cs</LastGenOutput>
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </EmbeddedResource>
-      <EmbeddedResource Update="Resources\SGuardDataAnnotationResource.ja.resx">
+      <EmbeddedResource Update="Resources\SGuardDataAnnotations.ja.resx">
         <Generator>ResXFileCodeGenerator</Generator>
         <LastGenOutput>SGuardDataAnnotationResource.ja.Designer.cs</LastGenOutput>
       </EmbeddedResource>
-      <EmbeddedResource Update="Resources\SGuardDataAnnotationsResource.de.resx">
+      <EmbeddedResource Update="Resources\SGuardDataAnnotations.de.resx">
         <Generator>ResXFileCodeGenerator</Generator>
         <LastGenOutput>SGuardDataAnnotationsResource.de.Designer.cs</LastGenOutput>
       </EmbeddedResource>
-      <EmbeddedResource Update="Resources\SGuardDataAnnotationsResource.fr.resx">
+      <EmbeddedResource Update="Resources\SGuardDataAnnotations.fr.resx">
         <Generator>ResXFileCodeGenerator</Generator>
         <LastGenOutput>SGuardDataAnnotationsResource.fr.Designer.cs</LastGenOutput>
       </EmbeddedResource>
-      <EmbeddedResource Update="Resources\SGuardDataAnnotationResource.hi.resx">
+      <EmbeddedResource Update="Resources\SGuardDataAnnotations.hi.resx">
         <Generator>ResXFileCodeGenerator</Generator>
         <LastGenOutput>SGuardDataAnnotationResource.hi.Designer.cs</LastGenOutput>
       </EmbeddedResource>
@@ -56,32 +56,32 @@
         <AutoGen>True</AutoGen>
         <DependentUpon>Resources.resx</DependentUpon>
       </Compile>
-      <Compile Update="Resources\SGuardDataAnnotationsResource.tr.Designer.cs">
+      <Compile Update="Resources\SGuardDataAnnotations.tr.Designer.cs">
         <DesignTime>True</DesignTime>
         <AutoGen>True</AutoGen>
         <DependentUpon>SGuardDataAnnotationsResource.tr.resx</DependentUpon>
       </Compile>
-      <Compile Update="Resources\SGuardDataAnnotationResource.ru.Designer.cs">
+      <Compile Update="Resources\SGuardDataAnnotations.ru.Designer.cs">
         <DesignTime>True</DesignTime>
         <AutoGen>True</AutoGen>
         <DependentUpon>SGuardDataAnnotationResource.ru.resx</DependentUpon>
       </Compile>
-      <Compile Update="Resources\SGuardDataAnnotationResource.ja.Designer.cs">
+      <Compile Update="Resources\SGuardDataAnnotations.ja.Designer.cs">
         <DesignTime>True</DesignTime>
         <AutoGen>True</AutoGen>
         <DependentUpon>SGuardDataAnnotationResource.ja.resx</DependentUpon>
       </Compile>
-      <Compile Update="Resources\SGuardDataAnnotationsResource.de.Designer.cs">
+      <Compile Update="Resources\SGuardDataAnnotations.de.Designer.cs">
         <DesignTime>True</DesignTime>
         <AutoGen>True</AutoGen>
         <DependentUpon>SGuardDataAnnotationsResource.de.resx</DependentUpon>
       </Compile>
-      <Compile Update="Resources\SGuardDataAnnotationsResource.fr.Designer.cs">
+      <Compile Update="Resources\SGuardDataAnnotations.fr.Designer.cs">
         <DesignTime>True</DesignTime>
         <AutoGen>True</AutoGen>
         <DependentUpon>SGuardDataAnnotationsResource.fr.resx</DependentUpon>
       </Compile>
-      <Compile Update="Resources\SGuardDataAnnotationResource.hi.Designer.cs">
+      <Compile Update="Resources\SGuardDataAnnotations.hi.Designer.cs">
         <DesignTime>True</DesignTime>
         <AutoGen>True</AutoGen>
         <DependentUpon>SGuardDataAnnotationResource.hi.resx</DependentUpon>
