@@ -4,6 +4,24 @@
         <TargetFrameworks>net6.0;net7.0;net8.0;net9.0</TargetFrameworks>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <!-- NuGet Metadata -->
+        <PackageId>SGuard.DataAnnotations</PackageId>
+        <Version>0.1.0</Version>
+        <Authors>Selçuk Güral</Authors>
+        <Company>Selçuk Güral</Company>
+        <Description>Advanced, extensible, and multilingual data validation and guard clause library for .NET. Includes custom validation attributes, guard helpers, and resource-based error messages for enterprise-grade applications.</Description>
+        <PackageTags>validation;data-annotations;guard;multilingual;localization;attributes;.NET;enterprise;library</PackageTags>
+        <PackageProjectUrl>https://github.com/selcukgural/SGuard.DataAnnotations</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/selcukgural/SGuard.DataAnnotations</RepositoryUrl>
+        <RepositoryType>git</RepositoryType>
+        <PackageLicenseUrl>https://opensource.org/licenses/MIT</PackageLicenseUrl>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <PackageIcon>icon.png</PackageIcon>
+        <Copyright>Copyright © 2025 Selçuk Güral</Copyright>
+        <PackageReleaseNotes>Initial release. Supports .NET 6, 7, 8, 9. Multilingual validation, guard clauses, and CI/CD integration.</PackageReleaseNotes>
+        <Title>SGuard.DataAnnotations - Advanced Multilingual Validation &amp; Guard Library for .NET 
+</Title>
     </PropertyGroup>
 
     <ItemGroup>

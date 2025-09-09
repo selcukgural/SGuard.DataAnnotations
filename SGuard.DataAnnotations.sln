@@ -14,8 +14,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		.gitignore = .gitignore
 		CHANGELOG.md = CHANGELOG.md
 		LICENSE = LICENSE
+		CONTRIBUTING.md = CONTRIBUTING.md
 		.github\CODE_OF_CONDUCT.md = .github\CODE_OF_CONDUCT.md
-		.github\CONTRIBUTING.md = .github\CONTRIBUTING.md
 		.github\SECURITY.md = .github\SECURITY.md
 		README.md = README.md
 	EndProjectSection

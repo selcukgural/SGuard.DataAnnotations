@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <!-- Modern gradient background -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0" y1="0" x2="128" y2="128" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#2D7DD2"/>
+      <stop offset="100%" stop-color="#6EC6FF"/>
+    </linearGradient>
+    <radialGradient id="circleGradient" cx="64" cy="64" r="64" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#fff" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#2D7DD2" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="128" height="128" rx="28" fill="url(#bgGradient)"/>
+  <circle cx="64" cy="64" r="48" fill="url(#circleGradient)"/>
+  <!-- Large shield icon for 'Guard' concept -->
+  <path d="M64 18 L116 52 Q116 108 64 124 Q12 108 12 52 Z" fill="#fff" opacity="0.95" stroke="#2D7DD2" stroke-width="4"/>
+  <!-- Large SG initials centered on shield -->
+  <text x="64" y="88" text-anchor="middle" font-size="56" font-family="Segoe UI, Arial, Helvetica, sans-serif" fill="#2D7DD2" font-weight="bold">SG</text>
+</svg>

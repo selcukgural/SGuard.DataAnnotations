@@ -1,8 +1,14 @@
 # SGuard.DataAnnotations
 
+![CI](https://github.com/selcukgural/SGuard.DataAnnotations/actions/workflows/ci.yml/badge.svg)
+[![NuGet Version](https://img.shields.io/nuget/v/SGuard.DataAnnotations.svg?style=flat-square)](https://www.nuget.org/packages/SGuard.DataAnnotations/)
+[![NuGet Downloads](https://img.shields.io/nuget/dt/SGuard.DataAnnotations.svg?style=flat-square)](https://www.nuget.org/packages/SGuard.DataAnnotations/)
+[![Coverage](https://codecov.io/gh/selcukgural/SGuard.DataAnnotations/branch/main/graph/badge.svg)](https://codecov.io/gh/selcukgural/SGuard.DataAnnotations)
+
+
 **SGuard.DataAnnotations** provides localized and extensible DataAnnotations support for .NET, including:
 - Localizable validation attributes (with robust fallback and custom error handling)
-- Collection, conditional, and property comparison validators not found in standard DataAnnotations
+- Collection, conditional, and property comparison validators are not found in standard DataAnnotations
 - Guard pattern (`Is.*` for boolean return, `ThrowIf.*` for exception-throwing) for model validation
 - Seamless integration with DataAnnotations and SGuard's fail-fast/callback philosophy
 - Well-tested and extensible for real-world application scenarios
@@ -74,35 +80,34 @@ SGuard.DataAnnotations ships with built-in resource support for the following la
 > **Note:**
 > - If the current UI culture is not found, SGuard will fallback to English or to the fallback message if provided.
 > - You can add your own resource files to support additional languages.
-> - [How to add your own language?](#how-to-add-custom-language)
-
+> - [How to add your own language?](#how-to-add-a-custom-language)
 ---
 
 ## Supported Attributes
 
 ### String & Common Validators
 
-| Attribute                             | Purpose                                       | Supported Types                   | Example Usage |
-|----------------------------------------|-----------------------------------------------|-----------------------------------|---------------|
-| `SGuardRequiredAttribute`              | Required field (localized)                    | Any                              | `[SGuardRequired(typeof(Resources.SGuardDataAnnotations), "Username_Required")]` |
-| `SGuardMinLengthAttribute`             | Minimum string length                         | `string`, `array`, `ICollection` | `[SGuardMinLength(5, typeof(Resources.SGuardDataAnnotations), "Username_MinLength")]` |
-| `SGuardMaxLengthAttribute`             | Maximum string length                         | `string`, `array`, `ICollection` | `[SGuardMaxLength(20, typeof(Resources.SGuardDataAnnotations), "Username_MaxLength")]` |
-| `SGuardStringLengthAttribute`          | Min/max string length                         | `string`                         | `[SGuardStringLength(12, typeof(Resources.SGuardDataAnnotations), "Username_MaxLength")]` |
-| `SGuardRegularExpressionAttribute`     | Regex pattern                                 | `string`                         | `[SGuardRegularExpression("^[a-zA-Z0-9_]+$", typeof(Resources.SGuardDataAnnotations), "Username_InvalidCharacters")]` |
-| `SGuardEmailAddressAttribute`          | Email format                                  | `string`                         | `[SGuardEmailAddress(typeof(Resources.SGuardDataAnnotations), "Email_InvalidFormat")]` |
-| `SGuardPhoneAttribute`                 | Phone format                                  | `string`                         | `[SGuardPhone(typeof(Resources.SGuardDataAnnotations), "Profile_Phone_Invalid")]` |
-| `SGuardUrlAttribute`                   | URL format                                    | `string`                         | `[SGuardUrl(typeof(Resources.SGuardDataAnnotations), "Common_Url_Invalid")]` |
-| `SGuardCreditCardAttribute`            | Credit card format                            | `string`                         | `[SGuardCreditCard(typeof(Resources.SGuardDataAnnotations), "Common_CreditCard_Invalid")]` |
-| `SGuardRangeAttribute`                 | Value must be within a numeric range          | `int`, `double`                  | `[SGuardRange(1, 10, typeof(Resources.SGuardDataAnnotations), "Common_Range")]` |
+| Attribute                          | Purpose                              | Supported Types                  | Example Usage                                                                                                         |
+|------------------------------------|--------------------------------------|----------------------------------|-----------------------------------------------------------------------------------------------------------------------|
+| `SGuardRequiredAttribute`          | Required field (localized)           | Any                              | `[SGuardRequired(typeof(Resources.SGuardDataAnnotations), "Username_Required")]`                                      |
+| `SGuardMinLengthAttribute`         | Minimum string length                | `string`, `array`, `ICollection` | `[SGuardMinLength(5, typeof(Resources.SGuardDataAnnotations), "Username_MinLength")]`                                 |
+| `SGuardMaxLengthAttribute`         | Maximum string length                | `string`, `array`, `ICollection` | `[SGuardMaxLength(20, typeof(Resources.SGuardDataAnnotations), "Username_MaxLength")]`                                |
+| `SGuardStringLengthAttribute`      | Min/max string length                | `string`                         | `[SGuardStringLength(12, typeof(Resources.SGuardDataAnnotations), "Username_MaxLength")]`                             |
+| `SGuardRegularExpressionAttribute` | Regex pattern                        | `string`                         | `[SGuardRegularExpression("^[a-zA-Z0-9_]+$", typeof(Resources.SGuardDataAnnotations), "Username_InvalidCharacters")]` |
+| `SGuardEmailAddressAttribute`      | Email format                         | `string`                         | `[SGuardEmailAddress(typeof(Resources.SGuardDataAnnotations), "Email_InvalidFormat")]`                                |
+| `SGuardPhoneAttribute`             | Phone format                         | `string`                         | `[SGuardPhone(typeof(Resources.SGuardDataAnnotations), "Profile_Phone_Invalid")]`                                     |
+| `SGuardUrlAttribute`               | URL format                           | `string`                         | `[SGuardUrl(typeof(Resources.SGuardDataAnnotations), "Common_Url_Invalid")]`                                          |
+| `SGuardCreditCardAttribute`        | Credit card format                   | `string`                         | `[SGuardCreditCard(typeof(Resources.SGuardDataAnnotations), "Common_CreditCard_Invalid")]`                            |
+| `SGuardRangeAttribute`             | Value must be within a numeric range | `int`, `double`                  | `[SGuardRange(1, 10, typeof(Resources.SGuardDataAnnotations), "Common_Range")]`                                       |
 
 ### Collection Validators
 
-| Attribute                                 | Purpose                                                         | Supported Types                | Example Usage |
-|--------------------------------------------|-----------------------------------------------------------------|-------------------------------|---------------|
-| `SGuardRequiredCollectionAttribute`        | Collection must not be null/empty                               | `IEnumerable`, arrays, etc.   | `[SGuardRequiredCollection(typeof(Resources.SGuardDataAnnotations), "Common_Collection_Required")]` |
-| `SGuardMinCountAttribute`                  | Minimum item count in collection                                | `IEnumerable`, arrays, etc.   | `[SGuardMinCount(2, typeof(Resources.SGuardDataAnnotations), "Common_Collection_MinCount")]` |
-| `SGuardMaxCountAttribute`                  | Maximum item count in collection                                | `IEnumerable`, arrays, etc.   | `[SGuardMaxCount(5, typeof(Resources.SGuardDataAnnotations), "Common_Collection_MaxCount")]` |
-| `SGuardCollectionItemsMatchAttribute`      | Each item must match one/more validators (e.g. regex, required) | `IEnumerable`, arrays, etc.   | `[SGuardCollectionItemsMatch(typeof(EmailAddressAttribute), typeof(Resources.SGuardDataAnnotations), "Email_InvalidFormat", AggregateAllErrors = true)]` |
+| Attribute                             | Purpose                                                         | Supported Types             | Example Usage                                                                                                                                            |
+|---------------------------------------|-----------------------------------------------------------------|-----------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `SGuardRequiredCollectionAttribute`   | Collection must not be null/empty                               | `IEnumerable`, arrays, etc. | `[SGuardRequiredCollection(typeof(Resources.SGuardDataAnnotations), "Common_Collection_Required")]`                                                      |
+| `SGuardMinCountAttribute`             | Minimum item count in collection                                | `IEnumerable`, arrays, etc. | `[SGuardMinCount(2, typeof(Resources.SGuardDataAnnotations), "Common_Collection_MinCount")]`                                                             |
+| `SGuardMaxCountAttribute`             | Maximum item count in collection                                | `IEnumerable`, arrays, etc. | `[SGuardMaxCount(5, typeof(Resources.SGuardDataAnnotations), "Common_Collection_MaxCount")]`                                                             |
+| `SGuardCollectionItemsMatchAttribute` | Each item must match one/more validators (e.g. regex, required) | `IEnumerable`, arrays, etc. | `[SGuardCollectionItemsMatch(typeof(EmailAddressAttribute), typeof(Resources.SGuardDataAnnotations), "Email_InvalidFormat", AggregateAllErrors = true)]` |
 
 **Details:**
 - `SGuardCollectionItemsMatchAttribute` can take multiple validators and will apply them to each item.
@@ -111,18 +116,18 @@ SGuard.DataAnnotations ships with built-in resource support for the following la
 
 ### Conditional Validators
 
-| Attribute                       | Purpose                                         | Supported Types | Example Usage |
-|----------------------------------|-------------------------------------------------|----------------|---------------|
-| `SGuardRequiredIfAttribute`      | Field required if another property equals value | Any            | `[SGuardRequiredIf("Country", "USA", typeof(Resources.SGuardDataAnnotations), "Address_Required")]` |
+| Attribute                   | Purpose                                         | Supported Types | Example Usage                                                                                       |
+|-----------------------------|-------------------------------------------------|-----------------|-----------------------------------------------------------------------------------------------------|
+| `SGuardRequiredIfAttribute` | Field required if another property equals value | Any             | `[SGuardRequiredIf("Country", "USA", typeof(Resources.SGuardDataAnnotations), "Address_Required")]` |
 
 ### Comparison Validators
 
-| Attribute                              | Purpose                                  | Supported Types      | Example Usage |
-|-----------------------------------------|------------------------------------------|---------------------|---------------|
-| `SGuardCompareAttribute`                | Values must be equal (like CompareAttribute) | Any              | `[SGuardCompare("Password", typeof(Resources.SGuardDataAnnotations), "Password_Mismatch")]` |
-| `SGuardBetweenAttribute`                | Value must be between two properties     | IComparable types   | `[SGuardBetween("Min", "Max", true, typeof(Resources.SGuardDataAnnotations), "Common_Between")]` |
-| `SGuardGreaterThanAttribute`            | Value must be greater than another property | IComparable types | `[SGuardGreaterThan("MinAge", typeof(Resources.SGuardDataAnnotations), "Profile_BirthDate_MinimumAge")]` |
-| `SGuardLessThanAttribute`               | Value must be less than another property | IComparable types   | `[SGuardLessThan("MaxAge", typeof(Resources.SGuardDataAnnotations), "Profile_BirthDate_MaximumAge")]` |
+| Attribute                    | Purpose                                      | Supported Types   | Example Usage                                                                                            |
+|------------------------------|----------------------------------------------|-------------------|----------------------------------------------------------------------------------------------------------|
+| `SGuardCompareAttribute`     | Values must be equal (like CompareAttribute) | Any               | `[SGuardCompare("Password", typeof(Resources.SGuardDataAnnotations), "Password_Mismatch")]`              |
+| `SGuardBetweenAttribute`     | Value must be between two properties         | IComparable types | `[SGuardBetween("Min", "Max", true, typeof(Resources.SGuardDataAnnotations), "Common_Between")]`         |
+| `SGuardGreaterThanAttribute` | Value must be greater than another property  | IComparable types | `[SGuardGreaterThan("MinAge", typeof(Resources.SGuardDataAnnotations), "Profile_BirthDate_MinimumAge")]` |
+| `SGuardLessThanAttribute`    | Value must be less than another property     | IComparable types | `[SGuardLessThan("MaxAge", typeof(Resources.SGuardDataAnnotations), "Profile_BirthDate_MaximumAge")]`    |
 
 **Supported types:** `int`, `double`, `decimal`, `DateTime`, `string`, etc. (anything implementing `IComparable`)
 
@@ -184,7 +189,7 @@ SGuard.DataAnnotations ships with built-in resource support for the following la
 #### Exception Details
 
 - Throws `DataAnnotationsException` by default, which contains all validation errors.
-- Extract errors (see also [`SGuard.DataAnnotations.Extensions`](src/Extensions/DataAnnotationsExceptionExtensions.cs)):
+- Extract errors (see also [`SGuard.DataAnnotations.Extensions`](./SGuard.DataAnnotations/src/Extensions/DataAnnotationsExceptionExtensions.cs)):
     ```csharp
     catch (DataAnnotationsException ex)
     {
@@ -222,8 +227,8 @@ SGuard.DataAnnotations ships with built-in resource support for the following la
 
 ## Extending SGuard.DataAnnotations
 
-Want to add your own fully-localized validation attribute?  
-Just inherit from `SGuardValidationAttributeBase` and implement `IsValid`:
+Want to add your own fully localized validation attribute?  
+Inherit from `SGuardValidationAttributeBase` and implement `IsValid`:
 
 ```csharp
 public class MyCustomLocalizedAttribute : SGuardValidationAttributeBase
