@@ -12,7 +12,7 @@ namespace SGuard.DataAnnotations;
 /// or exclusive based on the <see cref="Inclusive"/> property.
 /// </remarks>
 [AttributeUsage(AttributeTargets.Property | AttributeTargets.Field, AllowMultiple = true)]
-public sealed class SGuardBetweenAttribute : SGuardValidationAttributeBase
+public class SGuardBetweenAttribute : SGuardValidationAttributeBase
 {
     private const BindingFlags Flags = BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic;
 

@@ -1,7 +1,7 @@
 using System.ComponentModel.DataAnnotations;
 using SGuard.DataAnnotations.Exceptions;
 
-namespace SGuard.DataAnnotations.Tests.Guards.Exceptions;
+namespace SGuard.DataAnnotations.Tests.Exceptions;
 
 public sealed class DataAnnotationsExceptionTests
 {

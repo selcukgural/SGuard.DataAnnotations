@@ -1,9 +1,9 @@
 using System.ComponentModel.DataAnnotations;
 using SGuard.DataAnnotations.Exceptions;
 using SGuard.DataAnnotations.Extensions;
-using SGuard.DataAnnotations.Tests.Guards.Exceptions;
+using SGuard.DataAnnotations.Tests.Exceptions;
 
-namespace SGuard.DataAnnotations.Tests.Guards.Extensions;
+namespace SGuard.DataAnnotations.Tests.Extensions;
 
 public  sealed class DataAnnotationsExceptionExtensionsTest
 {

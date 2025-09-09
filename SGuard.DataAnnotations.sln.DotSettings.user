@@ -1,15 +1,63 @@
 ﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
 	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=7020124F_002D9FFC_002D4AC3_002D8F3D_002DAAB8E0240759_002Ff_003ADictionaryEntry_002Ecs_002Fl_003A_002E_002E_003F_002E_002E_003FLibrary_003FApplication_0020Support_003FJetBrains_003FRider2025_002E2_003Fresharper_002Dhost_003FDecompilerCache_003Fdecompiler_003F02bfa03b73f94f5b8947ec21da8cdcba74518_003Fe6_003Ffae6ad5a_003FDictionaryEntry_002Ecs/@EntryIndexedValue">ForceIncluded</s:String>
 	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=7020124F_002D9FFC_002D4AC3_002D8F3D_002DAAB8E0240759_002Ff_003AMaxLengthAttribute_002Ecs_002Fl_003A_002E_002E_003F_002E_002E_003FLibrary_003FApplication_0020Support_003FJetBrains_003FRider2025_002E2_003Fresharper_002Dhost_003FDecompilerCache_003Fdecompiler_003F7c2b13c10b164312823721e143db47d17920_003F82_003Fce513e1c_003FMaxLengthAttribute_002Ecs/@EntryIndexedValue">ForceIncluded</s:String>
+	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=7020124F_002D9FFC_002D4AC3_002D8F3D_002DAAB8E0240759_002Ff_003ARequiredAttribute_002Ecs_002Fl_003A_002E_002E_003F_002E_002E_003FLibrary_003FApplication_0020Support_003FJetBrains_003FRider2025_002E2_003Fresharper_002Dhost_003FSourcesCache_003F1b4c2e87d7878eb25e1dcae2d94dd7826e7d5cbf6c7e43e736b7a453368ce_003FRequiredAttribute_002Ecs/@EntryIndexedValue">ForceIncluded</s:String>
+	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=7020124F_002D9FFC_002D4AC3_002D8F3D_002DAAB8E0240759_002Ff_003AValidationAttribute_002Ecs_002Fl_003A_002E_002E_003F_002E_002E_003FLibrary_003FApplication_0020Support_003FJetBrains_003FRider2025_002E2_003Fresharper_002Dhost_003FSourcesCache_003Ff5379071e4f83fd6ca437fdb7b21f5d70eef8a11e147f8c0ca75523d742dd0_003FValidationAttribute_002Ecs/@EntryIndexedValue">ForceIncluded</s:String>
 	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=7020124F_002D9FFC_002D4AC3_002D8F3D_002DAAB8E0240759_002Ff_003AValidationContext_002Ecs_002Fl_003A_002E_002E_003F_002E_002E_003F_002E_002E_003FAppData_003FRoaming_003FJetBrains_003FRider2025_002E2_003Fresharper_002Dhost_003FSourcesCache_003Fa2e8a3cda4cc94b669847ecebd2186e342cd61f27e7dee795d7a3def6dce7f12_003FValidationContext_002Ecs/@EntryIndexedValue">ForceIncluded</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=0b0fb6dd_002De273_002D4cd0_002Dbb8f_002Da4aaeafcdab6/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Session #3" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;And&gt;
+    &lt;Project Location="/Users/selcuk/RiderProjects/SGuard.DataAnnotations/SGuard.DataAnnotations.Tests" Presentation="&amp;lt;tests&amp;gt;\&amp;lt;SGuard.DataAnnotations.Tests&amp;gt;" /&gt;
+    &lt;Project Location="/Users/selcuk/RiderProjects/SGuard.DataAnnotations" Presentation="&amp;lt;tests&amp;gt;" /&gt;
+  &lt;/And&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=0da893bb_002Df861_002D4f2e_002Db8c3_002Db2ea9972c654/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Constructor_DefaultsToInclusive" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;Project Location="/Users/selcuk/RiderProjects/SGuard.DataAnnotations/SGuard.DataAnnotations.Tests" Presentation="&amp;lt;tests&amp;gt;\&amp;lt;SGuard.DataAnnotations.Tests&amp;gt;" /&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=58c56b00_002Df81e_002D48fd_002Da74f_002Dc8e84271fcf4/@EntryIndexedValue">&lt;SessionState ContinuousTestingIsOn="True" ContinuousTestingMode="3" Name="Continuous Testing" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;xUnit::EE01A505-8666-4AEA-9014-6EB44A9E6395::net6.0::SGuard.DataAnnotations.Tests.Attributes.SGuardBetweenAttributeTests&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=58e94841_002Dcd06_002D4248_002Db383_002Dea7a38877ea2/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Session" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;And&gt;
+    &lt;Project Location="/Users/selcuk/RiderProjects/SGuard.DataAnnotations/SGuard.DataAnnotations.Tests" Presentation="&amp;lt;tests&amp;gt;\&amp;lt;SGuard.DataAnnotations.Tests&amp;gt;" /&gt;
+    &lt;Project Location="/Users/selcuk/RiderProjects/SGuard.DataAnnotations" Presentation="&amp;lt;tests&amp;gt;" /&gt;
+  &lt;/And&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=8bd9bc51_002Db6b5_002D48b2_002D9a4e_002Dd5ffdb916e32/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Session #4" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;And&gt;
+    &lt;Project Location="/Users/selcuk/RiderProjects/SGuard.DataAnnotations/SGuard.DataAnnotations.Tests" Presentation="&amp;lt;tests&amp;gt;\&amp;lt;SGuard.DataAnnotations.Tests&amp;gt;" /&gt;
+    &lt;Project Location="/Users/selcuk/RiderProjects/SGuard.DataAnnotations" Presentation="&amp;lt;tests&amp;gt;" /&gt;
+  &lt;/And&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=8ff6eae8_002D9cae_002D42df_002Dbb4b_002Dd69c78fcc606/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="All tests from SGuardRequiredIfAttributeTests.cs" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;Project Location="/Users/selcuk/RiderProjects/SGuard.DataAnnotations/SGuard.DataAnnotations.Tests" Presentation="&amp;lt;tests&amp;gt;\&amp;lt;SGuard.DataAnnotations.Tests&amp;gt;" /&gt;
+&lt;/SessionState&gt;</s:String>
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=bb0e218d_002Df0b8_002D4808_002Da358_002D69b627dfd436/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="DataAnnotationsExceptionExtensionsTest" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
   &lt;Project Location="/Users/selcuk/RiderProjects/SGuard.DataAnnotations/SGuard.DataAnnotations.Tests" Presentation="&amp;lt;tests&amp;gt;\&amp;lt;SGuard.DataAnnotations.Tests&amp;gt;" /&gt;
 &lt;/SessionState&gt;</s:String>
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=c5038ef0_002D0452_002D425e_002Da417_002Dca3dd295df22/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="All tests from &amp;lt;tests&amp;gt;\&amp;lt;SGuard.DataAnnotations.Tests&amp;gt;" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
   &lt;Project Location="/Users/selcuk/RiderProjects/SGuard.DataAnnotations/SGuard.DataAnnotations.Tests" Presentation="&amp;lt;tests&amp;gt;\&amp;lt;SGuard.DataAnnotations.Tests&amp;gt;" /&gt;
 &lt;/SessionState&gt;</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=e07fd5ce_002Db8ae_002D473e_002Da027_002De1fed186b5b8/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="TryGetValidationErrors_ReturnsTrueAndPopulatesErrors_WhenValidationErrorsExist" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=d2285a6a_002Df57d_002D4dfb_002Dbe47_002Dedfd4e95c7e5/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="SGuardBetweenAttributeTests" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;xUnit::EE01A505-8666-4AEA-9014-6EB44A9E6395::net6.0::SGuard.DataAnnotations.Tests.Attributes.SGuardBetweenAttributeTests&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=d3cc1c45_002D5062_002D4338_002Db733_002D109e34e271e7/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Session #5" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;And&gt;
+    &lt;Project Location="/Users/selcuk/RiderProjects/SGuard.DataAnnotations/SGuard.DataAnnotations.Tests" Presentation="&amp;lt;tests&amp;gt;\&amp;lt;SGuard.DataAnnotations.Tests&amp;gt;" /&gt;
+    &lt;Project Location="/Users/selcuk/RiderProjects/SGuard.DataAnnotations" Presentation="&amp;lt;tests&amp;gt;" /&gt;
+  &lt;/And&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=e07fd5ce_002Db8ae_002D473e_002Da027_002De1fed186b5b8/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="TryGetValidationErrors_ReturnsTrueAndPopulatesErrors_WhenValidationErrorsExist" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
   &lt;Project Location="/Users/selcuk/RiderProjects/SGuard.DataAnnotations/SGuard.DataAnnotations.Tests" Presentation="&amp;lt;tests&amp;gt;\&amp;lt;SGuard.DataAnnotations.Tests&amp;gt;" /&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=f7191918_002D7e79_002D4ae7_002D9176_002Df93992f22a0a/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Session #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;And&gt;
+    &lt;Project Location="/Users/selcuk/RiderProjects/SGuard.DataAnnotations/SGuard.DataAnnotations.Tests" Presentation="&amp;lt;tests&amp;gt;\&amp;lt;SGuard.DataAnnotations.Tests&amp;gt;" /&gt;
+    &lt;Project Location="/Users/selcuk/RiderProjects/SGuard.DataAnnotations" Presentation="&amp;lt;tests&amp;gt;" /&gt;
+  &lt;/And&gt;
 &lt;/SessionState&gt;</s:String>
 	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=Miscellaneous_0020Files_002FLalumim/@EntryIndexedValue">False</s:Boolean>
 	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=Miscellaneous_0020Files_002FLalumim/@EntryIndexRemoved">True</s:Boolean>
@@ -26,4 +74,7 @@
 	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=src_002FSGuard_002EDataAnnotations_002FResources_002FSGuardDataAnnotationsResource/@EntryIndexRemoved">True</s:Boolean>
 	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=src_002FSGuard_002EDataAnnotations_002Fsrc_002FResources_002FSGuardDataAnnotationResource/@EntryIndexedValue">False</s:Boolean>
 	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=src_002FSGuard_002EDataAnnotations_002Fsrc_002FResources_002FSGuardDataAnnotationResource/@EntryIndexRemoved">True</s:Boolean>
-	<s:Boolean x:Key="/Default/ResxEditorPersonal/Initialized/@EntryValue">True</s:Boolean></wpf:ResourceDictionary>
+	<s:Boolean x:Key="/Default/ResxEditorPersonal/Initialized/@EntryValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/ResxEditorPersonal/OrderByFullPath/@EntryValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/ResxEditorPersonal/ShowOnlyErrors/@EntryValue">False</s:Boolean>
+	<s:Boolean x:Key="/Default/ResxEditorPersonal/ShowOnlyStringResources/@EntryValue">False</s:Boolean></wpf:ResourceDictionary>

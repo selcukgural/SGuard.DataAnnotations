@@ -14,18 +14,18 @@ namespace SGuard.DataAnnotations.Resources {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
     [System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class SGuardDataAnnotations_ru {
+    public class SGuardDataAnnotations_ru {
         
         private static System.Resources.ResourceManager resourceMan;
         
         private static System.Globalization.CultureInfo resourceCulture;
         
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal SGuardDataAnnotations_ru() {
+        public SGuardDataAnnotations_ru() {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static System.Resources.ResourceManager ResourceManager {
+        public static System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.Equals(null, resourceMan)) {
                     System.Resources.ResourceManager temp = new System.Resources.ResourceManager("SGuard.DataAnnotations.Resources.SGuardDataAnnotations_ru", typeof(SGuardDataAnnotations_ru).Assembly);
@@ -36,7 +36,7 @@ namespace SGuard.DataAnnotations.Resources {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static System.Globalization.CultureInfo Culture {
+        public static System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -45,1045 +45,1045 @@ namespace SGuard.DataAnnotations.Resources {
             }
         }
         
-        internal static string Username_Required {
+        public static string Username_Required {
             get {
                 return ResourceManager.GetString("Username_Required", resourceCulture);
             }
         }
         
-        internal static string Username_MinLength {
+        public static string Username_MinLength {
             get {
                 return ResourceManager.GetString("Username_MinLength", resourceCulture);
             }
         }
         
-        internal static string Username_MaxLength {
+        public static string Username_MaxLength {
             get {
                 return ResourceManager.GetString("Username_MaxLength", resourceCulture);
             }
         }
         
-        internal static string Username_InvalidCharacters {
+        public static string Username_InvalidCharacters {
             get {
                 return ResourceManager.GetString("Username_InvalidCharacters", resourceCulture);
             }
         }
         
-        internal static string Username_AlreadyExists {
+        public static string Username_AlreadyExists {
             get {
                 return ResourceManager.GetString("Username_AlreadyExists", resourceCulture);
             }
         }
         
-        internal static string Username_NotFound {
+        public static string Username_NotFound {
             get {
                 return ResourceManager.GetString("Username_NotFound", resourceCulture);
             }
         }
         
-        internal static string Password_Required {
+        public static string Password_Required {
             get {
                 return ResourceManager.GetString("Password_Required", resourceCulture);
             }
         }
         
-        internal static string Password_MinLength {
+        public static string Password_MinLength {
             get {
                 return ResourceManager.GetString("Password_MinLength", resourceCulture);
             }
         }
         
-        internal static string Password_MaxLength {
+        public static string Password_MaxLength {
             get {
                 return ResourceManager.GetString("Password_MaxLength", resourceCulture);
             }
         }
         
-        internal static string Password_TooWeak {
+        public static string Password_TooWeak {
             get {
                 return ResourceManager.GetString("Password_TooWeak", resourceCulture);
             }
         }
         
-        internal static string Password_InvalidCharacters {
+        public static string Password_InvalidCharacters {
             get {
                 return ResourceManager.GetString("Password_InvalidCharacters", resourceCulture);
             }
         }
         
-        internal static string Password_Mismatch {
+        public static string Password_Mismatch {
             get {
                 return ResourceManager.GetString("Password_Mismatch", resourceCulture);
             }
         }
         
-        internal static string Email_Required {
+        public static string Email_Required {
             get {
                 return ResourceManager.GetString("Email_Required", resourceCulture);
             }
         }
         
-        internal static string Email_InvalidFormat {
+        public static string Email_InvalidFormat {
             get {
                 return ResourceManager.GetString("Email_InvalidFormat", resourceCulture);
             }
         }
         
-        internal static string Email_AlreadyExists {
+        public static string Email_AlreadyExists {
             get {
                 return ResourceManager.GetString("Email_AlreadyExists", resourceCulture);
             }
         }
         
-        internal static string Login_InvalidCredentials {
+        public static string Login_InvalidCredentials {
             get {
                 return ResourceManager.GetString("Login_InvalidCredentials", resourceCulture);
             }
         }
         
-        internal static string Login_AccountLocked {
+        public static string Login_AccountLocked {
             get {
                 return ResourceManager.GetString("Login_AccountLocked", resourceCulture);
             }
         }
         
-        internal static string Login_AccountInactive {
+        public static string Login_AccountInactive {
             get {
                 return ResourceManager.GetString("Login_AccountInactive", resourceCulture);
             }
         }
         
-        internal static string Login_TooManyAttempts {
+        public static string Login_TooManyAttempts {
             get {
                 return ResourceManager.GetString("Login_TooManyAttempts", resourceCulture);
             }
         }
         
-        internal static string Terms_NotAccepted {
+        public static string Terms_NotAccepted {
             get {
                 return ResourceManager.GetString("Terms_NotAccepted", resourceCulture);
             }
         }
         
-        internal static string Captcha_Invalid {
+        public static string Captcha_Invalid {
             get {
                 return ResourceManager.GetString("Captcha_Invalid", resourceCulture);
             }
         }
         
-        internal static string General_UnexpectedError {
+        public static string General_UnexpectedError {
             get {
                 return ResourceManager.GetString("General_UnexpectedError", resourceCulture);
             }
         }
         
-        internal static string Profile_DisplayName_Required {
+        public static string Profile_DisplayName_Required {
             get {
                 return ResourceManager.GetString("Profile_DisplayName_Required", resourceCulture);
             }
         }
         
-        internal static string Profile_DisplayName_MinLength {
+        public static string Profile_DisplayName_MinLength {
             get {
                 return ResourceManager.GetString("Profile_DisplayName_MinLength", resourceCulture);
             }
         }
         
-        internal static string Profile_DisplayName_MaxLength {
+        public static string Profile_DisplayName_MaxLength {
             get {
                 return ResourceManager.GetString("Profile_DisplayName_MaxLength", resourceCulture);
             }
         }
         
-        internal static string Profile_Bio_MaxLength {
+        public static string Profile_Bio_MaxLength {
             get {
                 return ResourceManager.GetString("Profile_Bio_MaxLength", resourceCulture);
             }
         }
         
-        internal static string Profile_ProfilePicture_Required {
+        public static string Profile_ProfilePicture_Required {
             get {
                 return ResourceManager.GetString("Profile_ProfilePicture_Required", resourceCulture);
             }
         }
         
-        internal static string Profile_ProfilePicture_InvalidFormat {
+        public static string Profile_ProfilePicture_InvalidFormat {
             get {
                 return ResourceManager.GetString("Profile_ProfilePicture_InvalidFormat", resourceCulture);
             }
         }
         
-        internal static string Profile_ProfilePicture_TooLarge {
+        public static string Profile_ProfilePicture_TooLarge {
             get {
                 return ResourceManager.GetString("Profile_ProfilePicture_TooLarge", resourceCulture);
             }
         }
         
-        internal static string Profile_Phone_Required {
+        public static string Profile_Phone_Required {
             get {
                 return ResourceManager.GetString("Profile_Phone_Required", resourceCulture);
             }
         }
         
-        internal static string Profile_Phone_Invalid {
+        public static string Profile_Phone_Invalid {
             get {
                 return ResourceManager.GetString("Profile_Phone_Invalid", resourceCulture);
             }
         }
         
-        internal static string Profile_Phone_AlreadyExists {
+        public static string Profile_Phone_AlreadyExists {
             get {
                 return ResourceManager.GetString("Profile_Phone_AlreadyExists", resourceCulture);
             }
         }
         
-        internal static string Profile_BirthDate_Required {
+        public static string Profile_BirthDate_Required {
             get {
                 return ResourceManager.GetString("Profile_BirthDate_Required", resourceCulture);
             }
         }
         
-        internal static string Profile_BirthDate_Invalid {
+        public static string Profile_BirthDate_Invalid {
             get {
                 return ResourceManager.GetString("Profile_BirthDate_Invalid", resourceCulture);
             }
         }
         
-        internal static string Profile_BirthDate_MinimumAge {
+        public static string Profile_BirthDate_MinimumAge {
             get {
                 return ResourceManager.GetString("Profile_BirthDate_MinimumAge", resourceCulture);
             }
         }
         
-        internal static string Profile_BirthDate_MaximumAge {
+        public static string Profile_BirthDate_MaximumAge {
             get {
                 return ResourceManager.GetString("Profile_BirthDate_MaximumAge", resourceCulture);
             }
         }
         
-        internal static string Profile_Gender_Required {
+        public static string Profile_Gender_Required {
             get {
                 return ResourceManager.GetString("Profile_Gender_Required", resourceCulture);
             }
         }
         
-        internal static string Profile_Address_Required {
+        public static string Profile_Address_Required {
             get {
                 return ResourceManager.GetString("Profile_Address_Required", resourceCulture);
             }
         }
         
-        internal static string Profile_Country_Required {
+        public static string Profile_Country_Required {
             get {
                 return ResourceManager.GetString("Profile_Country_Required", resourceCulture);
             }
         }
         
-        internal static string Profile_City_Required {
+        public static string Profile_City_Required {
             get {
                 return ResourceManager.GetString("Profile_City_Required", resourceCulture);
             }
         }
         
-        internal static string Profile_TimeZone_Required {
+        public static string Profile_TimeZone_Required {
             get {
                 return ResourceManager.GetString("Profile_TimeZone_Required", resourceCulture);
             }
         }
         
-        internal static string Profile_Account_Deactivated {
+        public static string Profile_Account_Deactivated {
             get {
                 return ResourceManager.GetString("Profile_Account_Deactivated", resourceCulture);
             }
         }
         
-        internal static string Profile_Account_NotFound {
+        public static string Profile_Account_NotFound {
             get {
                 return ResourceManager.GetString("Profile_Account_NotFound", resourceCulture);
             }
         }
         
-        internal static string Profile_Account_AlreadyExists {
+        public static string Profile_Account_AlreadyExists {
             get {
                 return ResourceManager.GetString("Profile_Account_AlreadyExists", resourceCulture);
             }
         }
         
-        internal static string Profile_Account_UpdateFailed {
+        public static string Profile_Account_UpdateFailed {
             get {
                 return ResourceManager.GetString("Profile_Account_UpdateFailed", resourceCulture);
             }
         }
         
-        internal static string Profile_Account_DeletionNotAllowed {
+        public static string Profile_Account_DeletionNotAllowed {
             get {
                 return ResourceManager.GetString("Profile_Account_DeletionNotAllowed", resourceCulture);
             }
         }
         
-        internal static string Profile_Account_Deleted {
+        public static string Profile_Account_Deleted {
             get {
                 return ResourceManager.GetString("Profile_Account_Deleted", resourceCulture);
             }
         }
         
-        internal static string Profile_Account_DeleteConfirm {
+        public static string Profile_Account_DeleteConfirm {
             get {
                 return ResourceManager.GetString("Profile_Account_DeleteConfirm", resourceCulture);
             }
         }
         
-        internal static string Email_Verification_Required {
+        public static string Email_Verification_Required {
             get {
                 return ResourceManager.GetString("Email_Verification_Required", resourceCulture);
             }
         }
         
-        internal static string Email_Verification_Failed {
+        public static string Email_Verification_Failed {
             get {
                 return ResourceManager.GetString("Email_Verification_Failed", resourceCulture);
             }
         }
         
-        internal static string Email_Verification_Expired {
+        public static string Email_Verification_Expired {
             get {
                 return ResourceManager.GetString("Email_Verification_Expired", resourceCulture);
             }
         }
         
-        internal static string Email_Change_Required {
+        public static string Email_Change_Required {
             get {
                 return ResourceManager.GetString("Email_Change_Required", resourceCulture);
             }
         }
         
-        internal static string Email_Change_SameAsCurrent {
+        public static string Email_Change_SameAsCurrent {
             get {
                 return ResourceManager.GetString("Email_Change_SameAsCurrent", resourceCulture);
             }
         }
         
-        internal static string Email_Change_AlreadyExists {
+        public static string Email_Change_AlreadyExists {
             get {
                 return ResourceManager.GetString("Email_Change_AlreadyExists", resourceCulture);
             }
         }
         
-        internal static string Email_Change_Pending {
+        public static string Email_Change_Pending {
             get {
                 return ResourceManager.GetString("Email_Change_Pending", resourceCulture);
             }
         }
         
-        internal static string Email_Notification_OptInRequired {
+        public static string Email_Notification_OptInRequired {
             get {
                 return ResourceManager.GetString("Email_Notification_OptInRequired", resourceCulture);
             }
         }
         
-        internal static string Email_Notification_OptOutSuccess {
+        public static string Email_Notification_OptOutSuccess {
             get {
                 return ResourceManager.GetString("Email_Notification_OptOutSuccess", resourceCulture);
             }
         }
         
-        internal static string Email_Notification_OptOutAlready {
+        public static string Email_Notification_OptOutAlready {
             get {
                 return ResourceManager.GetString("Email_Notification_OptOutAlready", resourceCulture);
             }
         }
         
-        internal static string Email_Blocked {
+        public static string Email_Blocked {
             get {
                 return ResourceManager.GetString("Email_Blocked", resourceCulture);
             }
         }
         
-        internal static string Email_Send_Failed {
+        public static string Email_Send_Failed {
             get {
                 return ResourceManager.GetString("Email_Send_Failed", resourceCulture);
             }
         }
         
-        internal static string Email_Template_NotFound {
+        public static string Email_Template_NotFound {
             get {
                 return ResourceManager.GetString("Email_Template_NotFound", resourceCulture);
             }
         }
         
-        internal static string Email_InvalidDomain {
+        public static string Email_InvalidDomain {
             get {
                 return ResourceManager.GetString("Email_InvalidDomain", resourceCulture);
             }
         }
         
-        internal static string Email_ContactSupport {
+        public static string Email_ContactSupport {
             get {
                 return ResourceManager.GetString("Email_ContactSupport", resourceCulture);
             }
         }
         
-        internal static string PasswordReset_Token_Required {
+        public static string PasswordReset_Token_Required {
             get {
                 return ResourceManager.GetString("PasswordReset_Token_Required", resourceCulture);
             }
         }
         
-        internal static string PasswordReset_Token_Invalid {
+        public static string PasswordReset_Token_Invalid {
             get {
                 return ResourceManager.GetString("PasswordReset_Token_Invalid", resourceCulture);
             }
         }
         
-        internal static string PasswordReset_Expired {
+        public static string PasswordReset_Expired {
             get {
                 return ResourceManager.GetString("PasswordReset_Expired", resourceCulture);
             }
         }
         
-        internal static string PasswordReset_TooManyRequests {
+        public static string PasswordReset_TooManyRequests {
             get {
                 return ResourceManager.GetString("PasswordReset_TooManyRequests", resourceCulture);
             }
         }
         
-        internal static string PasswordReset_Email_Required {
+        public static string PasswordReset_Email_Required {
             get {
                 return ResourceManager.GetString("PasswordReset_Email_Required", resourceCulture);
             }
         }
         
-        internal static string PasswordReset_Email_NotFound {
+        public static string PasswordReset_Email_NotFound {
             get {
                 return ResourceManager.GetString("PasswordReset_Email_NotFound", resourceCulture);
             }
         }
         
-        internal static string PasswordReset_OldPassword_Required {
+        public static string PasswordReset_OldPassword_Required {
             get {
                 return ResourceManager.GetString("PasswordReset_OldPassword_Required", resourceCulture);
             }
         }
         
-        internal static string PasswordReset_NewPassword_Required {
+        public static string PasswordReset_NewPassword_Required {
             get {
                 return ResourceManager.GetString("PasswordReset_NewPassword_Required", resourceCulture);
             }
         }
         
-        internal static string PasswordReset_NewPassword_MinLength {
+        public static string PasswordReset_NewPassword_MinLength {
             get {
                 return ResourceManager.GetString("PasswordReset_NewPassword_MinLength", resourceCulture);
             }
         }
         
-        internal static string PasswordReset_NewPassword_MaxLength {
+        public static string PasswordReset_NewPassword_MaxLength {
             get {
                 return ResourceManager.GetString("PasswordReset_NewPassword_MaxLength", resourceCulture);
             }
         }
         
-        internal static string PasswordReset_NewPassword_TooWeak {
+        public static string PasswordReset_NewPassword_TooWeak {
             get {
                 return ResourceManager.GetString("PasswordReset_NewPassword_TooWeak", resourceCulture);
             }
         }
         
-        internal static string PasswordReset_NewPassword_SameAsOld {
+        public static string PasswordReset_NewPassword_SameAsOld {
             get {
                 return ResourceManager.GetString("PasswordReset_NewPassword_SameAsOld", resourceCulture);
             }
         }
         
-        internal static string PasswordReset_Mismatch {
+        public static string PasswordReset_Mismatch {
             get {
                 return ResourceManager.GetString("PasswordReset_Mismatch", resourceCulture);
             }
         }
         
-        internal static string SecurityCode_Required {
+        public static string SecurityCode_Required {
             get {
                 return ResourceManager.GetString("SecurityCode_Required", resourceCulture);
             }
         }
         
-        internal static string SecurityCode_Invalid {
+        public static string SecurityCode_Invalid {
             get {
                 return ResourceManager.GetString("SecurityCode_Invalid", resourceCulture);
             }
         }
         
-        internal static string TwoFactor_Required {
+        public static string TwoFactor_Required {
             get {
                 return ResourceManager.GetString("TwoFactor_Required", resourceCulture);
             }
         }
         
-        internal static string TwoFactor_Invalid {
+        public static string TwoFactor_Invalid {
             get {
                 return ResourceManager.GetString("TwoFactor_Invalid", resourceCulture);
             }
         }
         
-        internal static string TwoFactor_SetupRequired {
+        public static string TwoFactor_SetupRequired {
             get {
                 return ResourceManager.GetString("TwoFactor_SetupRequired", resourceCulture);
             }
         }
         
-        internal static string Security_AccountLocked {
+        public static string Security_AccountLocked {
             get {
                 return ResourceManager.GetString("Security_AccountLocked", resourceCulture);
             }
         }
         
-        internal static string Security_AccountSuspended {
+        public static string Security_AccountSuspended {
             get {
                 return ResourceManager.GetString("Security_AccountSuspended", resourceCulture);
             }
         }
         
-        internal static string Security_UnexpectedError {
+        public static string Security_UnexpectedError {
             get {
                 return ResourceManager.GetString("Security_UnexpectedError", resourceCulture);
             }
         }
         
-        internal static string Address_Required {
+        public static string Address_Required {
             get {
                 return ResourceManager.GetString("Address_Required", resourceCulture);
             }
         }
         
-        internal static string Address_Line1_Required {
+        public static string Address_Line1_Required {
             get {
                 return ResourceManager.GetString("Address_Line1_Required", resourceCulture);
             }
         }
         
-        internal static string Address_Line2_Optional {
+        public static string Address_Line2_Optional {
             get {
                 return ResourceManager.GetString("Address_Line2_Optional", resourceCulture);
             }
         }
         
-        internal static string Address_City_Required {
+        public static string Address_City_Required {
             get {
                 return ResourceManager.GetString("Address_City_Required", resourceCulture);
             }
         }
         
-        internal static string Address_State_Required {
+        public static string Address_State_Required {
             get {
                 return ResourceManager.GetString("Address_State_Required", resourceCulture);
             }
         }
         
-        internal static string Address_PostalCode_Required {
+        public static string Address_PostalCode_Required {
             get {
                 return ResourceManager.GetString("Address_PostalCode_Required", resourceCulture);
             }
         }
         
-        internal static string Address_PostalCode_Invalid {
+        public static string Address_PostalCode_Invalid {
             get {
                 return ResourceManager.GetString("Address_PostalCode_Invalid", resourceCulture);
             }
         }
         
-        internal static string Address_Country_Required {
+        public static string Address_Country_Required {
             get {
                 return ResourceManager.GetString("Address_Country_Required", resourceCulture);
             }
         }
         
-        internal static string Address_Country_Invalid {
+        public static string Address_Country_Invalid {
             get {
                 return ResourceManager.GetString("Address_Country_Invalid", resourceCulture);
             }
         }
         
-        internal static string Address_NotFound {
+        public static string Address_NotFound {
             get {
                 return ResourceManager.GetString("Address_NotFound", resourceCulture);
             }
         }
         
-        internal static string Address_AlreadyExists {
+        public static string Address_AlreadyExists {
             get {
                 return ResourceManager.GetString("Address_AlreadyExists", resourceCulture);
             }
         }
         
-        internal static string Address_Location_Invalid {
+        public static string Address_Location_Invalid {
             get {
                 return ResourceManager.GetString("Address_Location_Invalid", resourceCulture);
             }
         }
         
-        internal static string Address_Coordinates_Required {
+        public static string Address_Coordinates_Required {
             get {
                 return ResourceManager.GetString("Address_Coordinates_Required", resourceCulture);
             }
         }
         
-        internal static string Address_Coordinates_Invalid {
+        public static string Address_Coordinates_Invalid {
             get {
                 return ResourceManager.GetString("Address_Coordinates_Invalid", resourceCulture);
             }
         }
         
-        internal static string Address_UpdateFailed {
+        public static string Address_UpdateFailed {
             get {
                 return ResourceManager.GetString("Address_UpdateFailed", resourceCulture);
             }
         }
         
-        internal static string Address_DeleteFailed {
+        public static string Address_DeleteFailed {
             get {
                 return ResourceManager.GetString("Address_DeleteFailed", resourceCulture);
             }
         }
         
-        internal static string Address_Type_Required {
+        public static string Address_Type_Required {
             get {
                 return ResourceManager.GetString("Address_Type_Required", resourceCulture);
             }
         }
         
-        internal static string Common_Required {
+        public static string Common_Required {
             get {
                 return ResourceManager.GetString("Common_Required", resourceCulture);
             }
         }
         
-        internal static string Common_Invalid {
+        public static string Common_Invalid {
             get {
                 return ResourceManager.GetString("Common_Invalid", resourceCulture);
             }
         }
         
-        internal static string Common_MinLength {
+        public static string Common_MinLength {
             get {
                 return ResourceManager.GetString("Common_MinLength", resourceCulture);
             }
         }
         
-        internal static string Common_MaxLength {
+        public static string Common_MaxLength {
             get {
                 return ResourceManager.GetString("Common_MaxLength", resourceCulture);
             }
         }
         
-        internal static string Common_Range {
+        public static string Common_Range {
             get {
                 return ResourceManager.GetString("Common_Range", resourceCulture);
             }
         }
         
-        internal static string Common_AlreadyExists {
+        public static string Common_AlreadyExists {
             get {
                 return ResourceManager.GetString("Common_AlreadyExists", resourceCulture);
             }
         }
         
-        internal static string Common_NotFound {
+        public static string Common_NotFound {
             get {
                 return ResourceManager.GetString("Common_NotFound", resourceCulture);
             }
         }
         
-        internal static string Common_Format {
+        public static string Common_Format {
             get {
                 return ResourceManager.GetString("Common_Format", resourceCulture);
             }
         }
         
-        internal static string Common_UnexpectedError {
+        public static string Common_UnexpectedError {
             get {
                 return ResourceManager.GetString("Common_UnexpectedError", resourceCulture);
             }
         }
         
-        internal static string Common_OperationNotAllowed {
+        public static string Common_OperationNotAllowed {
             get {
                 return ResourceManager.GetString("Common_OperationNotAllowed", resourceCulture);
             }
         }
         
-        internal static string Common_OperationFailed {
+        public static string Common_OperationFailed {
             get {
                 return ResourceManager.GetString("Common_OperationFailed", resourceCulture);
             }
         }
         
-        internal static string Common_RequiredSelection {
+        public static string Common_RequiredSelection {
             get {
                 return ResourceManager.GetString("Common_RequiredSelection", resourceCulture);
             }
         }
         
-        internal static string Common_TooManyRequests {
+        public static string Common_TooManyRequests {
             get {
                 return ResourceManager.GetString("Common_TooManyRequests", resourceCulture);
             }
         }
         
-        internal static string Common_Forbidden {
+        public static string Common_Forbidden {
             get {
                 return ResourceManager.GetString("Common_Forbidden", resourceCulture);
             }
         }
         
-        internal static string Common_Unauthorized {
+        public static string Common_Unauthorized {
             get {
                 return ResourceManager.GetString("Common_Unauthorized", resourceCulture);
             }
         }
         
-        internal static string Common_Timeout {
+        public static string Common_Timeout {
             get {
                 return ResourceManager.GetString("Common_Timeout", resourceCulture);
             }
         }
         
-        internal static string Common_Empty {
+        public static string Common_Empty {
             get {
                 return ResourceManager.GetString("Common_Empty", resourceCulture);
             }
         }
         
-        internal static string Common_Null {
+        public static string Common_Null {
             get {
                 return ResourceManager.GetString("Common_Null", resourceCulture);
             }
         }
         
-        internal static string Common_InvalidSelection {
+        public static string Common_InvalidSelection {
             get {
                 return ResourceManager.GetString("Common_InvalidSelection", resourceCulture);
             }
         }
         
-        internal static string Common_RequiredConfirmation {
+        public static string Common_RequiredConfirmation {
             get {
                 return ResourceManager.GetString("Common_RequiredConfirmation", resourceCulture);
             }
         }
         
-        internal static string Agreement_PrivacyPolicy_Required {
+        public static string Agreement_PrivacyPolicy_Required {
             get {
                 return ResourceManager.GetString("Agreement_PrivacyPolicy_Required", resourceCulture);
             }
         }
         
-        internal static string Agreement_TermsOfService_Required {
+        public static string Agreement_TermsOfService_Required {
             get {
                 return ResourceManager.GetString("Agreement_TermsOfService_Required", resourceCulture);
             }
         }
         
-        internal static string Agreement_Required {
+        public static string Agreement_Required {
             get {
                 return ResourceManager.GetString("Agreement_Required", resourceCulture);
             }
         }
         
-        internal static string Agreement_Consent_Required {
+        public static string Agreement_Consent_Required {
             get {
                 return ResourceManager.GetString("Agreement_Consent_Required", resourceCulture);
             }
         }
         
-        internal static string Agreement_AlreadyAccepted {
+        public static string Agreement_AlreadyAccepted {
             get {
                 return ResourceManager.GetString("Agreement_AlreadyAccepted", resourceCulture);
             }
         }
         
-        internal static string Agreement_Withdrawn {
+        public static string Agreement_Withdrawn {
             get {
                 return ResourceManager.GetString("Agreement_Withdrawn", resourceCulture);
             }
         }
         
-        internal static string Agreement_Invalid {
+        public static string Agreement_Invalid {
             get {
                 return ResourceManager.GetString("Agreement_Invalid", resourceCulture);
             }
         }
         
-        internal static string Agreement_NotFound {
+        public static string Agreement_NotFound {
             get {
                 return ResourceManager.GetString("Agreement_NotFound", resourceCulture);
             }
         }
         
-        internal static string Agreement_Signature_Required {
+        public static string Agreement_Signature_Required {
             get {
                 return ResourceManager.GetString("Agreement_Signature_Required", resourceCulture);
             }
         }
         
-        internal static string Agreement_ConsentTimestamp_Invalid {
+        public static string Agreement_ConsentTimestamp_Invalid {
             get {
                 return ResourceManager.GetString("Agreement_ConsentTimestamp_Invalid", resourceCulture);
             }
         }
         
-        internal static string System_Maintenance {
+        public static string System_Maintenance {
             get {
                 return ResourceManager.GetString("System_Maintenance", resourceCulture);
             }
         }
         
-        internal static string System_Unavailable {
+        public static string System_Unavailable {
             get {
                 return ResourceManager.GetString("System_Unavailable", resourceCulture);
             }
         }
         
-        internal static string System_RateLimitExceeded {
+        public static string System_RateLimitExceeded {
             get {
                 return ResourceManager.GetString("System_RateLimitExceeded", resourceCulture);
             }
         }
         
-        internal static string System_Timeout {
+        public static string System_Timeout {
             get {
                 return ResourceManager.GetString("System_Timeout", resourceCulture);
             }
         }
         
-        internal static string System_InternalError {
+        public static string System_publicError {
             get {
-                return ResourceManager.GetString("System_InternalError", resourceCulture);
+                return ResourceManager.GetString("System_publicError", resourceCulture);
             }
         }
         
-        internal static string System_UnexpectedError {
+        public static string System_UnexpectedError {
             get {
                 return ResourceManager.GetString("System_UnexpectedError", resourceCulture);
             }
         }
         
-        internal static string System_UnsupportedOperation {
+        public static string System_UnsupportedOperation {
             get {
                 return ResourceManager.GetString("System_UnsupportedOperation", resourceCulture);
             }
         }
         
-        internal static string System_ResourceNotFound {
+        public static string System_ResourceNotFound {
             get {
                 return ResourceManager.GetString("System_ResourceNotFound", resourceCulture);
             }
         }
         
-        internal static string System_ResourceLocked {
+        public static string System_ResourceLocked {
             get {
                 return ResourceManager.GetString("System_ResourceLocked", resourceCulture);
             }
         }
         
-        internal static string System_QuotaExceeded {
+        public static string System_QuotaExceeded {
             get {
                 return ResourceManager.GetString("System_QuotaExceeded", resourceCulture);
             }
         }
         
-        internal static string System_DependencyFailure {
+        public static string System_DependencyFailure {
             get {
                 return ResourceManager.GetString("System_DependencyFailure", resourceCulture);
             }
         }
         
-        internal static string System_ApiKeyMissing {
+        public static string System_ApiKeyMissing {
             get {
                 return ResourceManager.GetString("System_ApiKeyMissing", resourceCulture);
             }
         }
         
-        internal static string System_ApiKeyExpired {
+        public static string System_ApiKeyExpired {
             get {
                 return ResourceManager.GetString("System_ApiKeyExpired", resourceCulture);
             }
         }
         
-        internal static string System_ApiAccessDenied {
+        public static string System_ApiAccessDenied {
             get {
                 return ResourceManager.GetString("System_ApiAccessDenied", resourceCulture);
             }
         }
         
-        internal static string System_OperationCanceled {
+        public static string System_OperationCanceled {
             get {
                 return ResourceManager.GetString("System_OperationCanceled", resourceCulture);
             }
         }
         
-        internal static string Privacy_Consent_Required {
+        public static string Privacy_Consent_Required {
             get {
                 return ResourceManager.GetString("Privacy_Consent_Required", resourceCulture);
             }
         }
         
-        internal static string Privacy_Consent_Updated {
+        public static string Privacy_Consent_Updated {
             get {
                 return ResourceManager.GetString("Privacy_Consent_Updated", resourceCulture);
             }
         }
         
-        internal static string Privacy_DataExport_Requested {
+        public static string Privacy_DataExport_Requested {
             get {
                 return ResourceManager.GetString("Privacy_DataExport_Requested", resourceCulture);
             }
         }
         
-        internal static string Privacy_DataDeletion_Requested {
+        public static string Privacy_DataDeletion_Requested {
             get {
                 return ResourceManager.GetString("Privacy_DataDeletion_Requested", resourceCulture);
             }
         }
         
-        internal static string Common_Between {
+        public static string Common_Between {
             get {
                 return ResourceManager.GetString("Common_Between", resourceCulture);
             }
         }
         
-        internal static string Common_BetweenExclusive {
+        public static string Common_BetweenExclusive {
             get {
                 return ResourceManager.GetString("Common_BetweenExclusive", resourceCulture);
             }
         }
         
-        internal static string Common_Compare_Equal {
+        public static string Common_Compare_Equal {
             get {
                 return ResourceManager.GetString("Common_Compare_Equal", resourceCulture);
             }
         }
         
-        internal static string Common_Compare_NotEqual {
+        public static string Common_Compare_NotEqual {
             get {
                 return ResourceManager.GetString("Common_Compare_NotEqual", resourceCulture);
             }
         }
         
-        internal static string Common_Compare_GreaterThan {
+        public static string Common_Compare_GreaterThan {
             get {
                 return ResourceManager.GetString("Common_Compare_GreaterThan", resourceCulture);
             }
         }
         
-        internal static string Common_Compare_GreaterThanOrEqual {
+        public static string Common_Compare_GreaterThanOrEqual {
             get {
                 return ResourceManager.GetString("Common_Compare_GreaterThanOrEqual", resourceCulture);
             }
         }
         
-        internal static string Common_Compare_LessThan {
+        public static string Common_Compare_LessThan {
             get {
                 return ResourceManager.GetString("Common_Compare_LessThan", resourceCulture);
             }
         }
         
-        internal static string Common_Compare_LessThanOrEqual {
+        public static string Common_Compare_LessThanOrEqual {
             get {
                 return ResourceManager.GetString("Common_Compare_LessThanOrEqual", resourceCulture);
             }
         }
         
-        internal static string Common_CreditCard_Invalid {
+        public static string Common_CreditCard_Invalid {
             get {
                 return ResourceManager.GetString("Common_CreditCard_Invalid", resourceCulture);
             }
         }
         
-        internal static string Common_GreaterThan {
+        public static string Common_GreaterThan {
             get {
                 return ResourceManager.GetString("Common_GreaterThan", resourceCulture);
             }
         }
         
-        internal static string Common_LessThan {
+        public static string Common_LessThan {
             get {
                 return ResourceManager.GetString("Common_LessThan", resourceCulture);
             }
         }
         
-        internal static string Common_MaxCount {
+        public static string Common_MaxCount {
             get {
                 return ResourceManager.GetString("Common_MaxCount", resourceCulture);
             }
         }
         
-        internal static string Common_MinCount {
+        public static string Common_MinCount {
             get {
                 return ResourceManager.GetString("Common_MinCount", resourceCulture);
             }
         }
         
-        internal static string Common_Collection_Required {
+        public static string Common_Collection_Required {
             get {
                 return ResourceManager.GetString("Common_Collection_Required", resourceCulture);
             }
         }
         
-        internal static string Common_Collection_NotEmpty {
+        public static string Common_Collection_NotEmpty {
             get {
                 return ResourceManager.GetString("Common_Collection_NotEmpty", resourceCulture);
             }
         }
         
-        internal static string Common_Collection_MinCount {
+        public static string Common_Collection_MinCount {
             get {
                 return ResourceManager.GetString("Common_Collection_MinCount", resourceCulture);
             }
         }
         
-        internal static string Common_Collection_MaxCount {
+        public static string Common_Collection_MaxCount {
             get {
                 return ResourceManager.GetString("Common_Collection_MaxCount", resourceCulture);
             }
         }
         
-        internal static string Common_RequiredIf {
+        public static string Common_RequiredIf {
             get {
                 return ResourceManager.GetString("Common_RequiredIf", resourceCulture);
             }
         }
         
-        internal static string Common_RequiredIfNot {
+        public static string Common_RequiredIfNot {
             get {
                 return ResourceManager.GetString("Common_RequiredIfNot", resourceCulture);
             }
         }
         
-        internal static string Common_RequiredIfAny {
+        public static string Common_RequiredIfAny {
             get {
                 return ResourceManager.GetString("Common_RequiredIfAny", resourceCulture);
             }
         }
         
-        internal static string Common_RequiredIfAll {
+        public static string Common_RequiredIfAll {
             get {
                 return ResourceManager.GetString("Common_RequiredIfAll", resourceCulture);
             }
         }
         
-        internal static string Common_RequiredIfEmpty {
+        public static string Common_RequiredIfEmpty {
             get {
                 return ResourceManager.GetString("Common_RequiredIfEmpty", resourceCulture);
             }
         }
         
-        internal static string Common_RequiredIfNotEmpty {
+        public static string Common_RequiredIfNotEmpty {
             get {
                 return ResourceManager.GetString("Common_RequiredIfNotEmpty", resourceCulture);
             }
         }
         
-        internal static string Common_Url_Invalid {
+        public static string Common_Url_Invalid {
             get {
                 return ResourceManager.GetString("Common_Url_Invalid", resourceCulture);
             }
