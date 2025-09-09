@@ -15,7 +15,6 @@
         <PackageProjectUrl>https://github.com/selcukgural/SGuard.DataAnnotations</PackageProjectUrl>
         <RepositoryUrl>https://github.com/selcukgural/SGuard.DataAnnotations</RepositoryUrl>
         <RepositoryType>git</RepositoryType>
-        <PackageLicenseUrl>https://opensource.org/licenses/MIT</PackageLicenseUrl>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
         <PackageIcon>icon.png</PackageIcon>
         <Copyright>Copyright © 2025 Selçuk Güral</Copyright>
@@ -109,6 +108,19 @@
             <AutoGen>True</AutoGen>
             <DependentUpon>SGuardDataAnnotationResource.hi.resx</DependentUpon>
         </Compile>
+    </ItemGroup>
+    
+    <PropertyGroup>
+        <PackageIcon>icon.png</PackageIcon>
+    </PropertyGroup>
+    
+    
+    <ItemGroup>
+        <None Include="assets/icon.png" Pack="true" PackagePath="\" />
+    </ItemGroup>
+    <ItemGroup>
+        <None Include="LICENSE" Pack="true" PackagePath="\" />
+        <None Include="README.md" Pack="true" PackagePath="\" />
     </ItemGroup>
 
 </Project>
