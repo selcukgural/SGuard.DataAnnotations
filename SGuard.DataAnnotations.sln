@@ -1,5 +1,4 @@
-﻿
-Microsoft Visual Studio Solution File, Format Version 12.00
+﻿Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{BF3A83E1-8390-46AA-9FDF-4ED926EC071B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{02ECB08C-6882-4AB1-B6A3-94293964782B}"
@@ -7,6 +6,41 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SGuard.DataAnnotations", "SGuard.DataAnnotations\SGuard.DataAnnotations.csproj", "{52A61576-76CF-4A64-A800-05E244238BBC}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SGuard.DataAnnotations.Tests", "SGuard.DataAnnotations.Tests\SGuard.DataAnnotations.Tests.csproj", "{EE01A505-8666-4AEA-9014-6EB44A9E6395}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{D1E2F3A4-5555-6666-7777-888899990000}"
+	ProjectSection(SolutionItems) = preProject
+		coverlet.runsettings = coverlet.runsettings
+		.gitattributes = .gitattributes
+		.gitignore = .gitignore
+		CHANGELOG.md = CHANGELOG.md
+		LICENSE = LICENSE
+		.github\CODE_OF_CONDUCT.md = .github\CODE_OF_CONDUCT.md
+		.github\CONTRIBUTING.md = .github\CONTRIBUTING.md
+		.github\SECURITY.md = .github\SECURITY.md
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".github", ".github", "{A1B2C3D4-1111-2222-3333-444455556666}"
+	ProjectSection(SolutionItems) = preProject
+		.github\FUNDING.yml = .github\FUNDING.yml
+		.github\PULL_REQUEST_TEMPLATE.md = .github\PULL_REQUEST_TEMPLATE.md
+		.github\workflows\dotnet.yml = .github\workflows\dotnet.yml
+		.github\BRANCH_NAMING_GUIDLINES.md = .github\BRANCH_NAMING_GUIDLINES.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ISSUE_TEMPLATE", "ISSUE_TEMPLATE", "{B88852FE-2CCC-4E2B-AD97-C710BDB81E04}"
+	ProjectSection(SolutionItems) = preProject
+		.github\ISSUE_TEMPLATE\bug_report.md = .github\ISSUE_TEMPLATE\bug_report.md
+		.github\ISSUE_TEMPLATE\feature_request.md = .github\ISSUE_TEMPLATE\feature_request.md
+		.github\ISSUE_TEMPLATE\feedback.md = .github\ISSUE_TEMPLATE\feedback.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{E362DF74-82E5-4730-98CB-B70C686E7827}"
+	ProjectSection(SolutionItems) = preProject
+		.github\workflows\publish.yml = .github\workflows\publish.yml
+		.github\workflows\coverage-readme.yml = .github\workflows\coverage-readme.yml
+		.github\workflows\ci.yml = .github\workflows\ci.yml
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -16,6 +50,8 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{52A61576-76CF-4A64-A800-05E244238BBC} = {BF3A83E1-8390-46AA-9FDF-4ED926EC071B}
 		{EE01A505-8666-4AEA-9014-6EB44A9E6395} = {02ECB08C-6882-4AB1-B6A3-94293964782B}
+		{B88852FE-2CCC-4E2B-AD97-C710BDB81E04} = {A1B2C3D4-1111-2222-3333-444455556666}
+		{E362DF74-82E5-4730-98CB-B70C686E7827} = {A1B2C3D4-1111-2222-3333-444455556666}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{52A61576-76CF-4A64-A800-05E244238BBC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU

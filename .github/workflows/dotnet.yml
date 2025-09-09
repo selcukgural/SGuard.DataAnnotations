@@ -1,0 +1,46 @@
+name: .NET
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        dotnet-version: [ '8.0.x', '9.0.x' ]
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: Setup .NET ${{ matrix.dotnet-version }}
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: ${{ matrix.dotnet-version }}
+      - name: Display .NET info
+        run: dotnet --info
+      - name: Restore dependencies
+        run: dotnet restore SGuard.DataAnnotations.sln
+      - name: Build solution
+        run: dotnet build SGuard.DataAnnotations.sln --no-restore --configuration Release
+      - name: Run tests
+        run: dotnet test SGuard.DataAnnotations.Tests/SGuard.DataAnnotations.Tests.csproj --no-build --configuration Release --verbosity normal --logger trx
+      - name: Publish test results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: test-results
+          path: SGuard.DataAnnotations.Tests/TestResults/*.trx
+      - name: Check formatting
+        run: dotnet format --verify-no-changes
+      - name: Check for outdated NuGet packages
+        run: dotnet list SGuard.DataAnnotations/SGuard.DataAnnotations.csproj package --outdated
+      - name: Pack NuGet package
+        run: dotnet pack SGuard.DataAnnotations/SGuard.DataAnnotations.csproj --no-build --configuration Release --output ./nupkg
+      - name: Upload NuGet package artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: nuget-package
+          path: ./nupkg/*.nupkg

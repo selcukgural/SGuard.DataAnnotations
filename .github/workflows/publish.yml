@@ -1,0 +1,31 @@
+name: Publish NuGet Package
+
+on:
+  workflow_dispatch:
+  push:
+    tags:
+      - 'v*.*.*'
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        dotnet-version: [ '8.0.x', '9.0.x' ]
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: Setup .NET ${{ matrix.dotnet-version }}
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: ${{ matrix.dotnet-version }}
+      - name: Restore dependencies
+        run: dotnet restore SGuard.DataAnnotations.sln
+      - name: Build solution
+        run: dotnet build SGuard.DataAnnotations.sln --no-restore --configuration Release
+      - name: Pack NuGet package
+        run: dotnet pack SGuard.DataAnnotations/SGuard.DataAnnotations.csproj --no-build --configuration Release --output ./nupkg
+      - name: Publish NuGet package
+        run: dotnet nuget push ./nupkg/*.nupkg --source "https://api.nuget.org/v3/index.json" --api-key ${{ secrets.NUGET_API_KEY }}
+        env:
+          NUGET_API_KEY: ${{ secrets.NUGET_API_KEY }}

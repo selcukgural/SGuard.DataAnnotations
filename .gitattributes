@@ -1,0 +1,12 @@
+# .gitattributes for SGuard.DataAnnotations
+# Ensure consistent line endings and text encoding
+* text=auto
+*.cs diff=csharp
+*.resx text
+*.md text
+*.yml text
+*.json text
+*.sln text
+*.csproj text
+*.runsettings text
+
