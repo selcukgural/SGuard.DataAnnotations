@@ -372,9 +372,9 @@ MIT License. See [LICENSE](LICENSE).
 # Summary
 |||
 |:---|:---|
-| Generated on: | 09/09/2025 - 22:27:29 |
-| Coverage date: | 09/09/2025 - 22:27:26 - 09/09/2025 - 22:27:27 |
-| Parser: | MultiReport (4x Cobertura) |
+| Generated on: | 09/12/2025 - 12:00:34 |
+| Coverage date: | 09/09/2025 - 22:27:26 - 09/12/2025 - 12:00:31 |
+| Parser: | MultiReport (7x Cobertura) |
 | Assemblies: | 1 |
 | Classes: | 25 |
 | Files: | 25 |
@@ -416,5 +416,4 @@ MIT License. See [LICENSE](LICENSE).
 |SGuard.DataAnnotations.SGuardUrlAttribute|7|0|7|38|100%|2|2|100%|
 |SGuard.DataAnnotations.SGuardValidationAttributeBase|19|1|20|83|95%|19|24|79.1%|
 |SGuard.DataAnnotations.ThrowIf|14|2|16|101|87.5%|0|0||
-
 <!-- TEST-RESULTS:END -->
