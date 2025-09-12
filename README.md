@@ -324,7 +324,7 @@ public class UserRegistration
 **A:** Yes, you can stack any combination on your model.
 
 **Q:** _Will SGuard.DataAnnotations work with FluentValidation?_  
-**A:** Yes, as long as you use DataAnnotations integration. For a full fluent API, see [`SGuard.FluentValidation`](https://github.com/selcukgural/SGuard.FluentValidation).
+**A:** Yes, as long as you use DataAnnotations integration. For a full fluent API, see [`SGuard.FluentValidation`](https://github.com/selcukgural/SGuard.ValidationBuilder).
 
 **Q:** _How do I quickly test everything?_  
 **A:**
