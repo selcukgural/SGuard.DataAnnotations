@@ -1,4 +1,4 @@
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace SGuard.DataAnnotations.Tests.DataAnnotation;
 
@@ -11,7 +11,7 @@ public sealed class IsTests
 
     private sealed class TestModelInvalid
     {
-        [Required] public string Name { get; set; }
+        [Required] public string? Name { get; set; }
     }
 
     [Fact]

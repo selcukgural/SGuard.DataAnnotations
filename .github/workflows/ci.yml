@@ -1,5 +1,7 @@
 name: CI
 
+# The job that runs project code (restore, build, test) gets a read-only token and no secrets. Only the report job, which
+# runs no project code, can write checks and PR comments and upload coverage to Codecov.
 permissions:
   contents: read
 
@@ -7,79 +9,163 @@ on:
   push:
     branches: [ main, master ]
     paths:
-      - 'src/**'
-      - 'tests/**'
+      - 'SGuard.DataAnnotations/**'
+      - 'SGuard.DataAnnotations.Tests/**'
       - '.github/workflows/**'
+      - 'global.json'
       - 'SGuard.DataAnnotations.sln'
-      - '**/*.csproj'
       - 'coverlet.runsettings'
+      - 'Directory.Build.props'
   pull_request:
     branches: [ main, master ]
     paths:
-      - 'src/**'
-      - 'tests/**'
+      - 'SGuard.DataAnnotations/**'
+      - 'SGuard.DataAnnotations.Tests/**'
       - '.github/workflows/**'
+      - 'global.json'
       - 'SGuard.DataAnnotations.sln'
-      - '**/*.csproj'
       - 'coverlet.runsettings'
+      - 'Directory.Build.props'
 
 concurrency:
   group: ci-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:
-  build-and-test:
+  # The ruleset on main requires a check named "build": keep this job's id.
+  build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           fetch-depth: 0
+          persist-credentials: false
 
-      - name: Setup .NET (6/7/8/9)
-        uses: actions/setup-dotnet@v4
+      - name: Setup .NET (8/9/10)
+        uses: actions/setup-dotnet@a98b56852c35b8e3190ac28c8c2271da59106c68 # v6.0.0
         with:
           dotnet-version: |
-            6.0.x
-            7.0.x
             8.0.x
             9.0.x
+            10.0.x
 
-      - name: Cache NuGet packages
-        uses: actions/cache@v4
+      - name: Cache NuGet
+        uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
         with:
           path: ~/.nuget/packages
-          key: ${{ runner.os }}-nuget-${{ hashFiles('**/*.csproj') }}
-          restore-keys: |
-            ${{ runner.os }}-nuget-
+          key: ${{ runner.os }}-nuget-${{ hashFiles('**/packages.lock.json') }}
+          restore-keys: ${{ runner.os }}-nuget-
 
-      - name: Restore dependencies
-        run: dotnet restore SGuard.DataAnnotations.sln
+      # Directory.Build.props enables locked mode and fails on vulnerable packages in CI.
+      - name: Restore
+        run: dotnet restore SGuard.DataAnnotations.sln --locked-mode
 
       - name: Build
         run: dotnet build SGuard.DataAnnotations.sln --configuration Release --no-restore
 
-      - name: Test with coverage
-        run: dotnet test SGuard.DataAnnotations.sln --configuration Release --no-build --settings coverlet.runsettings --collect:"XPlat Code Coverage" --logger "trx;LogFileName=test_results.trx"
+      # Runs package validation against the last release, which otherwise only runs at release time.
+      - name: Pack
+        run: dotnet pack SGuard.DataAnnotations/SGuard.DataAnnotations.csproj --configuration Release --no-build --output dist
 
-      - name: Upload test results (TRX)
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: test-results
-          path: '**/TestResults/**/*.trx'
+      - name: Test (TRX + Coverage)
+        run: >
+          dotnet test SGuard.DataAnnotations.sln
+          --configuration Release
+          --no-build
+          --settings coverlet.runsettings
+          --collect:"XPlat Code Coverage"
+          --logger "trx;LogFilePrefix=test_results"
 
-      - name: Upload coverage report
-        if: always()
-        uses: actions/upload-artifact@v4
+      - name: Generate Coverage Summary + HTML
+        uses: danielpalme/ReportGenerator-GitHub-Action@d3ebf1f760f7d8ab92cc44d9bcfee7ad73722a31 # v5.5.11
         with:
-          name: coverage-report
+          reports: 'SGuard.DataAnnotations.Tests/TestResults/*/coverage.cobertura.xml' # the In/ copy written for the TRX logger is the same data
+          targetdir: 'coveragereport'
+          reporttypes: 'MarkdownSummary;Html'
+          assemblyfilters: '+SGuard.DataAnnotations;-*Tests'
+          classfilters: '-*.Designer*'
+          tag: '${{ github.run_number }}'
+
+      - name: Append coverage table to Job Summary
+        if: always()
+        run: |
+          echo "## Code Coverage" >> "$GITHUB_STEP_SUMMARY"
+          if [ -f coveragereport/Summary.md ]; then
+            cat coveragereport/Summary.md >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo "_Coverage summary not generated._" >> "$GITHUB_STEP_SUMMARY"
+          fi
+
+      - name: Upload Artifacts
+        if: always()
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: coverage-report-html
+          path: coveragereport
+
+      - name: Upload raw test/coverage files
+        if: always()
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: test-and-coverage-raw
           path: |
+            **/TestResults/**/*.trx
             **/TestResults/**/coverage*.xml
             **/TestResults/**/*.xml
-            
-      - name: Upload coverage reports to Codecov
-        uses: codecov/codecov-action@v5
+
+  report:
+    needs: build
+    if: ${{ !cancelled() }}
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      checks: write
+      pull-requests: write
+
+    steps:
+      - name: Download raw test/coverage files
+        continue-on-error: true
+        uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8.0.2
         with:
+          name: test-and-coverage-raw
+          path: raw
+
+      - name: Download coverage report
+        continue-on-error: true
+        uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8.0.2
+        with:
+          name: coverage-report-html
+          path: coveragereport
+
+      - name: Publish Unit Test Results (TRX)
+        uses: EnricoMi/publish-unit-test-result-action@d0a4676d0e0b938bc201470d88276b7c74c712b3 # v2.24.0
+        with:
+          files: 'raw/**/*.trx'
+          check_name: 'Test Results'
+          comment_mode: failures
+
+      - name: Post sticky PR comment (Coverage)
+        if: github.event_name == 'pull_request' && hashFiles('coveragereport/Summary.md') != ''
+        uses: marocchino/sticky-pull-request-comment@5770ad5eb8f42dd2c4f34da00c94c5381e49af88 # v3.0.5
+        with:
+          header: sguard-dataannotations-coverage
+          path: coveragereport/Summary.md
+
+      # The In/ folders written for the TRX logger hold copies of the same coverage data.
+      - name: Find coverage files
+        if: github.event_name == 'push'
+        id: coverage
+        run: echo "files=$(find raw -name coverage.cobertura.xml -not -path '*/In/*' | sort | paste -sd, -)" >> "$GITHUB_OUTPUT"
+
+      # Only for main, which the README badge shows. Pull requests from forks don't get the token.
+      - name: Upload coverage to Codecov
+        if: github.event_name == 'push' && steps.coverage.outputs.files != ''
+        uses: codecov/codecov-action@303a32d7a59b442fa8d48b6a1cc6825c09c847a5 # v7.1.1
+        with:
+          files: ${{ steps.coverage.outputs.files }}
+          disable_search: true
           token: ${{ secrets.CODECOV_TOKEN }}

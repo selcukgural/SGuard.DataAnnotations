@@ -39,7 +39,7 @@ public static class ThrowIf
 
         var valid = Validator.TryValidateObject(instance, context, results, validateAllProperties);
 
-        SGuardDataAnnotations.Guard(!valid, () => Throw.That(new DataAnnotationsException(results)), callback);
+        SGuardDataAnnotations.Guard(!valid, () => throw new DataAnnotationsException(results), callback);
     }
 
     /// <summary>
@@ -67,7 +67,7 @@ public static class ThrowIf
 
         var valid = Validator.TryValidateObject(instance, context, results, validateAllProperties);
 
-        SGuardDataAnnotations.Guard(!valid, () => Throw.That(exception), callback);
+        SGuardDataAnnotations.Guard(!valid, () => throw exception, callback);
     }
 
     /// <summary>
@@ -88,14 +88,54 @@ public static class ThrowIf
     /// The callback receives the validation outcome.
     /// </param>
     /// <exception cref="TException">Thrown when the object fails validation.</exception>
-    public static void DataAnnotationsInValid<TException>(object instance, object[]? constructorArgs, bool validateAllProperties = true,
-                                                          SGuardCallback? callback = null) where TException : Exception
+    /// <exception cref="InvalidOperationException">
+    /// Thrown when the object fails validation and no constructor, or more than one, matches <paramref name="constructorArgs"/>.
+    /// </exception>
+    [Obsolete(Obsoletions.ConstructorArgsMessage, DiagnosticId = Obsoletions.ConstructorArgsDiagnosticId)]
+    public static void DataAnnotationsInValid<[DynamicallyAccessedMembers(DynamicallyAccessedMemberTypes.PublicConstructors)] TException>(
+        object instance, object[]? constructorArgs, bool validateAllProperties = true, SGuardCallback? callback = null) where TException : Exception
     {
         var context = new ValidationContext(instance);
         var results = new List<ValidationResult>();
 
         var valid = Validator.TryValidateObject(instance, context, results, validateAllProperties);
 
-        SGuardDataAnnotations.Guard(!valid, () => Throw.That(ExceptionActivator.Create<TException>(constructorArgs)), callback);
+        SGuardDataAnnotations.Guard(!valid, () => throw SGuardDataAnnotations.CreateException<TException>(constructorArgs), callback);
+    }
+
+    /// <summary>
+    /// Validates the specified object instance using DataAnnotations and throws the exception created by
+    /// <paramref name="exceptionFactory"/> if the object is invalid. The factory runs only when validation fails.
+    /// </summary>
+    /// <typeparam name="TException">The type of exception to throw if validation fails.</typeparam>
+    /// <param name="instance">The object instance to validate.</param>
+    /// <param name="exceptionFactory">Creates the exception to throw, for example <c>() => new MyException("message")</c>.</param>
+    /// <param name="validateAllProperties">
+    /// A boolean value indicating whether to validate all properties.
+    /// If true, all properties are validated; otherwise, only required properties are validated.
+    /// </param>
+    /// <param name="callback">
+    /// An optional callback to invoke after the validation process.
+    /// The callback receives the validation outcome.
+    /// </param>
+    /// <exception cref="ArgumentNullException">Thrown when <paramref name="exceptionFactory"/> is <c>null</c>.</exception>
+    /// <exception cref="TException">Thrown when the object fails validation.</exception>
+    /// <exception cref="InvalidOperationException">
+    /// Thrown when the object fails validation and <paramref name="exceptionFactory"/> returns <c>null</c>.
+    /// </exception>
+    public static void DataAnnotationsInValid<TException>(object instance, Func<TException> exceptionFactory, bool validateAllProperties = true,
+                                                          SGuardCallback? callback = null) where TException : Exception
+    {
+        ArgumentNullException.ThrowIfNull(exceptionFactory);
+
+        var context = new ValidationContext(instance);
+        var results = new List<ValidationResult>();
+
+        var valid = Validator.TryValidateObject(instance, context, results, validateAllProperties);
+
+        SGuardDataAnnotations.Guard(!valid,
+                                    () => throw exceptionFactory() ??
+                                                throw new InvalidOperationException("The exception factory returned null."),
+                                    callback);
     }
 }

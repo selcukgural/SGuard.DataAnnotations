@@ -1,4 +1,5 @@
 ﻿using System.Diagnostics.CodeAnalysis;
+using System.Reflection;
 
 namespace SGuard.DataAnnotations.Internal;
 
@@ -26,6 +27,34 @@ internal static class SGuardDataAnnotations
         {
             // Safely invoke the callback with the appropriate outcomes.
             InvokeCallbackSafely(condition, callback, GuardOutcome.Failure, GuardOutcome.Success);
+        }
+    }
+
+    /// <summary>
+    /// Creates an exception of type <typeparamref name="TException"/> from constructor arguments. It replaces SGuard's
+    /// <c>ExceptionActivator</c>, which is obsolete and will be removed in SGuard 4.0.
+    /// </summary>
+    /// <param name="args">The constructor arguments, or <c>null</c> for the parameterless constructor.</param>
+    /// <exception cref="InvalidOperationException">
+    /// Thrown when no constructor, or more than one, matches <paramref name="args"/>.
+    /// </exception>
+    public static TException CreateException<[DynamicallyAccessedMembers(DynamicallyAccessedMemberTypes.PublicConstructors)] TException>(object?[]? args)
+        where TException : Exception
+    {
+        try
+        {
+            return (TException?)Activator.CreateInstance(typeof(TException), args ?? []) ??
+                   throw new InvalidOperationException($"Could not create instance of '{typeof(TException).FullName}'.");
+        }
+        catch (MissingMethodException)
+        {
+            throw new InvalidOperationException(
+                $"No matching constructor found for '{typeof(TException).FullName}' with the provided argument list.");
+        }
+        catch (AmbiguousMatchException)
+        {
+            throw new InvalidOperationException(
+                $"More than one constructor of '{typeof(TException).FullName}' matches the provided argument list.");
         }
     }
 

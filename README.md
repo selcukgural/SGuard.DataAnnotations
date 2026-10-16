@@ -13,7 +13,7 @@
 - Seamless integration with DataAnnotations and SGuard's fail-fast/callback philosophy
 - Well-tested and extensible for real-world application scenarios
 
-> **Note:** For fluent validation/guard support, see the upcoming [`SGuard.FluentValidation`](https://github.com/selcukgural/SGuard.FluentValidation) package.
+> **Note:** For fluent validation/guard support, see the upcoming `SGuard.FluentValidation` package.
 >
 > **Important:** If you want to implement custom callback, fail-fast, or chainable guard logic, you should also review the [SGuard core project](https://github.com/selcukgural/SGuard), which provides advanced guard and callback APIs used by this library.
 
@@ -50,6 +50,9 @@ Install via NuGet:
 ```bash
 dotnet add package SGuard.DataAnnotations
 ```
+
+Requires .NET 8, 9 or 10, and brings in [SGuard](https://www.nuget.org/packages/SGuard) 3.0 or later. For .NET 6 and 7, use
+version 0.1.1.
 
 ---
 
@@ -181,10 +184,13 @@ SGuard.DataAnnotations ships with built-in resource support for the following la
     ThrowIf.DataAnnotationsInValid<ArgumentException>(model, new ArgumentException("Custom error!"));
     ```
 
-- **Custom exception with constructor args:**
+- **Custom exception from a factory** (the factory runs only when validation fails):
     ```csharp
-    ThrowIf.DataAnnotationsInValid<ArgumentException>(model, new object[] { "Custom error!" });
+    ThrowIf.DataAnnotationsInValid(model, () => new ArgumentException("Custom error!"));
     ```
+
+  The overload that takes constructor arguments (`new object[] { "Custom error!" }`) is obsolete (`SGUARDDA001`): it
+  creates the exception with reflection, which the compiler can't check.
 
 #### Exception Details
 
@@ -324,7 +330,18 @@ public class UserRegistration
 **A:** Yes, you can stack any combination on your model.
 
 **Q:** _Will SGuard.DataAnnotations work with FluentValidation?_  
-**A:** Yes, as long as you use DataAnnotations integration. For a full fluent API, see [`SGuard.FluentValidation`](https://github.com/selcukgural/SGuard.ValidationBuilder).
+**A:** Yes, as long as you use DataAnnotations integration. For a full fluent API, see the upcoming `SGuard.FluentValidation` package.
+
+**Q:** _I get "`ThrowIf` is an ambiguous reference" (CS0104)._  
+**A:** SGuard and SGuard.DataAnnotations both have `ThrowIf` and `Is` classes, so a file that imports both namespaces has to
+say which one it means. Qualify the call or add an alias:
+```csharp
+using SGuard;
+using DataAnnotationsGuard = SGuard.DataAnnotations.ThrowIf;
+
+ThrowIf.NullOrEmpty(model.Name);                  // SGuard
+DataAnnotationsGuard.DataAnnotationsInValid(model); // SGuard.DataAnnotations
+```
 
 **Q:** _How do I quickly test everything?_  
 **A:**
@@ -356,65 +373,3 @@ MIT License. See [LICENSE](LICENSE).
 ## See Also
 
 - [SGuard (core)](https://github.com/selcukgural/SGuard)
-- [SGuard.FluentValidation (upcoming)](https://github.com/selcukgural/SGuard.FluentValidation)
-
----
-<!-- TEST-RESULTS:START -->
-## Test and Coverage Status
-
-### Test Results
-
-| Total | Passed | Failed | Skipped |
-|------:|-------:|-------:|--------:|
-| 353 | 353 | 0 | 0 |
-
-### Code Coverage
-# Summary
-|||
-|:---|:---|
-| Generated on: | 09/09/2025 - 22:27:29 |
-| Coverage date: | 09/09/2025 - 22:27:26 - 09/09/2025 - 22:27:27 |
-| Parser: | MultiReport (4x Cobertura) |
-| Assemblies: | 1 |
-| Classes: | 25 |
-| Files: | 25 |
-| **Line coverage:** | 87% (276 of 317) |
-| Covered lines: | 276 |
-| Uncovered lines: | 41 |
-| Coverable lines: | 317 |
-| Total lines: | 1470 |
-| **Branch coverage:** | 80.7% (185 of 229) |
-| Covered branches: | 185 |
-| Total branches: | 229 |
-| **Method coverage:** | [Feature is only available for sponsors](https://reportgenerator.io/pro) |
-
-|**Name**|**Covered**|**Uncovered**|**Coverable**|**Total**|**Line coverage**|**Covered**|**Total**|**Branch coverage**|
-|:---|---:|---:|---:|---:|---:|---:|---:|---:|
-|**SGuard.DataAnnotations**|**276**|**41**|**317**|**1470**|**87%**|**185**|**229**|**80.7%**|
-|SGuard.DataAnnotations.CompareToAttribute|26|13|39|139|66.6%|16|31|51.6%|
-|SGuard.DataAnnotations.Exceptions.DataAnnotationsException|14|0|14|62|100%|2|2|100%|
-|SGuard.DataAnnotations.Extensions.DataAnnotationsExceptionExtensions|9|1|10|47|90%|9|10|90%|
-|SGuard.DataAnnotations.Internal.SGuardDataAnnotations|10|2|12|59|83.3%|6|6|100%|
-|SGuard.DataAnnotations.Is|5|5|10|76|50%|0|0||
-|SGuard.DataAnnotations.SGuardBetweenAttribute|28|2|30|114|93.3%|28|32|87.5%|
-|SGuard.DataAnnotations.SGuardCollectionItemsMatchAttribute|29|4|33|124|87.8%|17|22|77.2%|
-|SGuard.DataAnnotations.SGuardCompareAttribute|4|0|4|25|100%|4|4|100%|
-|SGuard.DataAnnotations.SGuardCreditCardAttribute|7|0|7|38|100%|2|2|100%|
-|SGuard.DataAnnotations.SGuardEmailAddressAttribute|7|0|7|40|100%|2|2|100%|
-|SGuard.DataAnnotations.SGuardGreaterThanAttribute|2|0|2|19|100%|0|0||
-|SGuard.DataAnnotations.SGuardLessThanAttribute|2|0|2|17|100%|0|0||
-|SGuard.DataAnnotations.SGuardMaxCountAttribute|18|2|20|87|90%|16|18|88.8%|
-|SGuard.DataAnnotations.SGuardMaxLengthAttribute|4|0|4|25|100%|4|4|100%|
-|SGuard.DataAnnotations.SGuardMinCountAttribute|18|2|20|87|90%|18|20|90%|
-|SGuard.DataAnnotations.SGuardMinLengthAttribute|4|0|4|25|100%|4|4|100%|
-|SGuard.DataAnnotations.SGuardPhoneAttribute|7|0|7|38|100%|2|2|100%|
-|SGuard.DataAnnotations.SGuardRangeAttribute|8|0|8|42|100%|6|8|75%|
-|SGuard.DataAnnotations.SGuardRegularExpressionAttribute|0|4|4|26|0%|0|4|0%|
-|SGuard.DataAnnotations.SGuardRequiredCollectionAttribute|13|3|16|52|81.2%|11|14|78.5%|
-|SGuard.DataAnnotations.SGuardRequiredIfAttribute|17|0|17|82|100%|13|14|92.8%|
-|SGuard.DataAnnotations.SGuardStringLengthAttribute|4|0|4|24|100%|4|4|100%|
-|SGuard.DataAnnotations.SGuardUrlAttribute|7|0|7|38|100%|2|2|100%|
-|SGuard.DataAnnotations.SGuardValidationAttributeBase|19|1|20|83|95%|19|24|79.1%|
-|SGuard.DataAnnotations.ThrowIf|14|2|16|101|87.5%|0|0||
-
-<!-- TEST-RESULTS:END -->

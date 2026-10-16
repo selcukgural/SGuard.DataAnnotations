@@ -13,7 +13,7 @@
 - Seamless integration with DataAnnotations and SGuard's fail-fast/callback philosophy
 - Well-tested and extensible for real-world application scenarios
 
-> **Note:** For fluent validation/guard support, see the upcoming [`SGuard.FluentValidation`](https://github.com/selcukgural/SGuard.FluentValidation) package.
+> **Note:** For fluent validation/guard support, see the upcoming `SGuard.FluentValidation` package.
 >
 > **Important:** If you want to implement custom callback, fail-fast, or chainable guard logic, you should also review the [SGuard core project](https://github.com/selcukgural/SGuard), which provides advanced guard and callback APIs used by this library.
 
@@ -50,6 +50,9 @@ Install via NuGet:
 ```bash
 dotnet add package SGuard.DataAnnotations
 ```
+
+Requires .NET 8, 9 or 10, and brings in [SGuard](https://www.nuget.org/packages/SGuard) 3.0 or later. For .NET 6 and 7, use
+version 0.1.1.
 
 ---
 
@@ -181,10 +184,13 @@ SGuard.DataAnnotations ships with built-in resource support for the following la
     ThrowIf.DataAnnotationsInValid<ArgumentException>(model, new ArgumentException("Custom error!"));
     ```
 
-- **Custom exception with constructor args:**
+- **Custom exception from a factory** (the factory runs only when validation fails):
     ```csharp
-    ThrowIf.DataAnnotationsInValid<ArgumentException>(model, new object[] { "Custom error!" });
+    ThrowIf.DataAnnotationsInValid(model, () => new ArgumentException("Custom error!"));
     ```
+
+  The overload that takes constructor arguments (`new object[] { "Custom error!" }`) is obsolete (`SGUARDDA001`): it
+  creates the exception with reflection, which the compiler can't check.
 
 #### Exception Details
 
@@ -324,7 +330,18 @@ public class UserRegistration
 **A:** Yes, you can stack any combination on your model.
 
 **Q:** _Will SGuard.DataAnnotations work with FluentValidation?_  
-**A:** Yes, as long as you use DataAnnotations integration. For a full fluent API, see [`SGuard.FluentValidation`](https://github.com/selcukgural/SGuard.FluentValidation).
+**A:** Yes, as long as you use DataAnnotations integration. For a full fluent API, see the upcoming `SGuard.FluentValidation` package.
+
+**Q:** _I get "`ThrowIf` is an ambiguous reference" (CS0104)._  
+**A:** SGuard and SGuard.DataAnnotations both have `ThrowIf` and `Is` classes, so a file that imports both namespaces has to
+say which one it means. Qualify the call or add an alias:
+```csharp
+using SGuard;
+using DataAnnotationsGuard = SGuard.DataAnnotations.ThrowIf;
+
+ThrowIf.NullOrEmpty(model.Name);                  // SGuard
+DataAnnotationsGuard.DataAnnotationsInValid(model); // SGuard.DataAnnotations
+```
 
 **Q:** _How do I quickly test everything?_  
 **A:**
@@ -356,6 +373,5 @@ MIT License. See [LICENSE](LICENSE).
 ## See Also
 
 - [SGuard (core)](https://github.com/selcukgural/SGuard)
-- [SGuard.FluentValidation (upcoming)](https://github.com/selcukgural/SGuard.FluentValidation)
 
 ---
