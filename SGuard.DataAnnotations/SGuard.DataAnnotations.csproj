@@ -25,7 +25,7 @@
         <!-- Checks on every pack that the public API stays compatible with the last release. Breaking changes that are
              intended go into CompatibilitySuppressions.xml: regenerate it with -p:ApiCompatGenerateSuppressionFile=true. -->
         <EnablePackageValidation>true</EnablePackageValidation>
-        <PackageValidationBaselineVersion>0.1.1</PackageValidationBaselineVersion>
+        <PackageValidationBaselineVersion>0.2.0</PackageValidationBaselineVersion>
     </PropertyGroup>
 
     <ItemGroup>
