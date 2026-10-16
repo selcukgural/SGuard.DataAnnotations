@@ -231,32 +231,27 @@ public sealed class SGuardCompareAttributeTests
     #region Error Condition Tests
 
     [Fact]
-    public void ReturnsError_WhenOtherPropertyDoesNotExist()
+    public void Throws_WhenOtherPropertyDoesNotExist()
     {
         var model = new TestModel { ConfirmPassword = "Test123!" };
-        var attr = new SGuardCompareAttribute("NonExistentProperty", typeof(Resources.SGuardDataAnnotations), "Password_Mismatch");
+        var attr = new SGuardCompareAttribute("Missing", typeof(Resources.SGuardDataAnnotations), "Password_Mismatch");
         var ctx = new ValidationContext(model) { MemberName = nameof(TestModel.ConfirmPassword) };
-        
-        var result = attr.GetValidationResult(model.ConfirmPassword, ctx);
-        
-        Assert.NotEqual(ValidationResult.Success, result);
-        // CompareAttribute returns a generic error message when property doesn't exist
-        Assert.NotNull(result?.ErrorMessage);
+
+        var ex = Assert.Throws<InvalidOperationException>(() => attr.GetValidationResult(model.ConfirmPassword, ctx));
+
+        Assert.Contains("'Missing'", ex.Message);
     }
 
     [Fact]
-    public void ReturnsError_WhenPrivatePropertyCannotBeAccessed()
+    public void Throws_WhenOtherPropertyIsPrivate()
     {
+        // CompareAttribute only reads public properties.
         var model = new PrivatePropertyModel();
         model.SetPrivateProperty("test");
         var attr = new SGuardCompareAttribute("PrivateProperty", typeof(Resources.SGuardDataAnnotations), "Password_Mismatch");
         var ctx = new ValidationContext(model) { MemberName = nameof(PrivatePropertyModel.PublicProperty) };
-        
-        var result = attr.GetValidationResult(model.PublicProperty, ctx);
-        
-        // CompareAttribute cannot access private properties, so this should fail
-        Assert.NotEqual(ValidationResult.Success, result);
-        Assert.Contains("Could not find a property named PrivateProperty", result?.ErrorMessage ?? "");
+
+        Assert.Throws<InvalidOperationException>(() => attr.GetValidationResult(model.PublicProperty, ctx));
     }
 
     #endregion

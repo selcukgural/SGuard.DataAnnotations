@@ -236,42 +236,54 @@ public sealed class SGuardBetweenAttributeTests
     #region Error Condition Tests
 
     [Fact]
-    public void ReturnsError_WhenMinPropertyIsMissing()
+    public void Throws_WhenMinPropertyIsMissing()
     {
         var model = new { Max = 20, Value = 15 };
         var attr = new SGuardBetweenAttribute("Min", "Max", true, typeof(Resources.SGuardDataAnnotations), "Username_Required");
         var ctx = new ValidationContext(model) { MemberName = "Value" };
-        
-        var result = attr.GetValidationResult(15, ctx);
-        
-        Assert.NotEqual(ValidationResult.Success, result);
-        Assert.Contains("Unknown property: Min", result?.ErrorMessage);
+
+        var ex = Assert.Throws<InvalidOperationException>(() => attr.GetValidationResult(15, ctx));
+
+        Assert.Contains("'Min'", ex.Message);
     }
 
     [Fact]
-    public void ReturnsError_WhenMaxPropertyIsMissing()
+    public void Throws_WhenMaxPropertyIsMissing()
     {
         var model = new { Min = 10, Value = 15 };
         var attr = new SGuardBetweenAttribute("Min", "Max", true, typeof(Resources.SGuardDataAnnotations), "Username_Required");
         var ctx = new ValidationContext(model) { MemberName = "Value" };
-        
-        var result = attr.GetValidationResult(15, ctx);
-        
-        Assert.NotEqual(ValidationResult.Success, result);
-        Assert.Contains("Unknown property: Max", result?.ErrorMessage);
+
+        var ex = Assert.Throws<InvalidOperationException>(() => attr.GetValidationResult(15, ctx));
+
+        Assert.Contains("'Max'", ex.Message);
     }
 
     [Fact]
-    public void ReturnsError_WhenValueIsNotComparable()
+    public void ReturnsItsOwnMessage_WhenValueIsNotComparable()
     {
         var model = new TestModel { Min = 10, Max = 20, ObjectValue = new object() };
         var attr = new SGuardBetweenAttribute("Min", "Max", true, typeof(Resources.SGuardDataAnnotations), "Username_Required");
         var ctx = new ValidationContext(model) { MemberName = nameof(TestModel.ObjectValue) };
-        
+
         var result = attr.GetValidationResult(model.ObjectValue, ctx);
-        
+
         Assert.NotEqual(ValidationResult.Success, result);
-        Assert.Contains("must implement IComparable", result?.ErrorMessage);
+        Assert.Equal(attr.FormatErrorMessage(ctx.DisplayName), result?.ErrorMessage);
+    }
+
+    [Fact]
+    public void ReturnsItsOwnMessage_WhenTypesDontMatch()
+    {
+        var model = new TestModel { Min = 10, Max = 20, ObjectValue = "15" };
+        var attr = new SGuardBetweenAttribute("Min", "Max", true, typeof(Resources.SGuardDataAnnotations), "Username_Required");
+        var ctx = new ValidationContext(model) { MemberName = nameof(TestModel.ObjectValue) };
+
+        var result = attr.GetValidationResult(model.ObjectValue, ctx);
+
+        Assert.NotEqual(ValidationResult.Success, result);
+        Assert.Equal(attr.FormatErrorMessage(ctx.DisplayName), result?.ErrorMessage);
+        Assert.DoesNotContain("Int32", result?.ErrorMessage);
     }
 
     [Fact]

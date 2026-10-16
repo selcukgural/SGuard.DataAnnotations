@@ -7,7 +7,11 @@ namespace SGuard.DataAnnotations;
 /// <summary>
 /// Provides boolean guard methods for DataAnnotations validation, following the SGuard pattern.
 /// <para>
-/// <b>Pattern:</b> All <c>Is.*</c> methods return booleans for validation checks, never throw exceptions, and invoke callbacks with <see cref="GuardOutcome.Success"/> when the result is true and <see cref="GuardOutcome.Failure"/> when false.
+/// <b>Pattern:</b> All <c>Is.*</c> methods return booleans for validation checks, return <c>false</c> rather than throw for an invalid object, and invoke callbacks with <see cref="GuardOutcome.Success"/> when the result is true and <see cref="GuardOutcome.Failure"/> when false.
+/// </para>
+/// <para>
+/// An attribute that is declared wrong, for example one that names a property the object doesn't have, throws
+/// <see cref="InvalidOperationException"/> instead of failing validation.
 /// </para>
 /// <para>
 /// For details, see the SGuard main documentation: https://github.com/selcukgural/sguard

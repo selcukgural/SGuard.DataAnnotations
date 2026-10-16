@@ -1,4 +1,5 @@
 using System.ComponentModel.DataAnnotations;
+using SGuard.DataAnnotations.Internal;
 
 namespace SGuard.DataAnnotations;
 
@@ -41,12 +42,15 @@ public class SGuardMinCountAttribute : SGuardValidationAttributeBase
     /// A <see cref="ValidationResult"/> indicating whether the value is valid or not.
     /// Returns <see cref="ValidationResult.Success"/> if the value is valid; otherwise, a validation error.
     /// </returns>
+    /// <exception cref="InvalidOperationException">Thrown when <paramref name="value"/> is an <see cref="IQueryable"/>.</exception>
     protected override ValidationResult? IsValid(object? value, ValidationContext validationContext)
     {
         if (value == null)
         {
             return MinCount == 0 ? ValidationResult.Success : new ValidationResult(FormatErrorMessage(validationContext.DisplayName));
         }
+
+        ValidationTargets.ThrowIfQueryable(this, value);
 
         var type = value.GetType();
 

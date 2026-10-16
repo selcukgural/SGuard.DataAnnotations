@@ -49,13 +49,12 @@ public sealed class SGuardRequiredIfAttributeTests
     }
 
     [Fact]
-    public void ReturnsError_WhenDependentPropertyDoesNotExist()
+    public void Throws_WhenDependentPropertyDoesNotExist()
     {
         var attribute = new SGuardRequiredIfAttribute("NonExistent", "trigger", typeof(Resources.SGuardDataAnnotations), "Email_Required");
         var model = new TestModel { Dependent = "trigger", Value = "valid" };
-        var result = attribute.GetValidationResult(model.Value, GetContext(model));
-        Assert.NotEqual(ValidationResult.Success, result);
-        Assert.Contains("Unknown property", result?.ErrorMessage);
+        var ex = Assert.Throws<InvalidOperationException>(() => attribute.GetValidationResult(model.Value, GetContext(model)));
+        Assert.Contains("'NonExistent'", ex.Message);
     }
 
     [Fact]

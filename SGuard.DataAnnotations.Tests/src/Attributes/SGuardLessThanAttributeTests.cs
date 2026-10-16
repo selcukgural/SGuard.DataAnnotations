@@ -87,13 +87,31 @@ public sealed class SGuardLessThanAttributeTests
     }
 
     [Fact]
-    public void ReturnsError_WhenOtherPropertyDoesNotExist()
+    public void Throws_WhenOtherPropertyDoesNotExist()
     {
         var model = new TestModel { Value = 10 };
         var attr = new SGuardLessThanAttribute("NonExistent", typeof(Resources.SGuardDataAnnotations), "General_UnexpectedError");
         var ctx = new ValidationContext(model) { MemberName = nameof(TestModel.Value) };
+        var ex = Assert.Throws<InvalidOperationException>(() => attr.GetValidationResult(model.Value, ctx));
+        Assert.Contains("'NonExistent'", ex.Message);
+    }
+
+    [Fact]
+    public void ReturnsItsOwnMessage_WhenTypesDontMatch()
+    {
+        var model = new MixedModel { Value = "10", Other = 5 };
+        var attr = new SGuardLessThanAttribute(nameof(MixedModel.Other), typeof(Resources.SGuardDataAnnotations), "General_UnexpectedError");
+        var ctx = new ValidationContext(model) { MemberName = nameof(MixedModel.Value) };
         var result = attr.GetValidationResult(model.Value, ctx);
         Assert.NotEqual(ValidationResult.Success, result);
+        Assert.Equal(attr.FormatErrorMessage(ctx.DisplayName), result?.ErrorMessage);
+        Assert.DoesNotContain("Int32", result?.ErrorMessage);
+    }
+
+    private sealed class MixedModel
+    {
+        public object? Value { get; set; }
+        public object? Other { get; set; }
     }
 
     [Fact]

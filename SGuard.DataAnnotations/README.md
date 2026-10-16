@@ -115,7 +115,14 @@ SGuard.DataAnnotations ships with built-in resource support for the following la
 **Details:**
 - `SGuardCollectionItemsMatchAttribute` can take multiple validators and will apply them to each item.
 - `AggregateAllErrors` (default: `false`): If `true`, collects all errors; if `false`, returns on first failure.
+- `MaxErrors` (default: `10`): with `AggregateAllErrors`, validation stops after this many errors, so a large collection
+  doesn't produce a message for every item.
+- Each validator type must be a non-abstract `ValidationAttribute` with a public parameterless constructor; other types
+  throw `ArgumentException`.
 - Supported on any `IEnumerable` (e.g., `List<T>`, arrays, custom collections).
+- The collection attributes (`SGuardRequiredCollection`, `SGuardMinCount`, `SGuardMaxCount`, `SGuardCollectionItemsMatch`)
+  throw `InvalidOperationException` for an `IQueryable`, because enumerating it would run the query. Validate a
+  materialized collection (for example `ToList()`) instead.
 
 ### Conditional Validators
 
@@ -142,7 +149,7 @@ SGuard.DataAnnotations ships with built-in resource support for the following la
 
 ### Is.* Methods
 
-- **Purpose:** Return `bool` for validation checks (never throw).
+- **Purpose:** Return `bool` for validation checks. An invalid model returns `false`; only an attribute that is declared wrong throws (see [Error Handling](#error-handling)).
 - **Callback:** Optional `SGuardCallback` invoked with `GuardOutcome.Success`/`Failure`.  
   For advanced callback usage, see the [SGuard project documentation](https://github.com/selcukgural/SGuard).
 - **Example:**
@@ -308,7 +315,10 @@ public class UserRegistration
 ### Error Handling
 
 - **Guard methods**: Return `bool` or throw, never both.
-- **Attributes**: Always return `ValidationResult`, never throw.
+- **Attributes**: Return a `ValidationResult` for invalid values. They throw `InvalidOperationException` only when the
+  attribute itself is declared wrong, for example when `SGuardCompare`, `SGuardGreaterThan`, `SGuardLessThan`,
+  `SGuardBetween` or `SGuardRequiredIf` names a property that the model doesn't have. That keeps property and type names
+  in your logs instead of in the validation messages that clients see.
 - **All exceptions**: Contain full error detail, member names, and support for extraction/extension.
 - **For advanced fail-fast, callback, or custom guard usage:**  
   See [SGuard project documentation](https://github.com/selcukgural/SGuard).

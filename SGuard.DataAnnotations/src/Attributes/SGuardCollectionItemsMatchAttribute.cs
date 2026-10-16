@@ -1,4 +1,5 @@
 using System.ComponentModel.DataAnnotations;
+using SGuard.DataAnnotations.Internal;
 
 namespace SGuard.DataAnnotations;
 
@@ -19,6 +20,19 @@ public class SGuardCollectionItemsMatchAttribute : SGuardValidationAttributeBase
     /// </summary>
     public bool AggregateAllErrors { get; set; }
 
+    private int _maxErrors = 10;
+
+    /// <summary>
+    /// Gets or sets the most errors that <see cref="AggregateAllErrors"/> collects. Validation stops at this many errors,
+    /// so that a large collection doesn't produce a message for every item. Default is 10.
+    /// </summary>
+    /// <exception cref="ArgumentOutOfRangeException">Thrown when the value is less than 1.</exception>
+    public int MaxErrors
+    {
+        get => _maxErrors;
+        set => _maxErrors = value >= 1 ? value : throw new ArgumentOutOfRangeException(nameof(value), value, "MaxErrors must be at least 1.");
+    }
+
     /// <summary>
     /// Initializes a new instance of the <see cref="SGuardCollectionItemsMatchAttribute"/> class
     /// for a single validation attribute.
@@ -29,10 +43,15 @@ public class SGuardCollectionItemsMatchAttribute : SGuardValidationAttributeBase
     /// <exception cref="ArgumentNullException">
     /// Thrown if <paramref name="itemValidationAttribute"/>, <paramref name="resourceType"/>, or <paramref name="resourceName"/> is null.
     /// </exception>
+    /// <exception cref="ArgumentException">
+    /// Thrown if <paramref name="itemValidationAttribute"/> isn't a non-abstract <see cref="ValidationAttribute"/> with a public
+    /// parameterless constructor.
+    /// </exception>
     public SGuardCollectionItemsMatchAttribute(Type itemValidationAttribute, Type resourceType, string resourceName) : base(
         resourceType, resourceName)
     {
         ItemValidationAttributes = new[] { itemValidationAttribute ?? throw new ArgumentNullException(nameof(itemValidationAttribute)) };
+        ThrowIfNotValidationAttributes(ItemValidationAttributes, nameof(itemValidationAttribute));
     }
 
     /// <summary>
@@ -45,10 +64,15 @@ public class SGuardCollectionItemsMatchAttribute : SGuardValidationAttributeBase
     /// <exception cref="ArgumentNullException">
     /// Thrown if <paramref name="itemValidationAttributes"/>, <paramref name="resourceType"/>, or <paramref name="resourceName"/> is null.
     /// </exception>
+    /// <exception cref="ArgumentException">
+    /// Thrown if <paramref name="itemValidationAttributes"/> is empty, or one of its types isn't a non-abstract
+    /// <see cref="ValidationAttribute"/> with a public parameterless constructor.
+    /// </exception>
     public SGuardCollectionItemsMatchAttribute(Type[] itemValidationAttributes, Type resourceType, string resourceName) : base(
         resourceType, resourceName)
     {
         ItemValidationAttributes = itemValidationAttributes ?? throw new ArgumentNullException(nameof(itemValidationAttributes));
+        ThrowIfNotValidationAttributes(ItemValidationAttributes, nameof(itemValidationAttributes));
     }
 
     /// <summary>
@@ -60,6 +84,7 @@ public class SGuardCollectionItemsMatchAttribute : SGuardValidationAttributeBase
     /// A <see cref="ValidationResult"/> indicating whether validation succeeded or failed.
     /// Returns <see cref="ValidationResult.Success"/> if validation passes, or an error result otherwise.
     /// </returns>
+    /// <exception cref="InvalidOperationException">Thrown when <paramref name="value"/> is an <see cref="IQueryable"/>.</exception>
     protected override ValidationResult? IsValid(object? value, ValidationContext validationContext)
     {
         if (value is not System.Collections.IEnumerable enumerable)
@@ -67,22 +92,26 @@ public class SGuardCollectionItemsMatchAttribute : SGuardValidationAttributeBase
             return ValidationResult.Success;
         }
 
+        ValidationTargets.ThrowIfQueryable(this, value);
+
+        var validators = new ValidationAttribute[ItemValidationAttributes.Length];
+
+        for (var i = 0; i < validators.Length; i++)
+        {
+            var validator = (ValidationAttribute)Activator.CreateInstance(ItemValidationAttributes[i])!;
+            validator.ErrorMessageResourceType = ErrorMessageResourceType;
+            validator.ErrorMessageResourceName = ErrorMessageResourceName;
+            validators[i] = validator;
+        }
+
         var errors = new List<ValidationResult>();
         var idx = 0;
 
         foreach (var item in enumerable)
         {
-            foreach (var attrType in ItemValidationAttributes)
+            foreach (var validator in validators)
             {
-                if (Activator.CreateInstance(attrType) is not ValidationAttribute attr)
-                {
-                    continue;
-                }
-
-                attr.ErrorMessageResourceType = ErrorMessageResourceType;
-                attr.ErrorMessageResourceName = ErrorMessageResourceName;
-
-                if (attr.IsValid(item))
+                if (validator.IsValid(item))
                 {
                     continue;
                 }
@@ -95,6 +124,16 @@ public class SGuardCollectionItemsMatchAttribute : SGuardValidationAttributeBase
 
                 var msg = $"{FormatErrorMessage(validationContext.DisplayName)} (item #{idx + 1})";
                 errors.Add(new ValidationResult(msg, ReturnMemberNameList(validationContext.MemberName)));
+
+                if (errors.Count >= MaxErrors)
+                {
+                    break;
+                }
+            }
+
+            if (errors.Count >= MaxErrors)
+            {
+                break;
             }
 
             idx++;
@@ -107,6 +146,28 @@ public class SGuardCollectionItemsMatchAttribute : SGuardValidationAttributeBase
 
         var merged = string.Join("; ", errors.Select(e => e.ErrorMessage));
         return new ValidationResult(merged, ReturnMemberNameList(validationContext.MemberName ?? "item"));
+    }
+
+    /// <summary>
+    /// Checks that every type is a validation attribute that <see cref="IsValid"/> can create.
+    /// </summary>
+    private static void ThrowIfNotValidationAttributes(Type[] types, string paramName)
+    {
+        if (types.Length == 0)
+        {
+            throw new ArgumentException("At least one validation attribute type is required.", paramName);
+        }
+
+        foreach (var type in types)
+        {
+            if (type is null || !typeof(ValidationAttribute).IsAssignableFrom(type) || type.IsAbstract ||
+                type.GetConstructor(Type.EmptyTypes) is null)
+            {
+                throw new ArgumentException(
+                    $"'{type?.FullName ?? "null"}' isn't a non-abstract ValidationAttribute with a public parameterless constructor.",
+                    paramName);
+            }
+        }
     }
 
     /// <summary>
