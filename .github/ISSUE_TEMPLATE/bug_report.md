@@ -22,8 +22,8 @@ If applicable, add screenshots to help explain your problem.
 
 **Environment (please complete the following information):**
  - OS: [e.g. Windows, macOS, Linux]
- - .NET version:    [6.0, 7.0, 8.0, 9.0]
- - Library version: [e.g. 1.0.0]
+ - .NET version:    [8.0, 9.0, 10.0]
+ - Library version: [e.g. 0.2.0]
 
 **Additional context**
 Add any other context about the problem here.

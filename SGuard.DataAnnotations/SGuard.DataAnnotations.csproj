@@ -1,31 +1,35 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFrameworks>net6.0;net7.0;net8.0;net9.0</TargetFrameworks>
+        <TargetFrameworks>net8.0;net9.0;net10.0</TargetFrameworks>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
-        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
         <!-- NuGet Metadata -->
         <PackageId>SGuard.DataAnnotations</PackageId>
-        <Version>0.1.0</Version>
+        <Version>0.2.0</Version>
         <Authors>Selçuk Güral</Authors>
         <Company>Selçuk Güral</Company>
-        <Description>Advanced, extensible, and multilingual data validation and guard clause library for .NET. Includes custom validation attributes, guard helpers, and resource-based error messages for enterprise-grade applications.</Description>
+        <Description>Advanced, extensible, and multilingual data validation and guard clause library for .NET. Includes custom validation attributes, guard helpers, and resource-based error messages for enterprise-grade applications. Targets net8.0/net9.0/net10.0.</Description>
         <PackageTags>validation;data-annotations;guard;multilingual;localization;attributes;.NET;enterprise;library</PackageTags>
         <PackageProjectUrl>https://github.com/selcukgural/SGuard.DataAnnotations</PackageProjectUrl>
         <RepositoryUrl>https://github.com/selcukgural/SGuard.DataAnnotations</RepositoryUrl>
         <RepositoryType>git</RepositoryType>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
         <PackageIcon>icon.png</PackageIcon>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
         <Copyright>Copyright © 2025 Selçuk Güral</Copyright>
-        <PackageReleaseNotes>Initial release. Supports .NET 6, 7, 8, 9. Multilingual validation, guard clauses, and CI/CD integration.</PackageReleaseNotes>
-        <Title>SGuard.DataAnnotations - Advanced Multilingual Validation &amp; Guard Library for .NET 
-</Title>
+        <PackageReleaseNotes>See https://github.com/selcukgural/SGuard.DataAnnotations/blob/main/CHANGELOG.md</PackageReleaseNotes>
+        <Title>SGuard.DataAnnotations - Advanced Multilingual Validation &amp; Guard Library for .NET</Title>
+        <IncludeSymbols>true</IncludeSymbols>
+        <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+        <!-- Checks on every pack that the public API stays compatible with the last release. Breaking changes that are
+             intended go into CompatibilitySuppressions.xml: regenerate it with -p:ApiCompatGenerateSuppressionFile=true. -->
+        <EnablePackageValidation>true</EnablePackageValidation>
+        <PackageValidationBaselineVersion>0.1.1</PackageValidationBaselineVersion>
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="SGuard" Version="0.1.1"/>
-        <PackageReference Include="System.ComponentModel.Annotations" Version="5.0.0"/>
+        <PackageReference Include="SGuard" Version="3.0.0" />
     </ItemGroup>
     
     <ItemGroup>
@@ -68,7 +72,7 @@
         <EmbeddedResource Update="Resources\SGuardDataAnnotations.hi.resx">
             <Generator>PublicResXFileCodeGenerator</Generator>
             <LastGenOutput>SGuardDataAnnotationResource.hi.Designer.cs</LastGenOutput>
-            <CopyToOutputDirectory> Always</CopyToOutputDirectory>
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
         </EmbeddedResource>
     </ItemGroup>
 
@@ -110,15 +114,8 @@
         </Compile>
     </ItemGroup>
     
-    <PropertyGroup>
-        <PackageIcon>icon.png</PackageIcon>
-    </PropertyGroup>
-    
-    
     <ItemGroup>
         <None Include="assets/icon.png" Pack="true" PackagePath="\" />
-    </ItemGroup>
-    <ItemGroup>
         <None Include="LICENSE" Pack="true" PackagePath="\" />
         <None Include="README.md" Pack="true" PackagePath="\" />
     </ItemGroup>

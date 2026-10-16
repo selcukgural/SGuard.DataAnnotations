@@ -1,5 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 using System.Reflection;
+using SGuard.DataAnnotations.Internal;
 
 namespace SGuard.DataAnnotations;
 
@@ -46,15 +47,13 @@ public abstract class CompareToAttribute : SGuardValidationAttributeBase
     /// A <see cref="ValidationResult"/> indicating whether the value is valid or not.
     /// Returns <see cref="ValidationResult.Success"/> if the value is valid; otherwise, a validation error.
     /// </returns>
+    /// <exception cref="InvalidOperationException">
+    /// Thrown when the validated object has no property named by <see cref="OtherProperty"/>.
+    /// </exception>
     protected override ValidationResult? IsValid(object? value, ValidationContext validationContext)
     {
-        var otherPropertyInfo =
-            validationContext.ObjectType.GetProperty(OtherProperty, BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic);
-
-        if (otherPropertyInfo == null)
-        {
-            return new ValidationResult($"Unknown property: {OtherProperty}");
-        }
+        var otherPropertyInfo = ValidationTargets.GetProperty(this, validationContext, OtherProperty,
+                                                              BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic);
 
         var otherValue = otherPropertyInfo.GetValue(validationContext.ObjectInstance, null);
 
@@ -75,14 +74,11 @@ public abstract class CompareToAttribute : SGuardValidationAttributeBase
         var valueType = value.GetType();
         var otherType = otherValue.GetType();
 
-        if (!valueType.IsAssignableFrom(otherType) && !otherType.IsAssignableFrom(valueType))
+        // Values that can't be compared fail validation with the attribute's own message: the types involved are details
+        // of the model that a client shouldn't see.
+        if ((!valueType.IsAssignableFrom(otherType) && !otherType.IsAssignableFrom(valueType)) || value is not IComparable comparableValue)
         {
-            return new ValidationResult($"Type mismatch: {validationContext.MemberName} ({valueType.Name}) vs {OtherProperty} ({otherType.Name})");
-        }
-
-        if (value is not IComparable comparableValue)
-        {
-            return new ValidationResult($"{validationContext.MemberName} and {OtherProperty} must implement IComparable.");
+            return new ValidationResult(FormatErrorMessage(validationContext.DisplayName));
         }
 
         var comparisonResult = comparableValue.CompareTo(otherValue);

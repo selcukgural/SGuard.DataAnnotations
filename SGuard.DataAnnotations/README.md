@@ -13,7 +13,7 @@
 - Seamless integration with DataAnnotations and SGuard's fail-fast/callback philosophy
 - Well-tested and extensible for real-world application scenarios
 
-> **Note:** For fluent validation/guard support, see the upcoming [`SGuard.FluentValidation`](https://github.com/selcukgural/SGuard.FluentValidation) package.
+> **Note:** For fluent validation/guard support, see the upcoming `SGuard.FluentValidation` package.
 >
 > **Important:** If you want to implement custom callback, fail-fast, or chainable guard logic, you should also review the [SGuard core project](https://github.com/selcukgural/SGuard), which provides advanced guard and callback APIs used by this library.
 
@@ -50,6 +50,9 @@ Install via NuGet:
 ```bash
 dotnet add package SGuard.DataAnnotations
 ```
+
+Requires .NET 8, 9 or 10, and brings in [SGuard](https://www.nuget.org/packages/SGuard) 3.0 or later. For .NET 6 and 7, use
+version 0.1.1.
 
 ---
 
@@ -112,7 +115,14 @@ SGuard.DataAnnotations ships with built-in resource support for the following la
 **Details:**
 - `SGuardCollectionItemsMatchAttribute` can take multiple validators and will apply them to each item.
 - `AggregateAllErrors` (default: `false`): If `true`, collects all errors; if `false`, returns on first failure.
+- `MaxErrors` (default: `10`): with `AggregateAllErrors`, validation stops after this many errors, so a large collection
+  doesn't produce a message for every item.
+- Each validator type must be a non-abstract `ValidationAttribute` with a public parameterless constructor; other types
+  throw `ArgumentException`.
 - Supported on any `IEnumerable` (e.g., `List<T>`, arrays, custom collections).
+- The collection attributes (`SGuardRequiredCollection`, `SGuardMinCount`, `SGuardMaxCount`, `SGuardCollectionItemsMatch`)
+  throw `InvalidOperationException` for an `IQueryable`, because enumerating it would run the query. Validate a
+  materialized collection (for example `ToList()`) instead.
 
 ### Conditional Validators
 
@@ -139,7 +149,7 @@ SGuard.DataAnnotations ships with built-in resource support for the following la
 
 ### Is.* Methods
 
-- **Purpose:** Return `bool` for validation checks (never throw).
+- **Purpose:** Return `bool` for validation checks. An invalid model returns `false`; only an attribute that is declared wrong throws (see [Error Handling](#error-handling)).
 - **Callback:** Optional `SGuardCallback` invoked with `GuardOutcome.Success`/`Failure`.  
   For advanced callback usage, see the [SGuard project documentation](https://github.com/selcukgural/SGuard).
 - **Example:**
@@ -181,10 +191,13 @@ SGuard.DataAnnotations ships with built-in resource support for the following la
     ThrowIf.DataAnnotationsInValid<ArgumentException>(model, new ArgumentException("Custom error!"));
     ```
 
-- **Custom exception with constructor args:**
+- **Custom exception from a factory** (the factory runs only when validation fails):
     ```csharp
-    ThrowIf.DataAnnotationsInValid<ArgumentException>(model, new object[] { "Custom error!" });
+    ThrowIf.DataAnnotationsInValid(model, () => new ArgumentException("Custom error!"));
     ```
+
+  The overload that takes constructor arguments (`new object[] { "Custom error!" }`) is obsolete (`SGUARDDA001`): it
+  creates the exception with reflection, which the compiler can't check.
 
 #### Exception Details
 
@@ -302,7 +315,10 @@ public class UserRegistration
 ### Error Handling
 
 - **Guard methods**: Return `bool` or throw, never both.
-- **Attributes**: Always return `ValidationResult`, never throw.
+- **Attributes**: Return a `ValidationResult` for invalid values. They throw `InvalidOperationException` only when the
+  attribute itself is declared wrong, for example when `SGuardCompare`, `SGuardGreaterThan`, `SGuardLessThan`,
+  `SGuardBetween` or `SGuardRequiredIf` names a property that the model doesn't have. That keeps property and type names
+  in your logs instead of in the validation messages that clients see.
 - **All exceptions**: Contain full error detail, member names, and support for extraction/extension.
 - **For advanced fail-fast, callback, or custom guard usage:**  
   See [SGuard project documentation](https://github.com/selcukgural/SGuard).
@@ -324,7 +340,18 @@ public class UserRegistration
 **A:** Yes, you can stack any combination on your model.
 
 **Q:** _Will SGuard.DataAnnotations work with FluentValidation?_  
-**A:** Yes, as long as you use DataAnnotations integration. For a full fluent API, see [`SGuard.FluentValidation`](https://github.com/selcukgural/SGuard.FluentValidation).
+**A:** Yes, as long as you use DataAnnotations integration. For a full fluent API, see the upcoming `SGuard.FluentValidation` package.
+
+**Q:** _I get "`ThrowIf` is an ambiguous reference" (CS0104)._  
+**A:** SGuard and SGuard.DataAnnotations both have `ThrowIf` and `Is` classes, so a file that imports both namespaces has to
+say which one it means. Qualify the call or add an alias:
+```csharp
+using SGuard;
+using DataAnnotationsGuard = SGuard.DataAnnotations.ThrowIf;
+
+ThrowIf.NullOrEmpty(model.Name);                  // SGuard
+DataAnnotationsGuard.DataAnnotationsInValid(model); // SGuard.DataAnnotations
+```
 
 **Q:** _How do I quickly test everything?_  
 **A:**
@@ -356,6 +383,5 @@ MIT License. See [LICENSE](LICENSE).
 ## See Also
 
 - [SGuard (core)](https://github.com/selcukgural/SGuard)
-- [SGuard.FluentValidation (upcoming)](https://github.com/selcukgural/SGuard.FluentValidation)
 
 ---

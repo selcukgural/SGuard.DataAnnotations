@@ -1,5 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 using System.Reflection;
+using SGuard.DataAnnotations.Internal;
 
 namespace SGuard.DataAnnotations;
 
@@ -59,22 +60,13 @@ public class SGuardBetweenAttribute : SGuardValidationAttributeBase
     /// A <see cref="ValidationResult"/> indicating whether the value is valid or not.
     /// Returns <see cref="ValidationResult.Success"/> if the value is valid; otherwise, a validation error.
     /// </returns>
+    /// <exception cref="InvalidOperationException">
+    /// Thrown when the validated object has no property named by <see cref="MinProperty"/> or <see cref="MaxProperty"/>.
+    /// </exception>
     protected override ValidationResult? IsValid(object? value, ValidationContext validationContext)
     {
-        var objType = validationContext.ObjectType;
-
-        var minPropInfo = objType.GetProperty(MinProperty, Flags);
-        var maxPropInfo = objType.GetProperty(MaxProperty, Flags);
-
-        if (minPropInfo == null)
-        {
-            return new ValidationResult($"Unknown property: {MinProperty}");
-        }
-
-        if (maxPropInfo == null)
-        {
-            return new ValidationResult($"Unknown property: {MaxProperty}");
-        }
+        var minPropInfo = ValidationTargets.GetProperty(this, validationContext, MinProperty, Flags);
+        var maxPropInfo = ValidationTargets.GetProperty(this, validationContext, MaxProperty, Flags);
 
         var minValue = minPropInfo.GetValue(validationContext.ObjectInstance, null);
         var maxValue = maxPropInfo.GetValue(validationContext.ObjectInstance, null);
@@ -88,27 +80,20 @@ public class SGuardBetweenAttribute : SGuardValidationAttributeBase
         var minType = minValue.GetType();
         var maxType = maxValue.GetType();
 
-        // Check type compatibility
-        if (!valueType.IsAssignableFrom(minType) && !minType.IsAssignableFrom(valueType))
+        // Values that can't be compared fail validation with the attribute's own message: the types involved are details
+        // of the model that a client shouldn't see.
+        if ((!valueType.IsAssignableFrom(minType) && !minType.IsAssignableFrom(valueType)) ||
+            (!valueType.IsAssignableFrom(maxType) && !maxType.IsAssignableFrom(valueType)) ||
+            value is not IComparable cmpValue)
         {
-            return new ValidationResult($"Type mismatch: {validationContext.MemberName} vs {MinProperty}");
+            return new ValidationResult(FormatErrorMessage(validationContext.DisplayName));
         }
 
-        if (!valueType.IsAssignableFrom(maxType) && !maxType.IsAssignableFrom(valueType))
-        {
-            return new ValidationResult($"Type mismatch: {validationContext.MemberName} vs {MaxProperty}");
-        }
+        var minResult = cmpValue.CompareTo(minValue);
+        var maxResult = cmpValue.CompareTo(maxValue);
 
-        if (value is IComparable cmpValue)
-        {
-            var minResult = cmpValue.CompareTo(minValue);
-            var maxResult = cmpValue.CompareTo(maxValue);
+        var valid = Inclusive ? minResult >= 0 && maxResult <= 0 : minResult > 0 && maxResult < 0;
 
-            var valid = Inclusive ? minResult >= 0 && maxResult <= 0 : minResult > 0 && maxResult < 0;
-
-            return valid ? ValidationResult.Success : new ValidationResult(FormatErrorMessage(validationContext.DisplayName));
-        }
-
-        return new ValidationResult($"{validationContext.MemberName}, {MinProperty}, and {MaxProperty} must implement IComparable.");
+        return valid ? ValidationResult.Success : new ValidationResult(FormatErrorMessage(validationContext.DisplayName));
     }
 }

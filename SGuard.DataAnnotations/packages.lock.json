@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "dependencies": {
+    "net10.0": {
+      "SGuard": {
+        "type": "Direct",
+        "requested": "[3.0.0, )",
+        "resolved": "3.0.0",
+        "contentHash": "yHXpwaYOj9lbFdCZ6ouOx/sCXBomKv0QyQVuTHOckNCub4+VL/7J56lcRDH4LfrKenSH1H4GBq+6aBNtHQEFuQ=="
+      }
+    },
+    "net8.0": {
+      "SGuard": {
+        "type": "Direct",
+        "requested": "[3.0.0, )",
+        "resolved": "3.0.0",
+        "contentHash": "yHXpwaYOj9lbFdCZ6ouOx/sCXBomKv0QyQVuTHOckNCub4+VL/7J56lcRDH4LfrKenSH1H4GBq+6aBNtHQEFuQ=="
+      }
+    },
+    "net9.0": {
+      "SGuard": {
+        "type": "Direct",
+        "requested": "[3.0.0, )",
+        "resolved": "3.0.0",
+        "contentHash": "yHXpwaYOj9lbFdCZ6ouOx/sCXBomKv0QyQVuTHOckNCub4+VL/7J56lcRDH4LfrKenSH1H4GBq+6aBNtHQEFuQ=="
+      }
+    }
+  }
+}

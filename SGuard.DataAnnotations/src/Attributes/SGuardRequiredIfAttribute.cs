@@ -1,5 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 using System.Reflection;
+using SGuard.DataAnnotations.Internal;
 
 namespace SGuard.DataAnnotations;
 
@@ -52,15 +53,13 @@ public class SGuardRequiredIfAttribute : SGuardValidationAttributeBase
     /// A <see cref="ValidationResult"/> indicating whether the value is valid or not.
     /// Returns <see cref="ValidationResult.Success"/> if the value is valid; otherwise, a validation error.
     /// </returns>
+    /// <exception cref="InvalidOperationException">
+    /// Thrown when the validated object has no property named by <see cref="DependentProperty"/>.
+    /// </exception>
     protected override ValidationResult? IsValid(object? value, ValidationContext validationContext)
     {
-        var property = validationContext.ObjectType.GetProperty(DependentProperty,
-                                                                BindingFlags.Instance | BindingFlags.Public | BindingFlags.IgnoreCase);
-
-        if (property == null)
-        {
-            return new ValidationResult($"Unknown property: {DependentProperty}");
-        }
+        var property = ValidationTargets.GetProperty(this, validationContext, DependentProperty,
+                                                     BindingFlags.Instance | BindingFlags.Public | BindingFlags.IgnoreCase);
 
         var dependentValue = property.GetValue(validationContext.ObjectInstance, null);
 
